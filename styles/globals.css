@@ -3,17 +3,16 @@
 @tailwind utilities;
 
 @layer base {
-	html {
-		@apply font-roboto;
-	}
-	font-titan {
-		@apply font-titan;
-	}
-	font-edu {
-		@apply font-edu;
-	}
+  font-roboto {
+    @apply font-roboto;
+  }
+  font-titan {
+    @apply font-titan;
+  }
+  font-edu {
+    @apply font-edu;
+  }
 }
-
 
 * {
   padding: 0;
@@ -22,7 +21,7 @@
 }
 body {
   font-family: "Edu SA Beginner", "Roboto", "sans-serif";
-  background-color: #f8f8f8;
+  background: #fff;
 }
 
 a {
