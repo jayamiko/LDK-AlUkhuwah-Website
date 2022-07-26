@@ -1,0 +1,8 @@
+footer .logo .icon {
+  color: #fff;
+  margin-right: 10px;
+}
+footer .logo .icon:hover {
+  background-color: #fff;
+  scale: 1.25;
+}
