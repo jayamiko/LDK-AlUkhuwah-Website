@@ -6,12 +6,15 @@ module.exports = {
   ],
   theme: {
     extend: {
+      colors: {
+        "egg-green": "#1eb2a6",
+      },
       fontFamily: {
-				roboto: ['Roboto', 'sans-serif'],
-				titan: ['Titan One', 'Roboto', 'sans-serif'],
-				edu: ['Edu SA Beginner', 'Roboto', 'sans-serif'],
-			},
+        roboto: ["Roboto", "sans-serif"],
+        titan: ["Titan One", "Roboto", "sans-serif"],
+        edu: ["Edu SA Beginner", "Roboto", "sans-serif"],
+      },
     },
   },
   plugins: [],
-}
+};
