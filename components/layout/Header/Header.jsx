@@ -1,11 +1,8 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import Link from 'next/link'
 import Head from "./Head";
-import Logo from "../../../image/ldk-icon.png";
 import styles from "./Header.module.css";
 import Image from "next/image";
-
-const pathname = window.location.pathname;
 
 const Header = () => {
   const [click, setClick] = useState(false);
@@ -14,48 +11,44 @@ const Header = () => {
     <div className="flex flex-col-reverse md:flex-col relative z-50 border-2 border-yellow-700">
       <Head />
       <header
-        className={
-          pathname === "/documentasi"
-            ? "md:hidden max-h-32"
-            : "w-full md:container mx-auto overflow-hidden md:rounded-3xl bg-white"
-        }
+        className="w-full relative md:inline-block md:container mx-auto m-0 bg-[#1eb2a6] overflow-hidden md:rounded-3xl md:bg-white"
       >
-        <nav className={click ? "flex" : "flex flexSB items-center max-h-32"}>
+        <nav className={click ? "flex" : "flex flexSB items-center  maxh-32"}>
           <ul
             className={
-              click ? `${styles.mobileNav} hidden z-50` : "flexSB uppercase"
+              click ? `${styles.mobileNav} hidden z-50 py-8 px-5 mb-5` : "flexSB space-x-5 uppercase py-8 px-5 mb-5"
             }
             onClick={() => setClick(false)}
           >
             <li>
-              <Link to="/">
-                <b>Home</b>
+              <Link href={`/`}>
+                <a>Home</a>
               </Link>
             </li>
             <li>
-              <Link to="/news">
-                <b className="hidden lg:block">Info News</b>
-                <b className="lg:hidden block">News</b>
+              <Link href={`/`}>
+                <a className="hidden lg:block">Info News</a>
+                <a className="lg:hidden block">News</a>
               </Link>
             </li>
             <li>
-              <Link to="/aktivitas">
-                <b>Aktivitas</b>
+              <Link href={`/aktivitas`}>
+                <a>Aktivitas</a>
               </Link>
             </li>
             <li>
-              <Link to="/departemen">
-                <b>Departemen</b>
+              <Link href={`/departemen`}>
+                <a>Departemen</a>
               </Link>
             </li>
             <li>
-              <Link to="/documentasi">
-                <b>Dokumentasi</b>
+              <Link href={`/documentasi`}>
+                <a>Dokumentasi</a>
               </Link>
             </li>
             <li>
-              <Link to="/about">
-                <b>About</b>
+              <Link href={`/about`}>
+                <a>About</a>
               </Link>
             </li>
           </ul>
@@ -67,12 +60,16 @@ const Header = () => {
             }
           >
             <div className={click ? "hidden" : "md:hidden flex py-2"}>
-              <Link to="/">
-                <Image
-                  src={Logo}
-                  className="w-20 sm:w-28 md:w-40"
-                  alt="logo-ldk"
-                />
+              <Link href={`/`}>
+                <a>
+                  <Image
+                    src="/image/ldk-icon.png"
+                    width={100}
+                    heigth={100}
+                    className="w-20 sm:w-28 md:w-40"
+                    alt="logo-ldk"
+                  />
+                </a>
               </Link>
               <div className="w-full flexSB font-roboto">
                 <div className="flex flex-col my-auto">
@@ -88,12 +85,16 @@ const Header = () => {
           </div>
           <div className={click ? "w-full md:hiddenn font-roboto" : "hidden"}>
             <div className={click ? "flex text-white" : "hidden"}>
-              <Link to="/">
-                <Image
-                  src={Logo}
-                  className="w-28 sm:w-28 md:w-40 h-24"
-                  alt="logo-ldk"
-                />
+              <Link href={`/`}>
+                <a>
+                  <Image
+                    src="/image/ldk-icon.png"
+                    className="w-28 sm:w-28 md:w-40 h-24"
+                    width={100}
+                    heigth={100}
+                    alt="logo-ldk"
+                  />
+                </a>
               </Link>
               <div className="w-full flexSB">
                 <div className="logo flex flex-col my-auto">
@@ -107,37 +108,37 @@ const Header = () => {
               </div>
             </div>
             <ul
-              className={click ? "mobile-nav" : "flexSB"}
+              className={click ? "mobile-nav" : "hidden"}
               onClick={() => setClick(false)}
             >
               <li>
-                <Link to="/">
-                  <b>Home</b>
+                <Link href={`/`}>
+                  <a>Home</a>
                 </Link>
               </li>
               <li>
-                <Link to="/news">
-                  <b>Info News</b>
+                <Link href={`/news`}>
+                  <a>Info News</a>
                 </Link>
               </li>
               <li>
-                <Link to="/aktivitas">
-                  <b>Aktivitas</b>
+                <Link href={`/aktivitas`}>
+                  <a>Aktivitas</a>
                 </Link>
               </li>
               <li>
-                <Link to="/departemen">
-                  <b>Departemen</b>
+                <Link href={`/departemen`}>
+                  <a>Departemen</a>
                 </Link>
               </li>
               <li>
-                <Link to="/documentasi">
-                  <b>Dokumentasi</b>
+                <Link href={`/dokumentasi`}>
+                  <a>Dokumentasi</a>
                 </Link>
               </li>
               <li>
-                <Link to="/about">
-                  <b>About</b>
+                <Link href={`/about`}>
+                  <a>About</a>
                 </Link>
               </li>
             </ul>

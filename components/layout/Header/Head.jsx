@@ -1,7 +1,7 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import Link from 'next/link'
 import Image from "next/image";
-import Logo from "../../../image/ldk-icon.png";
+import styles from './Header.module.css'
 
 const Head = () => {
   return (
@@ -9,14 +9,16 @@ const Head = () => {
       <section
         className={`${styles.head} container mx-auto md:flex space-x-3 hidden`}
       >
-        <Link to="/">
-          <Image
-            src={Logo}
-            width={120}
-            height={80}
-            alt="logo-ldk"
-            className="cursor-pointer"
-          />
+        <Link href="/">
+          <a>
+            <Image
+              src="/image/ldk-icon.png"
+              width={120}
+              height={80}
+              alt="logo-ldk"
+              className="cursor-pointer"
+            />
+          </a>
         </Link>
         <div className="w-full flexSB">
           <div className="logo flex flex-col my-auto">

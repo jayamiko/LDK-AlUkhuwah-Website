@@ -12,20 +12,6 @@
 }
 
 /*--------header------------*/
-header li {
-  margin-right: 40px;
-}
-header ul {
-  padding: 30px 20px;
-}
-header ul li a {
-  color: #fff;
-  font-weight: 500;
-  transition: 0.5s;
-}
-header ul li a:hover {
-  color: rgb(2 132 199);
-}
 .start {
   background-color: #1eb2a6;
   color: #fff;
@@ -39,17 +25,6 @@ header ul li a:hover {
 @media screen and (max-width: 768px) {
   .start {
     clip-path: none;
-  }
-  header {
-    margin: 0;
-    background-color: #1eb2a6;
-    position: relative;
-  }
-  header ul.flexSB {
-    display: none;
-  }
-  header ul li {
-    margin-bottom: 20px;
   }
   .toggle {
     display: block;
