@@ -24,7 +24,7 @@ const Head = () => {
         </Link>
         <div className="w-full flex justify-between">
           <div className="flex flex-col my-auto">
-            <h1 className="font-titan uppercase lg:text-3xl xl:text-5xl leading-8 xl:leading-6">{UKM}</h1>
+            <h1 className="font-titan uppercase lg:text-3xl xl:text-4xl leading-8 xl:leading-6">{UKM}</h1>
             <span className="font-edu tracking-wide text-xl">{kampus}</span>
           </div>
 
