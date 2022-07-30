@@ -2,7 +2,7 @@ import React, { useState, useRef, useEffect } from "react";
 import styles from "./Registration.module.css";
 import Papa from "papaparse";
 import { DataGrid } from "@mui/x-data-grid";
-import FormRegistration from "../../components/FormRegistration";
+import FormRegistration from "../../components/Form/FormRegistration";
 // import Hero from "../home/hero/Hero";
 
 const scriptURL =

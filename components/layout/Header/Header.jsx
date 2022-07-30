@@ -1,61 +1,51 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import Link from 'next/link'
 import Head from "./Head";
-import Logo from "../../../image/ldk-icon.png";
+import { UKM, kampus} from '../../../pages/_app'
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {faTimes, faBars} from "@fortawesome/free-solid-svg-icons"
 import styles from "./Header.module.css";
 import Image from "next/image";
-
-const pathname = window.location.pathname;
 
 const Header = () => {
   const [click, setClick] = useState(false);
 
   return (
-    <div className="flex flex-col-reverse md:flex-col relative z-50 border-2 border-yellow-700">
+    <div className="flex flex-col-reverse md:flex-col absolute md:px-4 lg:mx-0 w-full z-50">
       <Head />
       <header
-        className={
-          pathname === "/documentasi"
-            ? "md:hidden max-h-32"
-            : "w-full md:container mx-auto overflow-hidden md:rounded-3xl bg-white"
-        }
+        className={`${styles.bgHeader} w-full lg:inline lg:container mx-auto items-center m-0 overflow-hidden md:rounded-3xl`}
       >
-        <nav className={click ? "flex" : "flex flexSB items-center max-h-32"}>
+        <nav className={click ? "flex" : "flex justify-between items-center"}>
           <ul
             className={
-              click ? `${styles.mobileNav} hidden z-50` : "flexSB uppercase"
+              click ? `${styles.mobileNav} hidden z-50 py-8 px-5 mb-5` : "my-auto h-full hidden md:flex justify-between space-x-7 uppercase py-10 px-5"
             }
             onClick={() => setClick(false)}
           >
             <li>
-              <Link to="/">
-                <b>Home</b>
+              <Link href={`/`}>
+                <a className={`${styles.linkMenu} font-bold hover:font-extrabold hover:scale-105`}>Home</a>
               </Link>
             </li>
             <li>
-              <Link to="/news">
-                <b className="hidden lg:block">Info News</b>
-                <b className="lg:hidden block">News</b>
+              <Link href={`/about`}>
+                <a className={`${styles.linkMenu} font-bold hover:font-extrabold hover:scale-105`}>Tentang</a>
               </Link>
             </li>
             <li>
-              <Link to="/aktivitas">
-                <b>Aktivitas</b>
+              <Link href={`/registration`}>
+                <a className={`${styles.linkMenu} font-bold hover:font-extrabold hover:scale-105`}>Registration</a>
               </Link>
             </li>
             <li>
-              <Link to="/departemen">
-                <b>Departemen</b>
+              <Link href={`/departemen`}>
+                <a className={`${styles.linkMenu} font-bold hover:font-extrabold hover:scale-105`}>Departemen</a>
               </Link>
             </li>
             <li>
-              <Link to="/documentasi">
-                <b>Dokumentasi</b>
-              </Link>
-            </li>
-            <li>
-              <Link to="/about">
-                <b>About</b>
+              <Link href={`/mentoring`}>
+                <a className={`${styles.linkMenu} font-bold hover:font-extrabold hover:scale-105`}>Mentoring</a>
               </Link>
             </li>
           </ul>
@@ -66,92 +56,99 @@ const Header = () => {
                 : `${styles.start} md:p-0 w-full float-right max-h-32 h-full lg:hidden`
             }
           >
-            <div className={click ? "hidden" : "md:hidden flex py-2"}>
-              <Link to="/">
-                <Image
-                  src={Logo}
-                  className="w-20 sm:w-28 md:w-40"
-                  alt="logo-ldk"
-                />
+            <div className={click ? "hidden" : "md:hidden flex items-center"}>
+              <Link href={`/`}>
+                <a>
+                  <Image
+                    src="/images/ldk-icon.png"
+                    width={150}
+                    height={150}
+                    className="w-20 sm:w-28 md:w-40"
+                    alt="logo-ldk"
+                  />
+                </a>
               </Link>
-              <div className="w-full flexSB font-roboto">
-                <div className="flex flex-col my-auto">
-                  <h4 className="text-base w-4/5 sm:text-3xl sm:w-full md:text-6xl font-bold">
-                    LEMBAGA DAKWAH KAMPUS
+              <div className="w-full justify-between">
+                <div className="flex flex-col my-auto uppercase">
+                  <h4 className="font-roboto text-xl sm:text-2xl md:text-3xl xl:text-4xl w-4/6 sm:w-full font-bold">
+                    {UKM}
                   </h4>
-                  <span className="text-[10px] md:text-base">
-                    UNIVERSITAS ISLAM {"'"}45 BEKASI
+                  <span className="text-xs sm:text-sm font-edu font-bold tracking-wide md:text-base">
+                    {kampus}
                   </span>
                 </div>
               </div>
             </div>
           </div>
-          <div className={click ? "w-full md:hiddenn font-roboto" : "hidden"}>
-            <div className={click ? "flex text-white" : "hidden"}>
-              <Link to="/">
-                <Image
-                  src={Logo}
-                  className="w-28 sm:w-28 md:w-40 h-24"
-                  alt="logo-ldk"
-                />
+          <div className={click ? "w-full font-roboto md:hidden" : "hidden"}>
+            <div className={click ? "flex md:hidden text-white items-center" : "hidden"}>
+              <Link href={`/`}>
+                <a>
+                  <Image
+                    src="/images/ldk-icon.png"
+                    width={150}
+                    height={150}
+                    className="w-20 sm:w-28 md:w-40"
+                    alt="logo-ldk"
+                  />
+                </a>
               </Link>
-              <div className="w-full flexSB">
-                <div className="logo flex flex-col my-auto">
-                  <h4 className="text-xl w-3/4 sm:text-3xl sm:w-full md:text-6xl font-bold">
-                    LEMBAGA DAKWAH KAMPUS
+              <div className="w-full flex justify-between">
+                <div className="flex flex-col my-auto uppercase">
+                  <h4 className="text-xl w-full sm:text-3xl sm:w-full md:text-6xl font-bold">
+                    {UKM}
                   </h4>
-                  <span className="text-xs md:text-base">
-                    UNIVERSITAS ISLAM {"'"}45 BEKASI
+                  <span className="text-xs sm:text-sm font-edu font-bold tracking-wide md:text-base">
+                    {kampus}
                   </span>
                 </div>
               </div>
             </div>
             <ul
-              className={click ? "mobile-nav" : "flexSB"}
+              className={click ? `${styles.mobileNav} space-y-2` : "flex border md:hidden"}
               onClick={() => setClick(false)}
             >
-              <li>
-                <Link to="/">
-                  <b>Home</b>
-                </Link>
-              </li>
-              <li>
-                <Link to="/news">
-                  <b>Info News</b>
-                </Link>
-              </li>
-              <li>
-                <Link to="/aktivitas">
-                  <b>Aktivitas</b>
-                </Link>
-              </li>
-              <li>
-                <Link to="/departemen">
-                  <b>Departemen</b>
-                </Link>
-              </li>
-              <li>
-                <Link to="/documentasi">
-                  <b>Dokumentasi</b>
-                </Link>
-              </li>
-              <li>
-                <Link to="/about">
-                  <b>About</b>
-                </Link>
-              </li>
+            <li>
+              <Link href={`/`}>
+                <a className={styles.linkMenu}>Home</a>
+              </Link>
+            </li>
+            <li>
+              <Link href={`/about`}>
+                <a className={styles.linkMenu}>Tentang</a>
+              </Link>
+            </li>
+            <li>
+              <Link href={`/registration`}>
+                <a className={styles.linkMenu}>Registration</a>
+              </Link>
+            </li>
+            <li>
+              <Link href={`/departemen`}>
+                <a className={styles.linkMenu}>Departemen</a>
+              </Link>
+            </li>
+            <li>
+              <Link href={`/mentoring`}>
+                <a className={styles.linkMenu}>Mentoring</a>
+              </Link>
+            </li>
             </ul>
           </div>
-
-          <div></div>
           <button
-            className={`${styles.toggle} mr-4`}
+            className={`mr-3 p-2 h-fit md:hidden`}
             onClick={() => setClick(!click)}
           >
             {click ? (
-              <i className="fa fa-times"> </i>
-            ) : (
-              <i className="fa fa-bars"></i>
+              <FontAwesomeIcon 
+                  icon={faTimes}
+                  className="text-white text-2xl mt-10"
+              ></FontAwesomeIcon>
+              ) : (
+              <FontAwesomeIcon 
+                  icon={faBars}
+                  className="text-white text-2xl"
+              ></FontAwesomeIcon>
             )}
           </button>
         </nav>

@@ -3,28 +3,23 @@
   padding: 20px 0;
   color: #fff;
 }
-.head .icon {
-  margin-left: 10px;
+
+.linkMenu {
+  color: #FFF;
+  text-shadow: 1px 1px rgb(8 145 178);
+  font-size: 18px;
+  text-decoration: none;
+  letter-spacing : 0.2px
 }
-.head .icon:hover {
-  color: #000 !important;
-  background: #fff !important;
+
+.linkMenu:hover {
+  color: rgb(8 145 178);
+  text-shadow: 2px 2px #FFF;
 }
 
 /*--------header------------*/
-header li {
-  margin-right: 40px;
-}
-header ul {
-  padding: 30px 20px;
-}
-header ul li a {
-  color: #fff;
-  font-weight: 500;
-  transition: 0.5s;
-}
-header ul li a:hover {
-  color: rgb(2 132 199);
+.bgHeader {
+  background-color: rgba(255, 255, 255, 0.2);
 }
 .start {
   background-color: #1eb2a6;
@@ -37,25 +32,17 @@ header ul li a:hover {
 
 /*--------header------------*/
 @media screen and (max-width: 768px) {
+  .bgHeader {
+    background-color: #1eb2a6;
+  }
   .start {
     clip-path: none;
-  }
-  header {
-    margin: 0;
-    background-color: #1eb2a6;
-    position: relative;
-  }
-  header ul.flexSB {
-    display: none;
-  }
-  header ul li {
-    margin-bottom: 20px;
   }
   .toggle {
     display: block;
     background: none;
     color: #fff;
-    font-size: 30px;
+    font-size: 40px;
     position: absolute;
     right: 0;
     z-index: 50;

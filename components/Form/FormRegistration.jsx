@@ -7,7 +7,7 @@ export const FormRegistration = ({
   return (
     <form
       name="submit-to-google-sheet"
-      className="border-2 sm:w-2/3 md:w-3/6 lg:w-2/5 xl:w-2/6 space-y-1"
+      className="sm:w-2/3 md:w-3/6 lg:w-2/5 xl:w-2/6 space-y-1"
       method="post"
       ref={formRef}
       onSubmit={handleSubmit}
@@ -181,7 +181,7 @@ export const FormRegistration = ({
       </div>
       <button
         type="submit"
-        className="btn bg-[#1eb2a6] my-4 text-white px-5 uppercase hover:font-bold"
+        className="bg-[#1eb2a6] py-2 my-4 rounded-md text-white px-5 uppercase hover:font-bold"
       >
         Submit
       </button>
