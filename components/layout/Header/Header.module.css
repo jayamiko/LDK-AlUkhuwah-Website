@@ -3,15 +3,24 @@
   padding: 20px 0;
   color: #fff;
 }
-.head .icon {
-  margin-left: 10px;
+
+.linkMenu {
+  color: #FFF;
+  text-shadow: 1px 1px rgb(8 145 178);
+  font-size: 18px;
+  text-decoration: none;
+  letter-spacing : 0.2px
 }
-.head .icon:hover {
-  color: #000 !important;
-  background: #fff !important;
+
+.linkMenu:hover {
+  color: rgb(8 145 178);
+  text-shadow: 2px 2px #FFF;
 }
 
 /*--------header------------*/
+.bgHeader {
+  background-color: rgba(255, 255, 255, 0.2);
+}
 .start {
   background-color: #1eb2a6;
   color: #fff;
@@ -23,6 +32,9 @@
 
 /*--------header------------*/
 @media screen and (max-width: 768px) {
+  .bgHeader {
+    background-color: #1eb2a6;
+  }
   .start {
     clip-path: none;
   }
@@ -30,7 +42,7 @@
     display: block;
     background: none;
     color: #fff;
-    font-size: 30px;
+    font-size: 40px;
     position: absolute;
     right: 0;
     z-index: 50;

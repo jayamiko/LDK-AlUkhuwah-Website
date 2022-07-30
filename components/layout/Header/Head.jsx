@@ -1,7 +1,9 @@
 import React from "react";
 import Link from 'next/link'
 import Image from "next/image";
+import { UKM, kampus } from '../../../pages/_app';
 import styles from './Header.module.css'
+import MediaSosial from "../../MediaSosial/MediaSosial";
 
 const Head = () => {
   return (
@@ -9,45 +11,24 @@ const Head = () => {
       <section
         className={`${styles.head} container mx-auto md:flex space-x-3 hidden`}
       >
-        <Link href="/">
+        <Link href={`/`}>
           <a>
             <Image
-              src="/image/ldk-icon.png"
-              width={120}
-              height={80}
+              src="/images/ldk-icon.png"
+              width={150}
+              height={125}
               alt="logo-ldk"
               className="cursor-pointer"
             />
           </a>
         </Link>
-        <div className="w-full flexSB">
-          <div className="logo flex flex-col my-auto">
-            <h1>LEMBAGA DAKWAH KAMPUS</h1>
-            <span>UNIVERSITAS ISLAM {"'"}45 BEKASI</span>
+        <div className="w-full flex justify-between">
+          <div className="flex flex-col my-auto">
+            <h1 className="font-titan uppercase lg:text-3xl xl:text-5xl leading-8 xl:leading-6">{UKM}</h1>
+            <span className="font-edu tracking-wide text-xl">{kampus}</span>
           </div>
 
-          <div className="flex my-auto">
-            <a href="https://web.facebook.com/ldkunisma.bekasi?_rdc=1&_rdr/">
-              <i
-                className={`${styles.icon} fab fa-facebook-f bg-blue-500 text-white hover:scale-125`}
-              ></i>
-            </a>
-            <a href="https://www.instagram.com/ldkunisma45bekasi/">
-              <i
-                className={`${styles.icon} fab fa-instagram bg-pink-500 text-white hover:scale-125`}
-              ></i>
-            </a>
-            <a href="https://twitter.com/ldk_unisma45">
-              <i
-                className={`${styles.icon} fab fa-twitter bg-cyan-400 text-white hover:scale-125`}
-              ></i>
-            </a>
-            <a href="https://www.youtube.com/channel/UCkpwGcpCbk2893j5qFyxePA">
-              <i
-                className={`${styles.icon} fab fa-youtube bg-red-500 text-white hover:scale-125`}
-              ></i>
-            </a>
-          </div>
+          <MediaSosial />
         </div>
       </section>
     </>
