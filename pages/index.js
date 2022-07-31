@@ -1,10 +1,13 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLongArrowRight } from "@fortawesome/free-solid-svg-icons"
+import { alUkhuwah } from "./_app"
+import AboutCard from "../components/Card/AboutCard";
+import CourseCard from "../components/Card/CourseCard"
 
 const HomePage = () => {
   return (
     <>
-      <section className={`coverHero bg-[url('/images/LDK-Flag.jpg')] z-10`}>
+      <section id="hero" className={`coverHero bg-[url('/images/LDK-Flag.jpg')] z-10`}>
       </section>
       <div className="relative h-screen flex container z-20 md:pt-44 w-full">
         <div className="grid grid-cols-1 my-auto">
@@ -32,6 +35,15 @@ const HomePage = () => {
           </div>
         </div>
       </div>
+      <AboutCard />
+      <section id="course" className="blog container mx-auto mb-20">
+        <div className="container mx-auto">
+          <h3 className="font-bold uppercase text-base mx-3 my-2 md:text-2xl text-egg-green">
+            Mentoring {alUkhuwah}
+          </h3>
+          <CourseCard />
+        </div>
+      </section>
     </>
   );
 };

@@ -10,7 +10,7 @@ const Footer = () => {
       <footer className="bg-cyan-500 relative z-50">
         <div className="container mx-auto flex flex-col sm:flex-row space-y-2 md:space-y-0 py-2 px-4 sm:px-0">
           <div className="w-full sm:w-1/3 flex flex-col">
-            <h2 className="font-semi-bold m-0 text-base md:text-lg xl:text-xl text-yellow-400">
+            <h2 className="font-semibold m-0 text-base md:text-lg xl:text-xl text-yellow-400">
               {alUkhuwah}
             </h2>
             <h2 className="italic font-medium text-white text-xs sm:text-sm xl:text-base">
