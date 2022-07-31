@@ -7,7 +7,7 @@ export const FormRegistration = ({
   return (
     <form
       name="submit-to-google-sheet"
-      className="sm:w-2/3 md:w-3/6 lg:w-2/5 xl:w-2/6 space-y-1"
+      className="sm:w-2/3 md:w-3/6 lg:w-2/5 xl:w-2/6 space-y-1 mb-4"
       method="post"
       ref={formRef}
       onSubmit={handleSubmit}

@@ -55,6 +55,12 @@ li {
   min-height: 110vh !important;
 }
 
+@media screen and (max-width: 1024px) {
+  .coverHero {
+    min-height:85vh !important;
+  }
+}
+
 @media screen and (max-width: 768px) {
   .coverHero {
     min-height:100vh !important;

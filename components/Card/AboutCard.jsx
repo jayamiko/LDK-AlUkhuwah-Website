@@ -16,10 +16,10 @@ const AboutCard = () => {
         </div>
       </div>
 
-      <div className="w-full sm:w-2/3 py-4">
+      <div className="w-full sm:w-2/3 sm:py-4">
         <div>
-          <h1 className="text-cyan-500 text-2xl my-2 md:my-5">Apa Itu UKM LDK ?</h1>
-          <p className="text-sm md:text-lg text-black">
+          <h1 className="text-cyan-500 text-xl md:text-2xl font-bold my-2 md:my-5">Apa Itu UKM LDK ?</h1>
+          <p className="text-xs sm:text-sm lg:text-base xl:w-5/6 text-black">
             Lembaga Dakwah Kampus (LDK) Al-Ukhuwah merupakan salah satu Unit
             Kegiatan Mahasiswa (UKM) yang ada di kampus Universitas Islam ‘45
             Bekasi. LDK Al-Ukhuwah adalah UKM yang bergerak di bidang pendidikan

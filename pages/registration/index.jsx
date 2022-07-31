@@ -98,9 +98,9 @@ const RegistrationPage = () => {
   }));
 
   return (
-    <div className="bg-white">
+    <>
       <section className={`${styles.coverRegistration} z-10`}>
-        <div className="container mx-auto flex flex-col md:justify-center h-full mt-32 md:mt-0 text-white px-6 py-8 md:p-0">
+        <div className="container mx-auto flex flex-col md:justify-end h-full mt-32 md:mt-0 text-white px-6 py-8 md:p-0">
           <FormRegistration
             formRef={formRef}
             personalMember={personalMember}
@@ -111,7 +111,7 @@ const RegistrationPage = () => {
       </section>
       <div className="h-screen border-2 border-black"></div>
       <div
-        className="container mx-auto mt-32 md:mt-0"
+        className="container mx-auto my-32 md:mt-0"
         style={{ height: 630, width: "100%" }}
       >
         <DataGrid
@@ -121,7 +121,7 @@ const RegistrationPage = () => {
           rowsPerPageOptions={[5]}
         />
       </div>
-    </div>
+    </>
   );
 };
 

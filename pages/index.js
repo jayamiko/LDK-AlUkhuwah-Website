@@ -38,7 +38,7 @@ const HomePage = () => {
       <AboutCard />
       <section id="course" className="blog container mx-auto mb-20">
         <div className="container mx-auto">
-          <h3 className="font-bold uppercase text-base mx-3 my-2 md:text-2xl text-egg-green">
+          <h3 className="font-bold uppercase text-base sm:mx-3 my-2 md:text-2xl text-egg-green">
             Mentoring {alUkhuwah}
           </h3>
           <CourseCard />
