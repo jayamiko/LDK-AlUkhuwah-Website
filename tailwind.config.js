@@ -8,6 +8,7 @@ module.exports = {
     extend: {
       colors: {
         "egg-green": "#1eb2a6",
+        whatsapp: "#25d366",
       },
       fontFamily: {
         roboto: ["Roboto", "sans-serif"],

@@ -3,7 +3,7 @@ import Link from 'next/link'
 import Head from "./Head";
 import { UKM, kampus} from '../../../pages/_app'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {faTimes, faBars} from "@fortawesome/free-solid-svg-icons"
+import {faTimes, faBars} from "@fortawesome/free-solid-svg-icons";
 import styles from "./Header.module.css";
 import Image from "next/image";
 
@@ -14,7 +14,7 @@ const Header = () => {
     <div className="flex flex-col-reverse md:flex-col absolute md:px-4 lg:mx-0 w-full z-50">
       <Head />
       <header
-        className={`${styles.bgHeader} w-full lg:inline lg:container mx-auto items-center m-0 overflow-hidden md:rounded-3xl`}
+        className={`${styles.bgHeader} w-full md:inline md:container mx-auto items-center m-0 overflow-hidden md:rounded-3xl`}
       >
         <nav className={click ? "flex" : "flex justify-between items-center"}>
           <ul
@@ -70,10 +70,10 @@ const Header = () => {
               </Link>
               <div className="w-full justify-between">
                 <div className="flex flex-col my-auto uppercase">
-                  <h4 className="font-roboto text-xl sm:text-2xl md:text-3xl xl:text-4xl w-4/6 sm:w-full font-bold">
+                  <h4 className="font-roboto text-xl sm:text-2xl md:text-3xl 2xl:text-4xl w-5/6 sm:w-full font-bold">
                     {UKM}
                   </h4>
-                  <span className="text-xs sm:text-sm font-edu font-bold tracking-wide md:text-base">
+                  <span className="text-xs sm:text-sm md:text-base font-edu font-bold tracking-wide">
                     {kampus}
                   </span>
                 </div>
@@ -95,7 +95,7 @@ const Header = () => {
               </Link>
               <div className="w-full flex justify-between">
                 <div className="flex flex-col my-auto uppercase">
-                  <h4 className="text-xl w-full sm:text-3xl sm:w-full md:text-6xl font-bold">
+                  <h4 className="text-xl w-full sm:text-3xl sm:w-full md:text-4xl lg:text-5xl font-bold">
                     {UKM}
                   </h4>
                   <span className="text-xs sm:text-sm font-edu font-bold tracking-wide md:text-base">
@@ -105,7 +105,7 @@ const Header = () => {
               </div>
             </div>
             <ul
-              className={click ? `${styles.mobileNav} space-y-2` : "flex border md:hidden"}
+              className={click ? `${styles.mobileNav} space-y-2` : "flex md:hidden"}
               onClick={() => setClick(false)}
             >
             <li>

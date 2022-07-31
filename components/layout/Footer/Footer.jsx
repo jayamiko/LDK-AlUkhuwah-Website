@@ -1,64 +1,46 @@
 import React from "react";
-import styles from "./Footer.module.css";
+import { alUkhuwah, kampus, emailLDK } from '../../../pages/_app'
+import MediaSosial from "../../MediaSosial/MediaSosial";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {faMap, faPaperPlane, faPhone} from "@fortawesome/free-solid-svg-icons";
 
 const Footer = () => {
   return (
     <>
-      <footer className="bg-cyan-500">
-        <div className="container mx-auto flex flex-col space-y-10 sm:spce-y-0 sm:flex-row py-10 px-4 sm:px-0">
-          <div className="box logo w-full sm:w-1/3">
-            <h2 className="text-xl font-bold w-fit text-white">
-              LDK Al-Ukhuwah
+      <footer className="bg-cyan-500 relative z-50">
+        <div className="container mx-auto flex flex-col sm:flex-row space-y-2 md:space-y-0 py-2 px-4 sm:px-0">
+          <div className="w-full sm:w-1/3 flex flex-col">
+            <h2 className="font-semibold m-0 text-base md:text-lg xl:text-xl text-yellow-400">
+              {alUkhuwah}
             </h2>
-            <h2 className="italic font-medium w-fit text-white md:text-lg xl:text-xl">
-              Universitas Islam {"'"}45 Bekasi
+            <h2 className="italic font-medium text-white text-xs sm:text-sm xl:text-base">
+              {kampus}
             </h2>
 
-            <div className="social flex my-auto">
-              <a href="https://web.facebook.com/ldkunisma.bekasi?_rdc=1&_rdr/">
-                <i
-                  className={`fab fa-facebook-f ${styles.icon} bg-blue-500 hover:text-blue-500`}
-                ></i>
-              </a>
-              <a href="https://www.instagram.com/ldkunisma45bekasi/">
-                <i
-                  className={`fab fa-instagram ${styles.icon} bg-pink-500 hover:text-pink-500`}
-                ></i>
-              </a>
-              <a href="https://twitter.com/ldk_unisma45">
-                <i
-                  className={`fab fa-twitter ${styles.icon} bg-cyan-400 hover:text-cyan-400`}
-                ></i>
-              </a>
-              <a href="https://www.youtube.com/channel/UCkpwGcpCbk2893j5qFyxePA">
-                <i
-                  className={`fab fa-youtube ${styles.icon} bg-red-500 hover:text-red-500`}
-                ></i>
-              </a>
-            </div>
+            <MediaSosial />
           </div>
 
-          <div className="w-full sm:w-1/3 text-white px-2 md:text-lg xl:text-xl">
-            <h2 className="text-xl font-semibold">
-              Departemen di LDK Al Ukhuwah
+          <div className="w-full sm:w-1/3 p-0 text-white">
+            <h2 className="font-semibold text-base md:text-lg xl:text-xl text-yellow-400">
+              Departemen di {alUkhuwah}
             </h2>
-            <ul className="flex sm:flex-col space-x-8 sm:space-x-0">
+            <ul className="flex m-0 sm:flex-col text-sm space-x-4 md:space-x-0 hover:text-slate-200 hover:font-semibold p-0">
               <div>
-                <li className="m-0 cursor-pointer hover:text-slate-200 hover:font-semibold">
+                <li className="m-0 cursor-pointer ">
                   Kesekretariatan
                 </li>
-                <li className="m-0 cursor-pointer hover:text-slate-200 hover:font-semibold">
+                <li className="m-0 cursor-pointer">
                   Perekonomian
                 </li>
-                <li className="m-0 cursor-pointer hover:text-slate-200 hover:font-semibold">
+                <li className="m-0 cursor-pointer">
                   Kaderisasi
                 </li>
               </div>
               <div>
-                <li className="m-0 cursor-pointer hover:text-slate-200 hover:font-semibold">
+                <li className="m-0 cursor-pointer">
                   Humas Media
                 </li>
-                <li className="m-0 cursor-pointer hover:text-slate-200 hover:font-semibold">
+                <li className="m-0 cursor-pointer">
                   Keputrian
                 </li>
               </div>
@@ -66,28 +48,39 @@ const Footer = () => {
           </div>
 
           <div className="w-full sm:w-1/3 text-white">
-            <h2 className="text-xl font-semibold">Have a Questions?</h2>
-            <ul className="list-outside md:text-lg xl:text-xl">
+            <h2 className="font-semibold text-base md:text-lg xl:text-xl text-yellow-400">Have a Questions?</h2>
+            <ul className="list-outside p-0 text-sm">
               <li>
-                <i className="fa fa-map mr-2"></i>
+                <FontAwesomeIcon 
+                  icon={faMap}
+                  className="text-white mr-2"
+                ></FontAwesomeIcon>
                 Jl. Cut Meutia No. 83 Bekasi Timur
               </li>
               <li>
-                <i className="fa fa-phone-alt mr-2"></i>
+                <FontAwesomeIcon 
+                  icon={faPhone}
+                  className="text-white mr-2"
+                ></FontAwesomeIcon>
                 0855-9163-3631
               </li>
               <li>
-                <i className="fa fa-paper-plane mr-2"></i>
-                ldkunismabekasi@gmail.com
+                <FontAwesomeIcon 
+                  icon={faPaperPlane}
+                  className="text-white mr-2"
+                ></FontAwesomeIcon>
+                {emailLDK}
               </li>
             </ul>
           </div>
         </div>
         <div className="text-center text-white bg-gray-700 py-2">
-          <p className="text-sm sm:text-base">
-            Copyright @ 2022 LDK Al-Ukhuwah Unisma {"'"}45 Bekasi All Right
-            Reserved
-          </p>
+          <span className="text-sm sm:text-base">
+            Copyright @ 2022 {alUkhuwah} {kampus} 
+          </span>
+          <span>
+            All Right Reserved
+          </span>
         </div>
       </footer>
     </>
