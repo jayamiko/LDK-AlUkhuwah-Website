@@ -1,10 +1,33 @@
+import React, { useState, useEffect } from 'react';
+import Image from 'next/image';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLongArrowRight } from "@fortawesome/free-solid-svg-icons"
 import { alUkhuwah } from "./_app"
+import { blog } from "../data/data";
 import AboutCard from "../components/Card/AboutCard";
 import CourseCard from "../components/Card/CourseCard"
 
 const HomePage = () => {
+
+  const [query, setQuery] = useState("");
+  const [resultQuery, setResultQuery] = useState([]);
+
+  const searching = () => {
+    const resultSearch = blog.filter(item => {
+      const title = item.title.toLowerCase().includes(query.toLowerCase());
+      if (query === "") {
+        return item;
+      } else if (title) {
+        return item;
+      }
+    });
+    setResultQuery(resultSearch);
+  }
+  
+  useEffect(() => {
+    searching()
+  }, [query])
+
   return (
     <>
       <section id="hero" className={`coverHero bg-[url('/images/LDK-Flag.jpg')] z-10`}>
@@ -41,7 +64,25 @@ const HomePage = () => {
           <h3 className="font-bold uppercase text-base sm:mx-3 my-2 md:text-2xl text-egg-green">
             Mentoring {alUkhuwah}
           </h3>
-          <CourseCard />
+          <div className='flex items-center mx-2 mb-4'>
+            <input
+              type="text"
+              className="w-80 text-slate-400 pl-2 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-egg-green"
+              placeholder="Search..."
+              onChange={event => setQuery(event.target.value)}
+            />
+            <div className='relative right-8 flex items-center'>
+              {!query &&
+                <Image 
+                  src="/images/icons/icon-search.png" 
+                  width="18px" 
+                  height="18px" 
+                  alt="icon-search"
+                />
+              }
+            </div>
+          </div>
+          <CourseCard resultQuery={resultQuery} />
         </div>
       </section>
     </>
