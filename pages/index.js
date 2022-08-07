@@ -30,12 +30,12 @@ const HomePage = () => {
 
   return (
     <>
-      <section id="hero" className={`coverHero bg-[url('/images/LDK-Flag.jpg')] z-10`}>
+      <section id="hero" className={`coverHero bg-[url('/images/LDK-Flag.jpg')] z-10 border-4`}>
       </section>
       <div className="relative h-screen flex container z-20 md:pt-44 w-full">
         <div className="grid grid-cols-1 my-auto">
           <div id="heading" className="text-white w-full mt-5 md:w-4/5 lg:w-2/3 mx-auto">
-            <h2 className="text-sky-600 brightness-110 font-semibold text-xl text-center">
+            <h2 className="text-sky-600 brightness-125 font-semibold text-xl text-center">
               #CerdasKreatifBersahabat
             </h2>
             <h2 className="text-center w-full font-extrabold text-4xl sm:text-4xl xl:text-5xl">

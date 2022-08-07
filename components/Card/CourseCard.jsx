@@ -46,21 +46,21 @@ const CourseCard = ({resultQuery}) => {
                   <h1 className="text-cyan-500 text-xl m-0 font-bold">{item.title}</h1>
                   <span className="text-xs sm:text-sm font-edu">{item.desc}</span>
                   <div className="flex flex-col sm:flex-row justify-center sm:justify-between space-y-2 sm:space-y-0 mt-4 mb-2 ">
-                    <button className="bg-whatsapp flex justify-center items-center text-center text-white font-bold text-sm sm:text-base cursor-pointer px-3 py-2 sm:py-2 sm:px-4 rounded-md sm:max-w-sm">
+                    <button className="bg-whatsapp flex justify-center items-center text-center text-white font-bold text-xs sm:text-sm cursor-pointer px-3 py-2 sm:py-2 sm:px-4 rounded-md sm:max-w-sm">
                       <FontAwesomeIcon 
                         icon={faWhatsapp}
                         className="text-white text-2xl sm:text-3xl mr-2"
                         ></FontAwesomeIcon>
                         Gabung Grup WhatsApp
                     </button>
-                    <div className="text-center flex justify-center">
-                      <span className="font-edu w-fit text-sm sm:text-base flex items-center sm:items-end pl-2 sm:pl-0 cursor-pointer text-egg-green hover:font-bold">
+                    <div className="text-center flex justify-center items-center">
+                      <span className="font-edu h-fit text-xs sm:text-sm flex items-center sm:items-end pl-2 sm:pl-0 cursor-pointer text-egg-green hover:font-bold">
                         Lihat Detail
+                      </span>
                         <FontAwesomeIcon 
                           icon={faArrowRight}
                           className="text-egg-green ml-2"
                         ></FontAwesomeIcon>
-                      </span>
                     </div>
                   </div>
                 </div>
