@@ -70,7 +70,7 @@ const Header = () => {
               </Link>
               <div className="w-full justify-between">
                 <div className="flex flex-col my-auto uppercase">
-                  <h4 className="font-roboto text-xl sm:text-2xl md:text-3xl 2xl:text-4xl w-5/6 sm:w-full font-bold">
+                  <h4 className="font-roboto text-lg sm:text-2xl md:text-3xl 2xl:text-4xl w-5/6 sm:w-full font-bold">
                     {UKM}
                   </h4>
                   <span className="text-xs sm:text-sm md:text-base font-edu font-bold tracking-wide">

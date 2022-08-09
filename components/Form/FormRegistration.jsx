@@ -1,3 +1,5 @@
+import { fakultas } from '../../data/data'
+
 export const FormRegistration = ({
   formRef,
   personalMember,
@@ -7,7 +9,7 @@ export const FormRegistration = ({
   return (
     <form
       name="submit-to-google-sheet"
-      className="sm:w-2/3 md:w-3/6 lg:w-2/5 xl:w-2/6 space-y-1"
+      className="sm:w-2/3 md:w-3/6 lg:w-2/5 xl:w-2/6 space-y-1 mb-4"
       method="post"
       ref={formRef}
       onSubmit={handleSubmit}
@@ -40,7 +42,7 @@ export const FormRegistration = ({
         />
       </div>
       <div className="flex justify-between">
-        <div className="w-2/5">
+        <div className="w-1/5">
           <label htmlFor="usia">Usia</label>
           <input
             type="text"
@@ -52,7 +54,19 @@ export const FormRegistration = ({
             onChange={handleChange}
           />
         </div>
-        <div className="w-3/6">
+        <div className="w-2/6">
+          <label htmlFor="usia">Angkatan</label>
+          <input
+            type="text"
+            className="form-control"
+            value={personalMember.study}
+            id="usia"
+            name="usia"
+            placeholder="cth : 2019"
+            onChange={handleChange}
+          />
+        </div>
+        <div className="w-2/5">
           <label htmlFor="whatsapp">Whatsapp</label>
           <input
             type="text"
@@ -68,104 +82,24 @@ export const FormRegistration = ({
       <div>
         <label htmlFor="fakultas">Fakultas</label>
         <div className="flex flex-wrap w-full md:w-5/6">
-          <div className="mr-5">
-            <input
-              type="radio"
-              id="fakultas"
-              name="fakultas"
-              value="FAI"
-              onChange={handleChange}
-              checked
-            />
-            <label className="ml-1" htmlFor="FAI">
-              FAI
-            </label>
-          </div>
-          <div className="mr-5">
-            <input
-              type="radio"
-              id="fakultas"
-              name="fakultas"
-              value="FISIP"
-              onChange={handleChange}
-            />
-            <label className="ml-1" htmlFor="FISIP">
-              FISIP
-            </label>
-          </div>
-          <div className="mr-5">
-            <input
-              type="radio"
-              id="fakultas"
-              name="fakultas"
-              value="FAPERTA"
-              onChange={handleChange}
-            />
-            <label className="ml-1" htmlFor="FAPERTA">
-              FAPERTA
-            </label>
-          </div>
-          <div className="mr-5">
-            <input
-              type="radio"
-              id="fakultas"
-              name="fakultas"
-              value="FKIP"
-              onChange={handleChange}
-            />
-            <label className="ml-1" htmlFor="FKIP">
-              FKIP
-            </label>
-          </div>
-          <div className="mr-5">
-            <input
-              type="radio"
-              id="fakultas"
-              name="fakultas"
-              value="FATEK"
-              onChange={handleChange}
-            />
-            <label className="ml-1" htmlFor="FATEK">
-              FATEK
-            </label>
-          </div>
-          <div className="mr-5">
-            <input
-              type="radio"
-              id="fakultas"
-              name="fakultas"
-              value="FE"
-              onChange={handleChange}
-            />
-            <label className="ml-1" htmlFor="FE">
-              FE
-            </label>
-          </div>
-          <div className="mr-5">
-            <input
-              type="radio"
-              id="fakultas"
-              name="fakultas"
-              value="FKSB"
-              onChange={handleChange}
-            />
-            <label className="ml-1" htmlFor="FKSB">
-              FKSB
-            </label>
-          </div>
+          {fakultas.map((list, index)=>{
+            return (
+              <div key={index} className="mr-5">
+                <input
+                  type="radio"
+                  id={list.id}
+                  name="fakultas"
+                  value={list.name}
+                  onChange={handleChange}
+                  checked
+                />
+                <label className="ml-1" htmlFor={list.name}>
+                  {list.name}
+                </label>
+              </div>
+            )
+          })}
         </div>
-      </div>
-      <div>
-        <label htmlFor="angkatan">Angkatan</label>
-        <input
-          type="text"
-          className="form-control"
-          value={personalMember.study}
-          id="angkatan"
-          name="angkatan"
-          placeholder="cth: 2019"
-          onChange={handleChange}
-        />
       </div>
       <div>
         <label htmlFor="jurusan">Jurusan</label>
@@ -179,9 +113,21 @@ export const FormRegistration = ({
           onChange={handleChange}
         />
       </div>
+      <div>
+        <label htmlFor="reason">Alasan Masuk LDK ?</label>
+        <textarea
+          type="text"
+          className="form-control"
+          value={personalMember.reason}
+          id="reason"
+          name="reason"
+          placeholder="Alasan Masuk LDK ?"
+          onChange={handleChange}
+        />
+      </div>
       <button
         type="submit"
-        className="bg-[#1eb2a6] py-2 my-4 rounded-md text-white px-5 uppercase hover:font-bold"
+        className="bg-egg-green py-2 my-4 rounded-md text-white px-5 uppercase hover:font-bold"
       >
         Submit
       </button>

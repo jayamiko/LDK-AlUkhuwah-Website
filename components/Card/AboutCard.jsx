@@ -3,23 +3,23 @@ import Image from 'next/image';
 
 const AboutCard = () => {
   return (
-    <section id="about" className="flex mb-24 mt-10 flex-col lg:pt-20 sm:flex-row sm:space-x-10 mx-auto container px-4 sm:px-0">
-      <div className="w-full sm:w-2/4 md:py-5">
-        <div>
+    <section id="about" className="container mx-auto flex flex-col lg:flex-row justify-between my-5">
+      <div className="w-full lg:w-4/6 flex">
+        <div className="container mx-auto flex justify-center">
           <Image 
             src="/images/LDK4.jpg" 
             width={500}
             height={350}
             alt=""
             className="rounded-lg"
-            />
+          />
         </div>
       </div>
 
-      <div className="w-full sm:w-2/3 py-4">
+      <div className="w-1/2 container">
+        <h1 className="text-cyan-500 text-xl md:text-2xl font-bold">Apa Itu UKM LDK ?</h1>
         <div>
-          <h1 className="text-cyan-500 text-2xl my-2 md:my-5">Apa Itu UKM LDK ?</h1>
-          <p className="text-sm md:text-lg text-black">
+          <p className="text-justify text-xs sm:text-sm lg:text-base text-black">
             Lembaga Dakwah Kampus (LDK) Al-Ukhuwah merupakan salah satu Unit
             Kegiatan Mahasiswa (UKM) yang ada di kampus Universitas Islam ‘45
             Bekasi. LDK Al-Ukhuwah adalah UKM yang bergerak di bidang pendidikan
@@ -27,6 +27,7 @@ const AboutCard = () => {
             & jasmani, penembangan prestasi, dan pengasahan kreativitas.
           </p>
         </div>
+        <button className="border py-2 px-4 rounded-md bg-cyan-500 shadow-md text-white font-semibold">{"Selengkapnya >>"}</button>
       </div>
     </section>
   );
