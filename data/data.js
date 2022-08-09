@@ -1,3 +1,5 @@
+import {alUkhuwah, UKM, kampus} from '../pages/_app'
+
 export const homeAbout = [
   {
     id: 1,
@@ -36,6 +38,36 @@ export const homeAbout = [
     desc: "Departemen Perekonomian merupakan sponsorship LDK dimana mereka mencari dana demi kelancaran berbagai kegiatan LDK, mengeluarkan berbagai ide dan pengetahuannya untuk bisa membiayai LDK",
   },
 ];
+export const fakultas = [
+  {
+    id: "fai",
+    name: "FAI"
+  },
+  {
+    id: "fisip",
+    name: "FISIP"
+  },
+  {
+    id: "faperta",
+    name: "FAPERTA"
+  },
+  {
+    id: "fkip",
+    name: "FKIP"
+  },
+  {
+    id: "fatek",
+    name: "FATEK"
+  },
+  {
+    id: "fe",
+    name: "FE"
+  },
+  {
+    id: "fksb",
+    name: "FKSB"
+  },
+]
 export const materialsAbout = [
   {
     id: "material-1",
@@ -54,6 +86,96 @@ export const materialsAbout = [
     p2: "LDK Al-Ukhuwah hadir untuk mengantisipasi globalisasi yang menyerang para pemuda khususnya mahasiswa dan mahasiswi Universitas Islam ‘45 Bekasi. Dengan semangat 45 berlandaskan nilai-nilai islam, LDK Al-Ukhuwah berusaha menghadapi tantangan global dengan ikut serta membina para pemuda baik dari segi intelektual, moral, maupun mental untuk dapat bersaing positif di dalam perkembangan zaman.",
     p3: "LDK Al-Ukhuwah melakukan pembinaan pada tiga aspek penting manusia, yaitu Fikriyah (Akal), Jasadiyah (Jasmani) dan Ruhiyah (Rohani) agar dapat menciptakan generasi “Anasir At-Tghyir” atau “Agent of Change” untuk perubahan yang lebih baik.",
     p4: "",
+  },
+];
+export const OrganizationValue = [
+  {
+    id: "islami",
+    title: "Islami",
+    paragraph: `${alUkhuwah} senantiasa menjunjung tinggi nilai-nilai
+      Islami sebagai dasar ideologinya Nilai-nilai keislaman harus
+      direpresentasikan dalam perilaku setiap anggotanya, karena
+      mereka memiliki kesadaran, dorongan, dan tanggung jawab
+      untuk berperilaku sesuai ajaran agama Islam. ${alUkhuwah}
+      berupaya untuk menunjukkan keindahan cahaya islam melalui
+      perilaku para anggotanya.`,
+  },
+  {
+    id: "nasionalisme",
+    title: "Nasionalisme",
+    paragraph: `Cinta pada tanah air merupakan rasa yang terus ditanamkan
+      dalam diri anggota ${alUkhuwah}. Kesadaran untuk membela
+      negara dan mengharumkan nama bangsa selalu melekat dalam
+      jiwa kader ${alUkhuwah}.`,
+  },
+  {
+    id: "persaudaraan",
+    title: "Persaudaraan",
+    paragraph: `Nilai-nilai persaudaraan menjadi landasan aktivitas sosial
+      organisasi. Nilai itu menjadi pedoman bagi para anggota
+      dalam berinteraksi. Masing-masing anggota tidak menganggap
+      yang lainnya sekedar sebagai anggota formal, namun lebih
+      dari itu, seperti saudara sendiri. Dengan rasa persaudaraan,
+      aktivitas dan suasana organisasi menjadi bersifat
+      kekeluargaan, saling menghormati dan menghargai.`,
+  },
+  {
+    id: "militansi",
+    title: "Militansi",
+    paragraph: `Dalam bekerja menjalankan tugas dan program organisasi,
+      militansi terus ditanamkan dalam diri anggotanya. Para
+      anggota bekerja dengan penuh tanggung jawab, ikhlas, terbuka
+      dan bergotong-royong.`,
+  },
+  {
+    id: "akademis",
+    title: "Akademis",
+    paragraph: `Nilai lainya yang ditanamkan kepada anggota ${alUkhuwah}
+      adalah nilai-nilai akademisi sebagai serorang mahasiswa
+      seperti keuletan, rajin, dan aktif berdiskusi.`,
+  },
+];
+export const visiMisi = [
+  {
+    visi: "Lembaga Dakwah Kampus memiliki visi 'Mewujudkan Komunitas Kampus Islami'",
+    misi: [
+      "Berpegang Teguh pada Al-Qur'an dan As Sunnah dalam mencetak kader-kadernya sebagai Anashir At Taghylr (Agen Perubahan) yang kreatif dan inovatif",
+      "Membangun kesadaran seluruh anggota dan sivitas akademika akan pentingnya penerapan nilai-nilai Islam dalam kehidupan kampus demi menopang peningkatan kualitas akademik.",
+      "Menjalin Ukhuwah Islamiah dan kerjasama dalam seluruh lini kehidupan intra dan ekstra kampus serta berperan aktif dan kreatif di dalamnya.",
+      "Melakukan amar ma’ruf nahi munkar serta membangun opini publik yang islami secara kontinu dan konsisten.",
+      "Menjadi mediator dan advokator (amal khidami) bagi pemenuhan kebutuhan akademik mahasiswa.",
+      "Membangun jaringan komunikasi efektif dengan LDK lainnya, khususnya wilayah bekasi dan nasional pada umumnya."
+    ],
+  },
+];
+export const topProgram = [
+  {
+    id: "dauroh",
+    title: "DAUROH",
+  },
+  {
+    id: "organization-management-training",
+    title: "Training Manajemen Organisasi",
+  },
+  {
+    id: "urkais",
+    title: "URKAIS (Urgensi Kajian Islam)",
+  },
+  {
+    id: "diantar",
+    title: "DIANTAR (Dialog Antar Kita)",
+  },
+  {
+    id: "mabit",
+    title: "Mabit (Malam Bina Iman dan Taqwa",
+  },
+  {
+    id: "ramadhan-smile-in-campus",
+    title: "Ramadhan Smile in Campus",
+  },
+  {
+    id: "bursa-obrolan-muslimah",
+    title: "BOM (Bursa Obrolan Muslimah)",
   },
 ];
 export const awrapper = [
