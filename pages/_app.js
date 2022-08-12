@@ -10,10 +10,11 @@ export const kampus = "Universitas Islam '45 Bekasi"
 export const emailLDK = "ldkunismabekasi@gmail.com"
 
 function MyApp({ Component, pageProps }) {
+
   return (
     <>
       <Header />
-        <Component {...pageProps} />
+        <Component {...pageProps}/>
       <Footer />
     </>
   ) 
