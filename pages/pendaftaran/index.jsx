@@ -1,9 +1,8 @@
 import React, { useState, useRef, useEffect } from "react";
-import styles from "./Registration.module.css";
+import styles from "./pendaftaran.module.css";
 import Papa from "papaparse";
 import { DataGrid } from "@mui/x-data-grid";
 import FormRegistration from "../../components/Form/FormRegistration";
-// import Hero from "../home/hero/Hero";
 
 const scriptURL =
   "https://script.google.com/macros/s/AKfycbxBND5Bi5PYyIYkqwU-bnjaOhIe2EfG79qs1aVsryR8_MGOy-8h1_IyFYyJ1spb0EXD/exec";
@@ -109,8 +108,7 @@ const RegistrationPage = () => {
           />
         </div>
       </section>
-      <div className="h-screen border-2 border-black"></div>
-      <div
+    <div
         className="container mx-auto my-32 md:mt-0"
         style={{ height: 630, width: "100%" }}
       >
