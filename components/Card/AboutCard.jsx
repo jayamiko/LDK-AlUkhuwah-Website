@@ -1,4 +1,5 @@
 import React from "react";
+import Link from 'next/link'
 import Image from 'next/image';
 
 const AboutCard = () => {
@@ -27,7 +28,13 @@ const AboutCard = () => {
             & jasmani, penembangan prestasi, dan pengasahan kreativitas.
           </p>
         </div>
-        <button className="border py-2 px-4 rounded-md bg-cyan-500 shadow-md text-white font-semibold">{"Selengkapnya >>"}</button>
+        <Link href="/about">
+          <a>
+            <button className="border py-2 px-4 rounded-md bg-cyan-500 shadow-md text-white font-semibold">
+              {"Selengkapnya >>"}
+            </button>
+          </a>
+        </Link>
       </div>
     </section>
   );

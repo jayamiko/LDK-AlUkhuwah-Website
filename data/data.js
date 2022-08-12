@@ -38,6 +38,28 @@ export const homeAbout = [
     desc: "Departemen Perekonomian merupakan sponsorship LDK dimana mereka mencari dana demi kelancaran berbagai kegiatan LDK, mengeluarkan berbagai ide dan pengetahuannya untuk bisa membiayai LDK",
   },
 ];
+export const menu = [
+  {
+    path: "/",
+    name: "Beranda"
+  },
+  {
+    path: "/tentang",
+    name: "Tentang"
+  },
+  {
+    path: "/pendaftaran",
+    name: "Pendaftaran"
+  },
+  {
+    path: "/dokumentasi",
+    name: "Dokumentasi"
+  },
+  {
+    path: "/mentoring",
+    name: "Mentoring"
+  },
+];
 export const fakultas = [
   {
     id: "fai",
@@ -92,11 +114,10 @@ export const OrganizationValue = [
   {
     id: "islami",
     title: "Islami",
-    paragraph: `${alUkhuwah} senantiasa menjunjung tinggi nilai-nilai
-      Islami sebagai dasar ideologinya Nilai-nilai keislaman harus
+    paragraph: `LDK Al-Ukhuwah senantiasa menjunjung tinggi nilai-nilai Islami sebagai dasar ideologinya Nilai-nilai keislaman harus
       direpresentasikan dalam perilaku setiap anggotanya, karena
       mereka memiliki kesadaran, dorongan, dan tanggung jawab
-      untuk berperilaku sesuai ajaran agama Islam. ${alUkhuwah}
+      untuk berperilaku sesuai ajaran agama Islam. LDK Al-Ukhuwah
       berupaya untuk menunjukkan keindahan cahaya islam melalui
       perilaku para anggotanya.`,
   },
@@ -104,9 +125,9 @@ export const OrganizationValue = [
     id: "nasionalisme",
     title: "Nasionalisme",
     paragraph: `Cinta pada tanah air merupakan rasa yang terus ditanamkan
-      dalam diri anggota ${alUkhuwah}. Kesadaran untuk membela
+      dalam diri anggota LDK Al-Ukhuwah. Kesadaran untuk membela
       negara dan mengharumkan nama bangsa selalu melekat dalam
-      jiwa kader ${alUkhuwah}.`,
+      jiwa kader LDK Al-Ukhuwah.`,
   },
   {
     id: "persaudaraan",
@@ -130,7 +151,7 @@ export const OrganizationValue = [
   {
     id: "akademis",
     title: "Akademis",
-    paragraph: `Nilai lainya yang ditanamkan kepada anggota ${alUkhuwah}
+    paragraph: `Nilai lainya yang ditanamkan kepada anggota LDK Al-Ukhuwah
       adalah nilai-nilai akademisi sebagai serorang mahasiswa
       seperti keuletan, rajin, dan aktif berdiskusi.`,
   },

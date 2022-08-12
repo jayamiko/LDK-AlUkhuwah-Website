@@ -5,6 +5,7 @@ import { UKM, kampus} from '../../../pages/_app'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {faTimes, faBars} from "@fortawesome/free-solid-svg-icons";
 import styles from "./Header.module.css";
+import { menu } from "../../../data/data"
 import Image from "next/image";
 
 const Header = () => {
@@ -23,31 +24,18 @@ const Header = () => {
             }
             onClick={() => setClick(false)}
           >
-            <li>
-              <Link href={`/`}>
-                <a className={`${styles.linkMenu} font-bold hover:font-extrabold hover:scale-105`}>Home</a>
-              </Link>
-            </li>
-            <li>
-              <Link href={`/about`}>
-                <a className={`${styles.linkMenu} font-bold hover:font-extrabold hover:scale-105`}>Tentang</a>
-              </Link>
-            </li>
-            <li>
-              <Link href={`/registration`}>
-                <a className={`${styles.linkMenu} font-bold hover:font-extrabold hover:scale-105`}>Registration</a>
-              </Link>
-            </li>
-            <li>
-              <Link href={`/departemen`}>
-                <a className={`${styles.linkMenu} font-bold hover:font-extrabold hover:scale-105`}>Departemen</a>
-              </Link>
-            </li>
-            <li>
-              <Link href={`/mentoring`}>
-                <a className={`${styles.linkMenu} font-bold hover:font-extrabold hover:scale-105`}>Mentoring</a>
-              </Link>
-            </li>
+            {menu.map((menus, index)=>{
+              return (
+                <li key={index}>
+                  <Link href={menus.path}>
+                    <a 
+                      className={`${styles.linkMenu} font-bold hover:font-extrabold hover:scale-105`}>
+                        {menus.name}
+                    </a>
+                  </Link>
+                </li>
+              )
+            })}
           </ul>
           <div
             className={
@@ -108,31 +96,15 @@ const Header = () => {
               className={click ? `${styles.mobileNav} space-y-2` : "flex md:hidden"}
               onClick={() => setClick(false)}
             >
-            <li>
-              <Link href={`/`}>
-                <a className={styles.linkMenu}>Home</a>
-              </Link>
-            </li>
-            <li>
-              <Link href={`/about`}>
-                <a className={styles.linkMenu}>Tentang</a>
-              </Link>
-            </li>
-            <li>
-              <Link href={`/registration`}>
-                <a className={styles.linkMenu}>Registration</a>
-              </Link>
-            </li>
-            <li>
-              <Link href={`/departemen`}>
-                <a className={styles.linkMenu}>Departemen</a>
-              </Link>
-            </li>
-            <li>
-              <Link href={`/mentoring`}>
-                <a className={styles.linkMenu}>Mentoring</a>
-              </Link>
-            </li>
+              {menu.map((menus, index) => {
+                return (
+                  <li key={index}>
+                    <Link href={menus.path}>
+                      <a className={styles.linkMenu}>{menus.name}</a>
+                    </Link>
+                  </li>
+                )
+              })}
             </ul>
           </div>
           <button
