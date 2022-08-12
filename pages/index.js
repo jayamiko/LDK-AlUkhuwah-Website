@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react";
+import Link from "next/link"
 import Image from 'next/image';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLongArrowRight } from "@fortawesome/free-solid-svg-icons"
@@ -47,13 +48,17 @@ const HomePage = () => {
               musyrik (QS. Al-Hijr [15]:94)
             </p>
             <div className="w-full md:w-3/4 mx-auto flex justify-center flex-wrap items-center text-center">
-              <button className="bg-cyan-500 my-2 text-xs md:text-base py-3 cursor-pointer px-8 hover:scale-105 rounded-md max-w-sm">
-                Yuk Bergabung Dengan LDK
-                <FontAwesomeIcon 
-                  icon={faLongArrowRight}
-                  className="text-white ml-2"
-                  ></FontAwesomeIcon>
-              </button>
+              <Link href="/pendaftaran">
+                <a className="no-underline text-white">
+                  <button className="bg-cyan-500 my-2 text-xs md:text-base py-3 cursor-pointer px-8 hover:scale-105 rounded-md max-w-sm">
+                    Yuk Bergabung Dengan LDK
+                    <FontAwesomeIcon 
+                      icon={faLongArrowRight}
+                      className="text-white ml-2"
+                      ></FontAwesomeIcon>
+                  </button>
+                </a>
+              </Link>
             </div>
           </div>
         </div>
