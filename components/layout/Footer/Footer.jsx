@@ -7,9 +7,9 @@ import {faMap, faPaperPlane, faPhone} from "@fortawesome/free-solid-svg-icons";
 const Footer = () => {
   return (
     <>
-      <footer className="bg-cyan-500 relative z-50 border-4">
+      <footer className="bg-cyan-500 relative z-50">
         <div className="container mx-auto px-4 py-2 flex flex-col sm:flex-row space-x-0 space-y-2 sm:space-x-3 sm:space-y-0">
-          <div className="text-center sm:text-left w-full sm:w-1/3 flex flex-col">
+          <div className="w-full sm:w-1/3 flex flex-col">
             <div className="flex flex-col items-center sm:items-start w-full">
               <h2 className="font-bold m-0 text-base md:text-lg xl:text-xl text-yellow-400">
                 {alUkhuwah}
@@ -25,7 +25,7 @@ const Footer = () => {
 
           <div className="w-full sm:w-1/3 text-white">
             <div className="flex justify-center sm:justify-start w-full">
-              <h2 className="text-center sm:text-left font-bold m-0 text-base md:text-lg xl:text-xl text-yellow-400">
+              <h2 className="font-bold m-0 text-base md:text-lg xl:text-xl text-yellow-400">
                 Departemen di {alUkhuwah}
               </h2>
             </div>
