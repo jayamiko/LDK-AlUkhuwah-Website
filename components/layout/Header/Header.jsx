@@ -15,7 +15,7 @@ const Header = () => {
     <div className="flex flex-col-reverse md:flex-col absolute md:px-4 lg:mx-0 w-full z-50">
       <Head />
       <header
-        className={`${styles.bgHeader} w-full md:inline md:container mx-auto items-center m-0 overflow-hidden md:rounded-3xl`}
+        className={`${styles.bgHeader} w-full md:container mx-auto md:inline items-center m-0 overflow-hidden md:rounded-3xl`}
       >
         <nav className={click ? "flex" : "flex justify-between items-center"}>
           <ul
