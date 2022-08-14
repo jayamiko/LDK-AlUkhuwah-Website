@@ -6,7 +6,7 @@ import { materialsAbout, visiMisi, OrganizationValue, topProgram } from "../../d
 const About = () => {
   return (
     <>
-      <section id="hero" className={`coverHero bg-[url('/images/LDK-Flag.jpg')] z-10 border-4`}>
+      <section id="hero" className={`coverHero bg-[url('/images/LDK-Flag.jpg')] z-10`}>
       </section>
       <Title title="Tentang LDK" />
       <main className="relative z-40 container mx-auto my-5 text-sky-800 px-4 sm:px-0">

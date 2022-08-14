@@ -1,5 +1,3 @@
-import {alUkhuwah, UKM, kampus} from '../pages/_app'
-
 export const homeAbout = [
   {
     id: 1,
@@ -56,8 +54,8 @@ export const menu = [
     name: "Dokumentasi"
   },
   {
-    path: "/mentoring",
-    name: "Mentoring"
+    path: "/program",
+    name: "Program"
   },
 ];
 export const fakultas = [

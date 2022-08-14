@@ -67,7 +67,7 @@ const RegistrationPage = () => {
   }, [personalMember, url, formRef]);
 
   const columns = [
-    { field: "id", headerName: "No", width: 80 },
+    { field: "id", headerName: "No", width: 60 },
     { field: "fullName", headerName: "Full Name", width: 350 },
     { field: "usia", headerName: "Usia", width: 80 },
     {
@@ -78,7 +78,7 @@ const RegistrationPage = () => {
     {
       field: "angkatan",
       headerName: "Angkatan",
-      width: 200,
+      width: 120,
     },
     {
       field: "timestamp",
@@ -98,8 +98,8 @@ const RegistrationPage = () => {
 
   return (
     <>
-      <section className={`${styles.coverRegistration} z-10`}>
-        <div className="container mx-auto flex flex-col md:justify-end h-full mt-32 md:mt-0 text-white px-6 py-8 md:p-0">
+      <section className={`${styles.coverRegistration}`}>
+        <div className="container mx-auto flex flex-col items-end justify-end h-full text-white pt-8">
           <FormRegistration
             formRef={formRef}
             personalMember={personalMember}
@@ -108,8 +108,8 @@ const RegistrationPage = () => {
           />
         </div>
       </section>
-    <div
-        className="container mx-auto my-32 md:mt-0"
+      <div
+        className="container mx-auto my-16"
         style={{ height: 630, width: "100%" }}
       >
         <DataGrid

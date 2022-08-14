@@ -1,6 +1,7 @@
 import React from "react";
-import Link from 'next/link'
 import Image from 'next/image';
+import Button from "../utils/Button";
+import { faArrowRight } from "@fortawesome/free-solid-svg-icons"
 
 const AboutCard = () => {
   return (
@@ -28,13 +29,13 @@ const AboutCard = () => {
             & jasmani, penembangan prestasi, dan pengasahan kreativitas.
           </p>
         </div>
-        <Link href="/about">
-          <a>
-            <button className="border py-2 px-4 rounded-md bg-cyan-500 shadow-md text-white font-semibold">
-              {"Selengkapnya >>"}
-            </button>
-          </a>
-        </Link>
+        <div className="w-full lg:w-2/6">
+          <Button 
+            path="/tentang"
+            text="Selengkapnya"
+            icon={faArrowRight}
+          />
+        </div>
       </div>
     </section>
   );

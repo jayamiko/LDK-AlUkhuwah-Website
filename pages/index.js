@@ -1,12 +1,11 @@
 import React, { useState, useEffect } from "react";
-import Link from "next/link"
 import Image from 'next/image';
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faLongArrowRight } from "@fortawesome/free-solid-svg-icons"
+import { faArrowRight } from "@fortawesome/free-solid-svg-icons"
 import { alUkhuwah } from "./_app"
 import { blog } from "../data/data";
 import AboutCard from "../components/Card/AboutCard";
-import CourseCard from "../components/Card/CourseCard"
+import CourseCard from "../components/Card/CourseCard";
+import Button from "../components/utils/Button"
 
 const HomePage = () => {
 
@@ -31,7 +30,7 @@ const HomePage = () => {
 
   return (
     <>
-      <section id="hero" className={`coverHero bg-[url('/images/LDK-Flag.jpg')] z-10 border-4`}>
+      <section id="hero" className="coverHero bg-[url('/images/LDK-Flag.jpg')] z-10">
       </section>
       <div className="relative h-screen flex container z-20 md:pt-44 w-full">
         <div className="grid grid-cols-1 my-auto">
@@ -47,18 +46,10 @@ const HomePage = () => {
               yang diperintahkan (kepadamu) dan berpalinglah dari orang yang
               musyrik (QS. Al-Hijr [15]:94)
             </p>
-            <div className="w-full md:w-3/4 mx-auto flex justify-center flex-wrap items-center text-center">
-              <Link href="/pendaftaran">
-                <a className="no-underline text-white">
-                  <button className="bg-cyan-500 my-2 text-xs md:text-base py-3 cursor-pointer px-8 hover:scale-105 rounded-md max-w-sm">
-                    Yuk Bergabung Dengan LDK
-                    <FontAwesomeIcon 
-                      icon={faLongArrowRight}
-                      className="text-white ml-2"
-                      ></FontAwesomeIcon>
-                  </button>
-                </a>
-              </Link>
+            <div className="w-full flex justify-center">
+              <div className="w-1/3">
+                <Button path="/pendaftaran" text="Yuk Gabung LDK !" icon={faArrowRight} />
+              </div>
             </div>
           </div>
         </div>
@@ -66,13 +57,13 @@ const HomePage = () => {
       <AboutCard />
       <section id="course" className="blog container mx-auto mb-20">
         <div className="container mx-auto">
-          <h3 className="font-bold uppercase text-base sm:mx-3 my-2 md:text-2xl text-egg-green">
+          <h3 className="font-bold uppercase text-base sm:mx-3 my-2 md:text-2xl text-cyan-500">
             Mentoring {alUkhuwah}
           </h3>
           <div className='flex items-center mx-2 mb-4'>
             <input
               type="text"
-              className="w-80 text-slate-400 pl-2 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-egg-green"
+              className="w-80 text-slate-400 pl-2 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-cyan-500"
               placeholder="Search..."
               onChange={event => setQuery(event.target.value)}
             />
