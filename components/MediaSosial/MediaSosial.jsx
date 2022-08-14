@@ -4,7 +4,7 @@ import { faFacebookF, faYoutube, faInstagram, faTwitter } from "@fortawesome/fre
 
 function MediaSosial() {
   return (
-    <div className="flex my-auto w-60 space-x-2">
+    <div className="flex my-auto w-fit space-x-2">
     <a href="https://web.facebook.com/ldkunisma.bekasi?_rdc=1&_rdr/"
         className="flex items-center justify-center hover:brightness-110 rounded-full w-8 h-8 md:w-9 md:h-9 lg:w-10 lg:h-10 xl:w-11 xl:h-11 bg-blue-500 hover:scale-110"
     >

@@ -7,25 +7,30 @@ import {faMap, faPaperPlane, faPhone} from "@fortawesome/free-solid-svg-icons";
 const Footer = () => {
   return (
     <>
-      <footer className="bg-cyan-500 relative z-50">
-        <div className="container mx-auto px-4 py-2 flex flex-col sm:flex-row space-x-3 space-y-2 sm:space-y-0">
-          <div className="w-full sm:w-1/3 flex flex-col">
-            <h2 className="font-bold m-0 text-base md:text-lg xl:text-xl text-yellow-400">
-              {alUkhuwah}
-            </h2>
-            <h2 className="italic font-medium text-white text-xs sm:text-sm xl:text-base">
-              {kampus}
-            </h2>
-
-            <MediaSosial />
+      <footer className="bg-cyan-500 relative z-50 border-4">
+        <div className="container mx-auto px-4 py-2 flex flex-col sm:flex-row space-x-0 space-y-2 sm:space-x-3 sm:space-y-0">
+          <div className="text-center sm:text-left w-full sm:w-1/3 flex flex-col">
+            <div className="flex flex-col items-center sm:items-start w-full">
+              <h2 className="font-bold m-0 text-base md:text-lg xl:text-xl text-yellow-400">
+                {alUkhuwah}
+              </h2>
+              <h2 className="italic font-medium text-white text-xs sm:text-sm xl:text-base">
+                {kampus}
+              </h2>
+            </div>
+            <div className="flex justify-center sm:justify-start">
+              <MediaSosial />
+            </div>
           </div>
 
           <div className="w-full sm:w-1/3 text-white">
-            <h2 className="font-bold m-0 text-base md:text-lg xl:text-xl text-yellow-400">
-              Departemen di {alUkhuwah}
-            </h2>
-            <ul className="flex m-0 py-2 flex-col md:flex-row text-sm md:space-x-6 hover:text-slate-200 hover:font-semibold p-0">
-              <div>
+            <div className="flex justify-center sm:justify-start w-full">
+              <h2 className="text-center sm:text-left font-bold m-0 text-base md:text-lg xl:text-xl text-yellow-400">
+                Departemen di {alUkhuwah}
+              </h2>
+            </div>
+            <ul className="m-0 py-2 flex flex-row justify-center text-sm md:space-x-6 hover:text-slate-200 hover:font-semibold p-0 gap-2">
+              <div className="w-2/6 sm:w-full">
                 <li className="m-0 cursor-pointer ">
                   <i>Kesekretariatan</i>
                 </li>
@@ -36,7 +41,7 @@ const Footer = () => {
                   <i>Kaderisasi</i>
                 </li>
               </div>
-              <div>
+              <div className="w-2/6 sm:w-full">
                 <li className="m-0 cursor-pointer">
                   <i>Humas Media</i>
                 </li>
@@ -50,11 +55,13 @@ const Footer = () => {
             </ul>
           </div>
 
-          <div className="w-full sm:w-1/3 text-white">
-            <h2 className="font-bold m-0 text-base md:text-lg xl:text-xl text-yellow-400">
-              Punya Pertanyaan ?
-            </h2>
-            <ul className="list-outside p-0 text-sm space-y-2 py-1">
+          <div className="flex flex-col items-center w-full sm:w-1/3 text-white">
+            <div className="flex justify-center sm:justify-start w-full">
+              <h2 className="font-bold m-0 text-base md:text-lg xl:text-xl text-yellow-400">
+                Punya Pertanyaan ?
+              </h2>
+            </div>
+            <ul className="w-2/3 sm:w-full list-outside p-0 text-sm space-y-2 py-1">
               <li>
                 <FontAwesomeIcon 
                   icon={faMap}
@@ -81,9 +88,9 @@ const Footer = () => {
         </div>
         <div className="text-center text-white bg-gray-700 py-2">
           <span className="text-sm sm:text-base">
-            Copyright @ 2022 {alUkhuwah} {kampus} 
+            Copyright @ 2022 {`${alUkhuwah + kampus} `}
           </span>
-          <span>
+          <span className="block sm:inline text-sm sm:text-base">
             All Right Reserved
           </span>
         </div>
