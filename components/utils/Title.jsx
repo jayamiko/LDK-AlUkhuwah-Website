@@ -4,7 +4,7 @@ import { tags } from "../../data/data";
 
 function TitlePage(props) {
   return (
-    <div className="relative z-40 h-screen container mx-auto px-4 sm:px-0 text-slate-100 flex flex-col items-end justify-end py-10">
+    <div className="border-4 z-40 h-fit container mx-auto px-4 sm:px-0 text-slate-100 flex flex-col items-end justify-end py-10">
       <div className="w-full lg:w-1/2">
         <div className="w-full lg:text-right">
           <h1 className="uppercase m-0 text-4xl font-titan tracking-wide">
