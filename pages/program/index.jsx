@@ -39,17 +39,29 @@ function ProgramPage() {
 
   useEffect(() => {
     searching()
-  }, [query])
-
-  // const module = !query ? [Autoplay, Pagination] : [Pagination]
+  }, [query, Autoplay])
 
   return (
-    <>
+    <div>
+      <div className='relative h-screen'>
+        <div className='absolute h-screen w-full z-40 flex flex-col justify-center items-center'>
+          <div className='w-full h-3/5 flex justify-center items-end space-x-2'>
+            <input
+              type="text"
+              className="w-2/5 h-12 text-slate-400 pl-2 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-cyan-500"
+              placeholder="Cari Program..."
+              onChange={event => setQuery(event.target.value)}
+            />
+            <Button path="" text="Search" onSubmit={searching} />
+          </div>
+          <div className='w-full h-2/5 flex flex-col justify-end items-center'>
+            <Title title="Program LDK" />
+          </div>
+        </div>
         <Swiper
-          spaceBetween={0}
           centeredSlides={true}
           loop={true}
-          autoplay={!query && {
+          autoplay={{
             delay: 2500,
             disableOnInteraction: true,
           }}
@@ -57,31 +69,19 @@ function ProgramPage() {
             clickable: false,
           }}
           navigation={false}
-          modules={!query ? [Autoplay, Pagination] : [Pagination]}
+          modules={[Autoplay, Pagination]}
           className="mySwiper"
-          >
-            {carouselArray.map((carousel, index)=> {
-              return (
-                <SwiperSlide key={index}>
-                  <section className={carousel}>
-                    <div className='border-4 border-green-800 h-full flex flex-col justify-end items-center'>
-                      <div className='space-x-2 h-1/4 w-full flex items-center justify-center'>
-                        <input
-                          type="text"
-                          className="w-2/5 h-12 text-slate-400 pl-2 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-cyan-500"
-                          placeholder="Search..."
-                          onChange={event => setQuery(event.target.value)}
-                        />
-                        <Button path="" text="Search" onSubmit={searching} />
-                      </div>
-                      <Title title="Program LDK" />
-                    </div>
-                  </section>
-                </SwiperSlide>
-              )
-            })}
+        >
+          {carouselArray.map((carousel, index)=> {
+            return (
+              <SwiperSlide key={index}>
+                <div className={carousel}></div>
+              </SwiperSlide>
+            )
+          })}
         </Swiper>
-    </>
+      </div>
+    </div>
   )
 }
 
