@@ -8,7 +8,7 @@ function Button({path, text, icon, onSubmit}) {
       {path ? (
         <Link href={path}>
           <a>
-            <button className="w-full h-10 rounded-md bg-cyan-500 shadow-md text-white font-semibold">
+            <button className="w-full h-10 rounded-md bg-cyan-500 shadow-md text-white font-semibold text-xs sm:text-sm xl:text-base">
               {text}
               <FontAwesomeIcon 
                 icon={icon}

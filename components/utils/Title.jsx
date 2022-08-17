@@ -4,13 +4,13 @@ import { tags } from "../../data/data";
 
 function TitlePage(props) {
   return (
-    <div className="z-40 h-fit container mx-auto px-4 sm:px-0 text-slate-100 flex flex-col items-end justify-end py-10">
+    <div className="container mx-auto px-4 sm:px-0 z-40 h-fit text-slate-100 flex flex-col items-end justify-end py-10">
       <div className="w-full lg:w-1/2">
-        <div className="w-full lg:text-right">
+        <div className="w-full flex flex-col items-center lg:items-end">
           <h1 className="uppercase m-0 text-4xl font-titan tracking-wide">
             {props.title}
           </h1>
-          <span className="shadow-lg text-sm sm:text-base lg:text-lg xl:text-xl w-full tracking-widest">
+          <span className="w-fit shadow-lg text-sm sm:text-base lg:text-lg xl:text-xl w-full tracking-widest">
             {alUkhuwah} {kampus}
           </span>
         </div>

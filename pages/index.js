@@ -48,19 +48,19 @@ const HomePage = () => {
             </p>
             <div className="w-full flex justify-center">
               <div className="w-1/3">
-                <Button path="/pendaftaran" text="Yuk Gabung LDK !" icon={faArrowRight} />
+                <Button path="/pendaftaran" text="Yuk Gabung LDK" icon={faArrowRight} />
               </div>
             </div>
           </div>
         </div>
       </div>
       <AboutCard />
-      <section id="course" className="blog container mx-auto mb-20">
+      <section id="course" className="container mx-auto mb-20">
         <div className="container mx-auto">
-          <h3 className="font-bold uppercase text-base sm:mx-3 my-2 md:text-2xl text-cyan-500">
+          <h3 className="font-bold uppercase text-base my-2 md:text-2xl text-cyan-500">
             Mentoring {alUkhuwah}
           </h3>
-          <div className='flex items-center mx-2 mb-4'>
+          <div className='flex items-center mb-4'>
             <input
               type="text"
               className="w-80 text-slate-400 pl-2 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-cyan-500"
