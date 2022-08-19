@@ -96,8 +96,10 @@ function ProgramPage() {
           })}
         </Swiper>
       </div>
-      <TabFilter resultQuery={resultQuery} resultData={resultData} setResultData={setResultData} />
-      <CourseCard resultQuery={resultData} />
+      <div className='container mx-auto my-5'>
+        <TabFilter resultQuery={resultQuery} resultData={resultData} setResultData={setResultData} />
+        <CourseCard resultQuery={resultData} />
+      </div>
     </>
   )
 }
