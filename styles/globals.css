@@ -51,6 +51,11 @@ a {
   min-height: 100vh !important;
 }
 
+.animation-wrapper {
+  width: fit-content;
+  height: fit-content;
+}
+
 .swiper-slide {
   text-align: center;
   font-size: 18px;

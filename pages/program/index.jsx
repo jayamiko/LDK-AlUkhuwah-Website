@@ -15,6 +15,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import CourseCard from '../../components/Card/CourseCard';
 import TabFilter from '../../components/utils/TabFilter';
+import SearchNotFound from '../../components/Animations/Search/Search';
 
 
 function ProgramPage() {
@@ -98,7 +99,13 @@ function ProgramPage() {
       </div>
       <div className='container mx-auto my-5'>
         <TabFilter resultQuery={resultQuery} resultData={resultData} setResultData={setResultData} />
-        <CourseCard resultQuery={resultData} />
+        {resultQuery.length ? (
+          <CourseCard resultQuery={resultData} />
+        ) : (
+          <div className='h-screen flex justify-center items-center'>
+            <SearchNotFound text="Pencarian tidak ditermukan.." />
+          </div>
+        )}
       </div>
     </>
   )
