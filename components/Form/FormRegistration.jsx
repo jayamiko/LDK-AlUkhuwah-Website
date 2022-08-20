@@ -15,7 +15,7 @@ export const FormRegistration = ({
       onSubmit={handleSubmit}
     >
       <div className='w-full'>
-        <h2 className="uppercase font-titan md:text-center text-xl sm:text-2xl mb-4 tracking-wide">
+        <h2 className="uppercase font-titan md:text-center text-xl sm:text-2xl mb-2 md:mb-4 tracking-wide">
           Bergabung Bersama Kami!
         </h2>
 
@@ -118,7 +118,7 @@ export const FormRegistration = ({
               <label htmlFor="reason">Alasan Masuk LDK ?</label>
               <textarea
                 type="text"
-                className="form-control h-24"
+                className="form-control md:h-24"
                 value={personalMember.reason}
                 id="reason"
                 name="reason"

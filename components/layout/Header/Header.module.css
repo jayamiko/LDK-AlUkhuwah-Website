@@ -13,8 +13,8 @@
 }
 
 .linkMenu:hover {
-  color: rgb(8 145 178);
-  text-shadow: 2px 2px #FFF;
+  color: #FFF;
+  font-weight: 700;
 }
 
 /*--------header------------*/

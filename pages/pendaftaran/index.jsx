@@ -108,7 +108,6 @@ const RegistrationPage = () => {
           />
         </div>
       </section>
-      <div className="h-screen"></div>
       <div
         className="container mx-auto my-16"
         style={{ height: 630, width: "100%" }}
