@@ -7,7 +7,7 @@ const About = () => {
   return (
     <>
       <section id="hero" className={`coverHero bg-[url('/images/LDK-Flag.jpg')] z-10`}>
-        <div className='absolute h-screen w-full flex items-end justify-end'>
+        <div className='absolute h-[90vh] w-full flex items-end justify-end'>
           <Title title="Tentang LDK" />
         </div>
       </section>

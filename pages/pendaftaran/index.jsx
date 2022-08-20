@@ -99,7 +99,7 @@ const RegistrationPage = () => {
   return (
     <>
       <section className={`${styles.coverRegistration}`}>
-        <div className="container mx-auto flex flex-col justify-center md:items-end md:justify-end h-full text-white">
+        <div className={`${styles.form} container mx-auto text-white flex flex-col justify-center md:items-end md:justify-end`}>
           <FormRegistration
             formRef={formRef}
             personalMember={personalMember}
