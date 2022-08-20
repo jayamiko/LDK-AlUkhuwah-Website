@@ -15,7 +15,7 @@ export const FormRegistration = ({
       onSubmit={handleSubmit}
     >
       <div className='w-full'>
-        <h2 className="font-titan md:text-center text-xl sm:text-2xl mb-1 tracking-wide">
+        <h2 className="uppercase font-titan md:text-center text-xl sm:text-2xl mb-2 tracking-wide">
           Bergabung Bersama Kami!
         </h2>
 
