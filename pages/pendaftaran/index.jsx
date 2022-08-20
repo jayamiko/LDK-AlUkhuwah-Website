@@ -99,7 +99,7 @@ const RegistrationPage = () => {
   return (
     <>
       <section className={`${styles.coverRegistration}`}>
-        <div className="container mx-auto flex flex-col items-end justify-end h-full text-white pt-8">
+        <div className="container mx-auto flex flex-col items-end justify-end h-full text-white">
           <FormRegistration
             formRef={formRef}
             personalMember={personalMember}
@@ -108,6 +108,7 @@ const RegistrationPage = () => {
           />
         </div>
       </section>
+      <div className="h-screen"></div>
       <div
         className="container mx-auto my-16"
         style={{ height: 630, width: "100%" }}

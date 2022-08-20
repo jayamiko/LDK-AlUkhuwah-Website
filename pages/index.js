@@ -46,8 +46,8 @@ const HomePage = () => {
               yang diperintahkan (kepadamu) dan berpalinglah dari orang yang
               musyrik (QS. Al-Hijr [15]:94)
             </p>
-            <div className="w-full flex justify-center">
-              <div className="w-1/3">
+          <div className="w-full flex justify-center">
+              <div className="w-1/2 sm:w-1/3">
                 <Button path="/pendaftaran" text="Yuk Gabung LDK" icon={faArrowRight} />
               </div>
             </div>

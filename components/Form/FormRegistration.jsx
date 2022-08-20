@@ -9,7 +9,7 @@ export const FormRegistration = ({
   return (
     <form
       name="submit-to-google-sheet"
-      className="flex items-center h-fit w-full md:h-3/5 space-y-1"
+      className="flex items-center md:h-[55vh] w-full space-y-1"
       method="post"
       ref={formRef}
       onSubmit={handleSubmit}
@@ -118,7 +118,7 @@ export const FormRegistration = ({
               <label htmlFor="reason">Alasan Masuk LDK ?</label>
               <textarea
                 type="text"
-                className="form-control"
+                className="form-control h-24"
                 value={personalMember.reason}
                 id="reason"
                 name="reason"
