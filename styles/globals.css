@@ -39,6 +39,7 @@ a {
 }
 
 .coverHero {
+  background: url('/images/LDK-Flag.jpg');
   background-size: cover;
   background-position-x: left;
   background-position-y: bottom;
@@ -49,6 +50,17 @@ a {
 .animation-wrapper {
   width: fit-content;
   height: fit-content;
+}
+
+.swiper {
+  width: 100%;
+}
+
+.swiper-slide-3d {
+  background-position: center;
+  background-size: cover;
+  width: 360px;
+  height: 360px;
 }
 
 .swiper-slide {
