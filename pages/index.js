@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import Image from 'next/image';
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons"
 import { alUkhuwah } from "./_app"
 import { blog } from "../data/data";
@@ -7,7 +6,8 @@ import AboutCard from "../components/Card/AboutCard";
 import CourseCard from "../components/Card/CourseCard";
 import Button from "../components/utils/Button"
 import DepartementSlide from "../components/Card/DeptSlide";
-import { departement } from '../data/data'
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faSearch } from "@fortawesome/free-solid-svg-icons"
 
 const HomePage = () => {
 
@@ -57,8 +57,10 @@ const HomePage = () => {
         </div>
       </section>
       <AboutCard />
-      <section id="departement" className="container mx-auto px-4 my-20">
-        <DepartementSlide data={departement} />
+      <section id="departement" className="h-[90vh] py-12 my-20 bg-[url(/images/ldk-akhwat2.jpg)] bg-center bg-no-repeat bg-cover">
+        <div className="relative container mx-auto px-4 h-full flex items-center">
+          <DepartementSlide />
+        </div>
       </section>
       <section id="course" className="container mx-auto mb-20">
         <div className="container mx-auto">
@@ -74,12 +76,10 @@ const HomePage = () => {
             />
             <div className='relative right-8 flex items-center'>
               {!query &&
-                <Image 
-                  src="/images/icons/icon-search.png" 
-                  width="18px" 
-                  height="18px" 
-                  alt="icon-search"
-                />
+                <FontAwesomeIcon 
+                  icon={faSearch}
+                  className="mr-2 text-cyan-500"
+                ></FontAwesomeIcon>
               }
             </div>
           </div>

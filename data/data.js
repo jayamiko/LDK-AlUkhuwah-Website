@@ -1,39 +1,57 @@
 export const departement = [
   {
     id: 1,
-    logo: "./images/departemen/syiar.jpg",
+    logo: "/images/departemen/syiar.jpg",
     title: "Departemen Syiar",
     desc: "Depertemen Syiar adalah yang berwenang menyiarkan LDK ke luar dengan melakukan dakwah umum seperti kajian atau melakukan kegiatan positif untuk kalangan umum",
+    members: '12',
+    category: 'Penyiaran Islam',
+    programs: '4'
   },
   {
     id: 2,
-    logo: "./images/departemen/kaderisasi.jpg",
+    logo: "/images/departemen/kaderisasi.jpg",
     title: "Departemen Kaderisasi",
     desc: "Departemen Kaderisasi merupakan jantung bagi keberlanjutan LDK untuk mencetak kader-kader yang siap melanjutkan visi dan misi LDK agar organisasi ini bisa terus berkembang",
+    members: '12',
+    category: 'Penyiaran Islam',
+    programs: '4'
   },
   {
     id: 3,
-    logo: "./images/departemen/hummed.jpg",
+    logo: "/images/departemen/hummed.jpg",
     title: "Departemen Hummed",
     desc: "Hummed atau Humas dan Media merupakan departemen yang memegang kendali terkait media sosial, dokumentasi kegiatan dan berfungsi sebagai humasnya LDK",
+    members: '12',
+    category: 'Penyiaran Islam',
+    programs: '4'
   },
   {
     id: 4,
-    logo: "./images/departemen/keputrian.jpg",
+    logo: "/images/departemen/keputrian.jpg",
     title: "Departemen Keputrian",
     desc: "Departemen yang menjadi ikatan dari akhwat yang bertugas membimbing akhwat agar senantiasa solid dan saling merangkul antar anggota-anggota akhwat",
+    members: '12',
+    category: 'Penyiaran Islam',
+    programs: '4'
   },
   {
     id: 5,
-    logo: "./images/departemen/kesekretariatan.jpg",
+    logo: "/images/departemen/kesekretariatan.jpg",
     title: "Departemen Kesekretariatan",
     desc: "Departemen Kesekretariatan dalah yang bertugas menjadikan sekretariat LDK menjadi lebih nyaman dan dapat dipergunakan untuk seluruh anggota LDK serta menjaga dan merawat berbagai aset LDK",
+    members: '12',
+    category: 'Penyiaran Islam',
+    programs: '4'
   },
   {
     id: 6,
-    logo: "./images/departemen/perekonomian.jpg",
+    logo: "/images/departemen/perekonomian.jpg",
     title: "Departemen Perekonomian",
     desc: "Departemen Perekonomian merupakan sponsorship LDK dimana mereka mencari dana demi kelancaran berbagai kegiatan LDK, mengeluarkan berbagai ide dan pengetahuannya untuk bisa membiayai LDK",
+    members: '12',
+    category: 'Penyiaran Islam',
+    programs: '4'
   },
 ];
 export const menu = [
