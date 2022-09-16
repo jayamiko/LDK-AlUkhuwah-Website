@@ -1,8 +1,74 @@
 .coverRegistration {
-  background-image: url("/images/ldk-ikhwan9.jpg");
+  background-image: url("/images/BACKGROUND1.jpg");
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: top;
   width: 100%;
   height: 100vh;
+}
+
+.form {
+  display: flex;
+  place-items: center;
+  height: 75%;
+}
+
+@media (max-width: 768px) {
+  .form {
+    height: fit-content;
+    border: solid blue 1px;
+  }
+}
+
+/*--------header------------*/
+.bgHeader {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+.start {
+  background-color: rgb(6 182 212);
+  color: #fff;
+  clip-path: polygon(10% 0%, 100% 0, 100% 100%, 0% 100%);
+}
+.toggle {
+  display: none;
+}
+
+/*--------header------------*/
+@media screen and (max-width: 768px) {
+  .bgHeader {
+    background-color: rgb(6 182 212);
+  }
+  .start {
+    clip-path: none;
+  }
+  .toggle {
+    display: block;
+    background: none;
+    color: #fff;
+    font-size: 40px;
+    position: absolute;
+    right: 0;
+    z-index: 50;
+  }
+  .mobileNav {
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 50;
+    background-color: rgb(6 182 212);
+  }
+}
+
+@media (max-height: 412px) and (min-width : 500px) {
+  .coverRegistration {
+    height: 200vh;
+    padding-bottom: 35vh;
+    background-position-y: bottom;
+  }
+}
+
+@media (max-height: 600px) and (max-width : 499px) {
+  .coverRegistration {
+    height: fit-content;
+  }
 }

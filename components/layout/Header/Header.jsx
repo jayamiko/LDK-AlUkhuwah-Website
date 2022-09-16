@@ -12,7 +12,7 @@ const Header = () => {
   const [click, setClick] = useState(false);
 
   return (
-    <div className="flex flex-col-reverse md:flex-col absolute md:px-4 lg:mx-0 w-full z-50">
+    <div className="absolute flex flex-col-reverse md:flex-col md:px-5 lg:mx-0 w-full z-50">
       <Head />
       <header
         className={`${styles.bgHeader} w-full md:container mx-auto md:inline items-center m-0 overflow-hidden md:rounded-3xl`}

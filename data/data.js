@@ -1,39 +1,57 @@
-export const homeAbout = [
+export const departement = [
   {
     id: 1,
-    cover: "https://img.icons8.com/dotty/80/000000/storytelling.png",
+    logo: "/images/departemen/syiar.jpg",
     title: "Departemen Syiar",
     desc: "Depertemen Syiar adalah yang berwenang menyiarkan LDK ke luar dengan melakukan dakwah umum seperti kajian atau melakukan kegiatan positif untuk kalangan umum",
+    members: '12',
+    category: 'Penyiaran Islam',
+    programs: '4'
   },
   {
     id: 2,
-    cover: "https://img.icons8.com/ios/80/000000/diploma.png",
+    logo: "/images/departemen/kaderisasi.jpg",
     title: "Departemen Kaderisasi",
     desc: "Departemen Kaderisasi merupakan jantung bagi keberlanjutan LDK untuk mencetak kader-kader yang siap melanjutkan visi dan misi LDK agar organisasi ini bisa terus berkembang",
+    members: '12',
+    category: 'Penyiaran Islam',
+    programs: '4'
   },
   {
     id: 3,
-    cover: "https://img.icons8.com/ios/80/000000/athlete.png",
+    logo: "/images/departemen/hummed.jpg",
     title: "Departemen Hummed",
     desc: "Hummed atau Humas dan Media merupakan departemen yang memegang kendali terkait media sosial, dokumentasi kegiatan dan berfungsi sebagai humasnya LDK",
+    members: '12',
+    category: 'Penyiaran Islam',
+    programs: '4'
   },
   {
     id: 4,
-    cover: "https://img.icons8.com/dotty/80/000000/storytelling.png",
+    logo: "/images/departemen/keputrian.jpg",
     title: "Departemen Keputrian",
     desc: "Departemen yang menjadi ikatan dari akhwat yang bertugas membimbing akhwat agar senantiasa solid dan saling merangkul antar anggota-anggota akhwat",
+    members: '12',
+    category: 'Penyiaran Islam',
+    programs: '4'
   },
   {
     id: 5,
-    cover: "https://img.icons8.com/ios/80/000000/diploma.png",
+    logo: "/images/departemen/kesekretariatan.jpg",
     title: "Departemen Kesekretariatan",
     desc: "Departemen Kesekretariatan dalah yang bertugas menjadikan sekretariat LDK menjadi lebih nyaman dan dapat dipergunakan untuk seluruh anggota LDK serta menjaga dan merawat berbagai aset LDK",
+    members: '12',
+    category: 'Penyiaran Islam',
+    programs: '4'
   },
   {
     id: 6,
-    cover: "https://img.icons8.com/ios/80/000000/athlete.png",
+    logo: "/images/departemen/perekonomian.jpg",
     title: "Departemen Perekonomian",
     desc: "Departemen Perekonomian merupakan sponsorship LDK dimana mereka mencari dana demi kelancaran berbagai kegiatan LDK, mengeluarkan berbagai ide dan pengetahuannya untuk bisa membiayai LDK",
+    members: '12',
+    category: 'Penyiaran Islam',
+    programs: '4'
   },
 ];
 export const menu = [
@@ -517,50 +535,55 @@ export const faq = [
 export const blog = [
   {
     id: 1,
+    title: "Tasqif",
+    audience: "Internal",
     app: "WhatsApp",
     date: "Setiap Rabu",
-    title: "Tasqif",
     desc: "Maka sampaikanlah (Muhammad) secara terang-terangan segala apa yang diperintahkan (kepadamu) dan berpalinglah dari orang yang musyrik (QS. Al-Hijr [15]:94)",
     cover: "/images/ldk-ikhwan3.jpg",
   },
   {
     id: 2,
+    title: "Tahsin Ikhwan",
+    audience: "Internal",
     app: "WhatsApp",
     date: "Setiap Ahad",
-    title: "Tahsin Ikhwan",
     desc: "Maka sampaikanlah (Muhammad) secara terang-terangan segala apa yang diperintahkan (kepadamu) dan berpalinglah dari orang yang musyrik (QS. Al-Hijr [15]:94)",
     cover: "/images/ldk-akhwat1.jpg",
   },
   {
     id: 3,
+    title: "Tahsin Akhwat",
+    audience: "Internal",
     app: "WhatsApp",
     date: "Setiap Ahad",
-    title: "Tahsin Akhwat",
     desc: "Maka sampaikanlah (Muhammad) secara terang-terangan segala apa yang diperintahkan (kepadamu) dan berpalinglah dari orang yang musyrik (QS. Al-Hijr [15]:94)",
     cover: "/images/ldk-ikhwan4.jpg",
   },
   {
     id: 4,
+    title: "Baca Kitab",
+    audience: "Umum",
     app: "GMeet",
     date: "Setiap Jum'at",
-    com: "3 COMMENTS",
-    title: "Baca Kitab",
     desc: "Maka sampaikanlah (Muhammad) secara terang-terangan segala apa yang diperintahkan (kepadamu) dan berpalinglah dari orang yang musyrik (QS. Al-Hijr [15]:94)",
     cover: "/images/ldk-ikhwan5.jpg",
   },
   {
     id: 5,
+    title: "Al-Kahfi Time",
+    audience: "Internal",
     app: "GMeet",
     date: "Setiap Kamis",
-    title: "Al-Kahfi Time",
     desc: "Maka sampaikanlah (Muhammad) secara terang-terangan segala apa yang diperintahkan (kepadamu) dan berpalinglah dari orang yang musyrik (QS. Al-Hijr [15]:94)",
     cover: "/images/ldk-ikhwan6.jpg",
   },
   {
     id: 6,
+    title: "Murajaah",
+    audience: "Umum",
     app: "GMeet",
     date: "Setiap Senin",
-    title: "Murajaah",
     desc: "Maka sampaikanlah (Muhammad) secara terang-terangan segala apa yang diperintahkan (kepadamu) dan berpalinglah dari orang yang musyrik (QS. Al-Hijr [15]:94)",
     cover: "/images/ldk-ikhwan7.jpg",
   },

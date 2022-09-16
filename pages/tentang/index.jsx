@@ -7,8 +7,10 @@ const About = () => {
   return (
     <>
       <section id="hero" className={`coverHero bg-[url('/images/LDK-Flag.jpg')] z-10`}>
+        <div className='h-screen w-full flex items-end justify-end pb-[10vh]'>
+          <Title title="Tentang LDK" />
+        </div>
       </section>
-      <Title title="Tentang LDK" />
       <main className="relative z-40 container mx-auto my-5 text-sky-800 px-4 sm:px-0">
         <h1 className="text-xl md:text-2xl lg:text-4xl font-titan m-0">Tentang UKM {alUkhuwah}</h1>
         <i className="font-medium md:text-lg lg:text-xl mt-2">{kampus}</i>
@@ -22,7 +24,7 @@ const About = () => {
                     className="flex items-center justify-between"
                     key={index}
                   >
-                    <h1 className="text-2xl text-sky-800 uppercase font-bold">
+                    <h1 className="text-lg sm:text-xl lg:text-2xl text-sky-800 uppercase font-bold">
                       {content.title}
                     </h1>
                   </div>
@@ -41,7 +43,7 @@ const About = () => {
             {/* VISI MISI */}
             <>
               <div className="flex items-center justify-between text-black">
-                <h1 className="text-2xl text-sky-800 uppercase font-bold">
+                <h1 className="text-lg sm:text-xl lg:text-2xl text-sky-800 uppercase font-bold">
                   C. Visi dan Misi
                 </h1>
               </div>
@@ -49,14 +51,14 @@ const About = () => {
                 id="material-3"
                 className="py-2 text-black text-base sm:text-lg leading-6"
               >
-                <h2 className="font-bold text-xl">Visi</h2>
+                <h2 className="font-bold text-base sm:text-lg lg:text-xl">Visi</h2>
                 {visiMisi.map((list)=>{
                   return (
                     <>
                       <p>
                         {list.visi}
                       </p>
-                      <h2 className="font-bold text-xl m-0">Misi</h2>
+                      <h2 className="font-bold text-base sm:text-lg lg:text-xl m-0">Misi</h2>
                       <ul className="list-decimal list-outside pl-4">
                         {list.misi.map((list)=> {
                           return (
@@ -73,7 +75,7 @@ const About = () => {
             {/* NILAI ORGANISASI */}
             <>
               <div className="flex items-center justify-between text-black">
-                <h1 className="text-2xl text-sky-800 uppercase font-bold">
+                <h1 className="text-lg sm:text-xl lg:text-2xl text-sky-800 uppercase font-bold">
                   D. Nilai-Nilai Organisasi
                 </h1>
               </div>
@@ -85,7 +87,7 @@ const About = () => {
                   {OrganizationValue.map((value, index) => {
                     return (
                       <li key={index} id={value.id}>
-                        <h2 className="font-bold text-xl">{index + 1}. {value.title}</h2>
+                        <h2 className="font-bold text-base sm:text-lg lg:text-xl">{index + 1}. {value.title}</h2>
                         <p className="indent-6">
                           {value.paragraph}
                         </p>
@@ -99,13 +101,13 @@ const About = () => {
             {/* PROGRAM UNGGULAN */}
             <>
               <div className="flex items-center justify-between text-black">
-                <h1 className="text-2xl text-sky-800 uppercase font-bold m-0">
+                <h1 className="text-lg sm:text-xl lg:text-2xl text-sky-800 uppercase font-bold m-0">
                   E. Program Unggulan
                 </h1>
               </div>
               <div
                 id="material-5"
-                className="text-black text-base sm:text-lg"
+                className="text-black text-base"
               >
                 <ul className="list-decimal list-outside pl-4">
                   {topProgram.map((list, index) => {

@@ -7,6 +7,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
+        "primary": "#06B6D4",
         "egg-green": "#1eb2a6",
         whatsapp: "#25d366",
       },

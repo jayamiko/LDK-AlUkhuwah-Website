@@ -30,27 +30,31 @@ const Footer = () => {
               </h2>
             </div>
             <ul className="m-0 py-2 flex flex-row justify-center text-sm md:space-x-6 hover:text-slate-200 hover:font-semibold p-0 gap-2">
-              <div className="w-2/6 sm:w-full">
-                <li className="m-0 cursor-pointer ">
-                  <i>Kesekretariatan</i>
-                </li>
-                <li className="m-0 cursor-pointer">
-                  <i>Perekonomian</i>
-                </li>
-                <li className="m-0 cursor-pointer">
-                  <i>Kaderisasi</i>
-                </li>
+              <div className="text-xs sm:text-sm md:text-base w-2/6 sm:w-full">
+                <ul className="list-disc p-0">
+                  <li className="m-0 cursor-pointer ">
+                    <i>Kesekretariatan</i>
+                  </li>
+                  <li className="m-0 cursor-pointer">
+                    <i>Perekonomian</i>
+                  </li>
+                  <li className="m-0 cursor-pointer">
+                    <i>Kaderisasi</i>
+                  </li>
+                </ul>
               </div>
-              <div className="w-2/6 sm:w-full">
-                <li className="m-0 cursor-pointer">
-                  <i>Humas Media</i>
-                </li>
-                <li className="m-0 cursor-pointer">
-                  <i>Keputrian</i>
-                </li>
-                <li className="m-0 cursor-pointer">
-                  <i>Syiar</i>
-                </li>
+              <div className="text-xs sm:text-sm md:text-base w-2/6 sm:w-full">
+                <ul className="list-disc p-0">
+                  <li className="m-0 cursor-pointer">
+                    <i>Humas Media</i>
+                  </li>
+                  <li className="m-0 cursor-pointer">
+                    <i>Keputrian</i>
+                  </li>
+                  <li className="m-0 cursor-pointer">
+                    <i>Syiar</i>
+                  </li>
+                </ul>
               </div>
             </ul>
           </div>
@@ -61,7 +65,7 @@ const Footer = () => {
                 Punya Pertanyaan ?
               </h2>
             </div>
-            <ul className="w-2/3 sm:w-full list-outside p-0 text-sm space-y-2 py-1">
+            <ul className="text-xs sm:text-sm w-2/3 sm:w-full list-outside p-0 space-y-2 py-1">
               <li>
                 <FontAwesomeIcon 
                   icon={faMap}
@@ -87,10 +91,10 @@ const Footer = () => {
           </div>
         </div>
         <div className="text-center text-white bg-gray-700 py-2">
-          <span className="text-sm sm:text-base">
-            Copyright @ 2022 {`${alUkhuwah + kampus} `}
+          <span className="text-xs sm:text-sm md:text-base">
+            Copyright @ 2022 {`${alUkhuwah} ${kampus} `}
           </span>
-          <span className="block sm:inline text-sm sm:text-base">
+          <span className="block sm:inline text-xs sm:text-sm md:text-base">
             All Right Reserved
           </span>
         </div>

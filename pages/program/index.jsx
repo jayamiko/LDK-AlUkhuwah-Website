@@ -11,7 +11,12 @@ import "swiper/css/navigation";
 // import required modules
 import { Autoplay, Pagination } from "swiper";
 import Title from '../../components/utils/Title';
-import Button from '../../components/utils/Button';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faSearch } from "@fortawesome/free-solid-svg-icons";
+import CourseCard from '../../components/Card/CourseCard';
+import TabFilter from '../../components/utils/TabFilter';
+import SearchNotFound from '../../components/Animations/Search/Search';
+
 
 function ProgramPage() {
 
@@ -24,6 +29,7 @@ function ProgramPage() {
 
   const [query, setQuery] = useState("");
   const [resultQuery, setResultQuery] = useState([]);
+  const [resultData, setResultData] = useState([])
 
   const searching = () => {
     const resultSearch = blog.filter(item => {
@@ -35,21 +41,43 @@ function ProgramPage() {
       }
     });
     setResultQuery(resultSearch);
+    setResultData(resultSearch)
   }
 
   useEffect(() => {
     searching()
-  }, [query])
-
-  // const module = !query ? [Autoplay, Pagination] : [Pagination]
+  }, [query, Autoplay])
 
   return (
     <>
+      <div className='relative h-screen'>
+        <div className='absolute h-screen w-full z-40 flex flex-col justify-center items-center'>
+          <div className='w-full h-3/5 flex flex-col md:flex-row justify-end items-center md:justify-center md:items-end space-y-2 md:space-y-0 md:space-x-2'>
+            <input
+              type="text"
+              className="w-5/6 md:w-2/5 h-12 text-slate-400 pl-2 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-cyan-500"
+              placeholder="Cari Program..."
+              onChange={event => setQuery(event.target.value)}
+            />
+            <button 
+              className="px-5 py-2 h-12 rounded-md bg-cyan-500 shadow-sm shadow-black text-white font-semibold"
+              onSubmit={searching}
+            >
+            Search
+            <FontAwesomeIcon 
+              icon={faSearch}
+              className="text-white ml-2"
+            ></FontAwesomeIcon>
+          </button>
+          </div>
+          <div className='w-full h-2/5 flex flex-col justify-end items-center'>
+            <Title title="Program LDK" />
+          </div>
+        </div>
         <Swiper
-          spaceBetween={0}
           centeredSlides={true}
           loop={true}
-          autoplay={!query && {
+          autoplay={{
             delay: 2500,
             disableOnInteraction: true,
           }}
@@ -57,30 +85,28 @@ function ProgramPage() {
             clickable: false,
           }}
           navigation={false}
-          modules={!query ? [Autoplay, Pagination] : [Pagination]}
+          modules={[Autoplay, Pagination]}
           className="mySwiper"
-          >
-            {carouselArray.map((carousel, index)=> {
-              return (
-                <SwiperSlide key={index}>
-                  <section className={carousel}>
-                    <div className='border-4 border-green-800 h-full flex flex-col justify-end items-center'>
-                      <div className='space-x-2 h-1/4 w-full flex items-center justify-center'>
-                        <input
-                          type="text"
-                          className="w-2/5 h-12 text-slate-400 pl-2 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-cyan-500"
-                          placeholder="Search..."
-                          onChange={event => setQuery(event.target.value)}
-                        />
-                        <Button path="" text="Search" onSubmit={searching} />
-                      </div>
-                      <Title title="Program LDK" />
-                    </div>
-                  </section>
-                </SwiperSlide>
-              )
-            })}
+        >
+          {carouselArray.map((carousel, index)=> {
+            return (
+              <SwiperSlide key={index}>
+                <div className={carousel}></div>
+              </SwiperSlide>
+            )
+          })}
         </Swiper>
+      </div>
+      <div className='container mx-auto my-5'>
+        <TabFilter resultQuery={resultQuery} resultData={resultData} setResultData={setResultData} />
+        {resultQuery.length ? (
+          <CourseCard resultQuery={resultData} />
+        ) : (
+          <div className='h-screen flex justify-center items-center'>
+            <SearchNotFound text="Pencarian tidak ditermukan.." />
+          </div>
+        )}
+      </div>
     </>
   )
 }
