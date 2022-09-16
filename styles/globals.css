@@ -47,6 +47,11 @@ a {
   width: 100%;
 }
 
+.customPlaceholder::placeholder {
+  font-size: 12px;
+  font-style: italic;
+}
+
 .animation-wrapper {
   width: fit-content;
   height: fit-content;
