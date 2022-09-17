@@ -1,111 +1,170 @@
+import {
+  faFacebookF,
+  faYoutube,
+  faInstagram,
+  faTwitter,
+} from "@fortawesome/free-brands-svg-icons";
+
+export const menu = [
+  {
+    path: "/",
+    name: "Beranda",
+  },
+  {
+    path: "/tentang",
+    name: "Tentang",
+  },
+  {
+    path: "/pendaftaran",
+    name: "Pendaftaran",
+  },
+  {
+    path: "/dokumentasi",
+    name: "Dokumentasi",
+  },
+  {
+    path: "/program",
+    name: "Program",
+  },
+];
+export const tags = [
+  {
+    id: 1,
+    name: "#LDK_AlUkhuwah",
+  },
+  {
+    id: 2,
+    name: "#LDK_UNISMA",
+  },
+  {
+    id: 3,
+    name: "#LDKers",
+  },
+  {
+    id: 4,
+    name: "#CerdasKreatifBersahabat",
+  },
+  {
+    id: 5,
+    name: "#TaatDekatBermanfaat",
+  },
+  {
+    id: 6,
+    name: "#MuslimBersahabat",
+  },
+];
+export const mediasosial = [
+  {
+    id: "Facebook",
+    icon: faFacebookF,
+    link: "https://web.facebook.com/ldkunisma.bekasi?_rdc=1&_rdr/",
+    color: "bg-blue-500",
+  },
+  {
+    id: "Youtube",
+    icon: faYoutube,
+    link: "https://www.youtube.com/channel/UCkpwGcpCbk2893j5qFyxePA",
+    color: "bg-red-500",
+  },
+  {
+    id: "Instagram",
+    icon: faInstagram,
+    link: "https://www.instagram.com/ldkunisma45bekasi/",
+    color: "bg-pink-500",
+  },
+  {
+    id: "Twitter",
+    icon: faTwitter,
+    link: "https://twitter.com/ldk_unisma45",
+    color: "bg-sky-500",
+  },
+];
 export const departement = [
   {
     id: 1,
     logo: "/images/departemen/syiar.jpg",
     title: "Departemen Syiar",
     desc: "Depertemen Syiar adalah yang berwenang menyiarkan LDK ke luar dengan melakukan dakwah umum seperti kajian atau melakukan kegiatan positif untuk kalangan umum",
-    members: '12',
-    category: 'Penyiaran Islam',
-    programs: '4'
+    members: "12",
+    category: "Penyiaran Islam",
+    programs: "4",
   },
   {
     id: 2,
     logo: "/images/departemen/kaderisasi.jpg",
     title: "Departemen Kaderisasi",
     desc: "Departemen Kaderisasi merupakan jantung bagi keberlanjutan LDK untuk mencetak kader-kader yang siap melanjutkan visi dan misi LDK agar organisasi ini bisa terus berkembang",
-    members: '12',
-    category: 'Penyiaran Islam',
-    programs: '4'
+    members: "12",
+    category: "Penyiaran Islam",
+    programs: "4",
   },
   {
     id: 3,
     logo: "/images/departemen/hummed.jpg",
     title: "Departemen Hummed",
     desc: "Hummed atau Humas dan Media merupakan departemen yang memegang kendali terkait media sosial, dokumentasi kegiatan dan berfungsi sebagai humasnya LDK",
-    members: '12',
-    category: 'Penyiaran Islam',
-    programs: '4'
+    members: "12",
+    category: "Penyiaran Islam",
+    programs: "4",
   },
   {
     id: 4,
     logo: "/images/departemen/keputrian.jpg",
     title: "Departemen Keputrian",
     desc: "Departemen yang menjadi ikatan dari akhwat yang bertugas membimbing akhwat agar senantiasa solid dan saling merangkul antar anggota-anggota akhwat",
-    members: '12',
-    category: 'Penyiaran Islam',
-    programs: '4'
+    members: "12",
+    category: "Penyiaran Islam",
+    programs: "4",
   },
   {
     id: 5,
     logo: "/images/departemen/kesekretariatan.jpg",
     title: "Departemen Kesekretariatan",
     desc: "Departemen Kesekretariatan dalah yang bertugas menjadikan sekretariat LDK menjadi lebih nyaman dan dapat dipergunakan untuk seluruh anggota LDK serta menjaga dan merawat berbagai aset LDK",
-    members: '12',
-    category: 'Penyiaran Islam',
-    programs: '4'
+    members: "12",
+    category: "Penyiaran Islam",
+    programs: "4",
   },
   {
     id: 6,
     logo: "/images/departemen/perekonomian.jpg",
     title: "Departemen Perekonomian",
     desc: "Departemen Perekonomian merupakan sponsorship LDK dimana mereka mencari dana demi kelancaran berbagai kegiatan LDK, mengeluarkan berbagai ide dan pengetahuannya untuk bisa membiayai LDK",
-    members: '12',
-    category: 'Penyiaran Islam',
-    programs: '4'
-  },
-];
-export const menu = [
-  {
-    path: "/",
-    name: "Beranda"
-  },
-  {
-    path: "/tentang",
-    name: "Tentang"
-  },
-  {
-    path: "/pendaftaran",
-    name: "Pendaftaran"
-  },
-  {
-    path: "/dokumentasi",
-    name: "Dokumentasi"
-  },
-  {
-    path: "/program",
-    name: "Program"
+    members: "12",
+    category: "Penyiaran Islam",
+    programs: "4",
   },
 ];
 export const fakultas = [
   {
     id: "fai",
-    name: "FAI"
+    name: "FAI",
   },
   {
     id: "fisip",
-    name: "FISIP"
+    name: "FISIP",
   },
   {
     id: "faperta",
-    name: "FAPERTA"
+    name: "FAPERTA",
   },
   {
     id: "fkip",
-    name: "FKIP"
+    name: "FKIP",
   },
   {
-    id: "fatek",
-    name: "FATEK"
+    id: "ft",
+    name: "FT",
   },
   {
     id: "fe",
-    name: "FE"
+    name: "FE",
   },
   {
     id: "fksb",
-    name: "FKSB"
+    name: "FKSB",
   },
-]
+];
 export const materialsAbout = [
   {
     id: "material-1",
@@ -181,7 +240,7 @@ export const visiMisi = [
       "Menjalin Ukhuwah Islamiah dan kerjasama dalam seluruh lini kehidupan intra dan ekstra kampus serta berperan aktif dan kreatif di dalamnya.",
       "Melakukan amar ma’ruf nahi munkar serta membangun opini publik yang islami secara kontinu dan konsisten.",
       "Menjadi mediator dan advokator (amal khidami) bagi pemenuhan kebutuhan akademik mahasiswa.",
-      "Membangun jaringan komunikasi efektif dengan LDK lainnya, khususnya wilayah bekasi dan nasional pada umumnya."
+      "Membangun jaringan komunikasi efektif dengan LDK lainnya, khususnya wilayah bekasi dan nasional pada umumnya.",
     ],
   },
 ];
@@ -213,31 +272,6 @@ export const topProgram = [
   {
     id: "bursa-obrolan-muslimah",
     title: "BOM (Bursa Obrolan Muslimah)",
-  },
-];
-export const awrapper = [
-  {
-    cover:
-      "https://img.icons8.com/external-yogi-aprelliyanto-basic-outline-yogi-aprelliyanto/80/ffffff/external-graduation-education-yogi-aprelliyanto-basic-outline-yogi-aprelliyanto.png",
-    data: "3,000",
-    title: "SUCCESS STORIES",
-  },
-
-  {
-    cover: "https://img.icons8.com/ios/80/ffffff/athlete.png",
-    data: "320",
-    title: "TRUSTED TUTORS",
-  },
-  {
-    cover:
-      "https://img.icons8.com/external-outline-icons-maxicons/80/ffffff/external-calender-insurance-outline-outline-icons-maxicons.png",
-    data: "1,000",
-    title: "SCHEDULES",
-  },
-  {
-    cover: "https://img.icons8.com/ios/80/ffffff/macbook-idea--v3.png",
-    data: "587",
-    title: "COURSES",
   },
 ];
 export const coursesCard = [
@@ -368,170 +402,6 @@ export const coursesCard = [
     pricePer: "$3 per month",
   },
 ];
-export const online = [
-  {
-    cover: "./images/courses/tasqif.jpg",
-    hoverCover: "./images/courses/tasqif.jpg",
-    courseName: "UI/UX Design Courses",
-    course: "25 Courses",
-  },
-  {
-    cover: "./images/courses/online/o2.png",
-    hoverCover: "./images/courses/online/o2.1.png",
-    courseName: "Art & Design",
-    course: "25 Courses",
-  },
-  {
-    cover: "./images/courses/online/o3.png",
-    hoverCover: "./images/courses/online/o3.1.png",
-    courseName: "Computer Science",
-    course: "10 Courses",
-  },
-  {
-    cover: "./images/courses/online/o4.png",
-    hoverCover: "./images/courses/online/o4.1.png",
-    courseName: "History & Archeologic",
-    course: "15 Courses",
-  },
-  {
-    cover: "./images/courses/online/o5.png",
-    hoverCover: "./images/courses/online/o5.1.png",
-    courseName: "Software Engineering",
-    course: "30 Courses",
-  },
-  {
-    cover: "./images/courses/online/o6.png",
-    hoverCover: "./images/courses/online/o6.1.png",
-    courseName: "Information Software",
-    course: "60 Courses",
-  },
-  {
-    cover: "./images/courses/online/o7.png",
-    hoverCover: "./images/courses/online/o7.1.png",
-    courseName: "Health & Fitness",
-    course: "10 Courses",
-  },
-  {
-    cover: "./images/courses/online/o8.png",
-    hoverCover: "./images/courses/online/o8.1.png",
-    courseName: "Marketing",
-    course: "30 Courses",
-  },
-  {
-    cover: "./images/courses/online/o9.png",
-    hoverCover: "./images/courses/online/o9.1.png",
-    courseName: "Graphic Design",
-    course: "80 Courses",
-  },
-  {
-    cover: "./images/courses/online/o10.png",
-    hoverCover: "./images/courses/online/o10.1.png",
-    courseName: "Music",
-    course: "120 Courses",
-  },
-  {
-    cover: "./images/courses/online/o11.png",
-    hoverCover: "./images/courses/online/o11.1.png",
-    courseName: "Business Administration",
-    course: "17 Courses",
-  },
-  {
-    cover: "./images/courses/online/o12.png",
-    hoverCover: "./images/courses/online/o12.1.png",
-    courseName: "Web Management",
-    course: "17 Courses",
-  },
-];
-export const team = [
-  {
-    cover: "./images/team/t1.webp",
-    name: "Ph.D Adrian Molises",
-    work: "DEVELOPER AND LEAD INSTRUCTOR",
-  },
-  {
-    cover: "./images/team/t2.webp",
-    name: "Ph.D Arthur MaGregor",
-    work: "DEVELOPER AND LEAD INSTRUCTOR",
-  },
-  {
-    cover: "./images/team/t3.webp",
-    name: "Ph.D Anna Hanzen",
-    work: "DEVELOPER AND LEAD INSTRUCTOR",
-  },
-  {
-    cover: "./images/team/t4.webp",
-    name: "Ph.D Brian Wooden",
-    work: "DEVELOPER AND LEAD INSTRUCTOR",
-  },
-  {
-    cover: "./images/team/t5.webp",
-    name: "Ph.D Adrian Molises",
-    work: "DEVELOPER AND LEAD INSTRUCTOR",
-  },
-  {
-    cover: "./images/team/t6.webp",
-    name: "Ph.D Arthur MaGregor",
-    work: "DEVELOPER AND LEAD INSTRUCTOR",
-  },
-  {
-    cover: "./images/team/t7.webp",
-    name: "Ph.D Anna Hanzen",
-    work: "DEVELOPER AND LEAD INSTRUCTOR",
-  },
-  {
-    cover: "./images/team/t8.webp",
-    name: "Ph.D Brian Wooden",
-    work: "DEVELOPER AND LEAD INSTRUCTOR",
-  },
-];
-export const price = [
-  {
-    name: "BASIC PLAN",
-    price: "49K",
-    desc: "Maka sampaikanlah (Muhammad) secara terang-terangan segala apa yang diperintahkan (kepadamu) dan berpalinglah dari orang yang musyrik (QS. Al-Hijr [15]:94)",
-  },
-  {
-    name: "BEGINNER PLAN",
-    price: "79K",
-    desc: "Maka sampaikanlah (Muhammad) secara terang-terangan segala apa yang diperintahkan (kepadamu) dan berpalinglah dari orang yang musyrik (QS. Al-Hijr [15]:94)",
-  },
-  {
-    name: "PREMIUM PLAN",
-    price: "109k",
-    desc: "Maka sampaikanlah (Muhammad) secara terang-terangan segala apa yang diperintahkan (kepadamu) dan berpalinglah dari orang yang musyrik (QS. Al-Hijr [15]:94)",
-  },
-  {
-    name: "ULTIMATE PLAN",
-    price: "149K",
-    desc: "Maka sampaikanlah (Muhammad) secara terang-terangan segala apa yang diperintahkan (kepadamu) dan berpalinglah dari orang yang musyrik (QS. Al-Hijr [15]:94)",
-  },
-];
-export const faq = [
-  {
-    title: "How to Enroll This Online Courses?",
-    desc: "This is the first item's accordion body. It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. It's also worth noting that just about any HTML can go within the .accordion-body, though the transition does limit overflow.",
-  },
-  {
-    title: "Where It is hidden by default, until the collapse?",
-    desc: "It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. It's also worth noting that just about any HTML can go within the .accordion-body, though the transition does limit overflow.",
-  },
-  {
-    title: "How It is hidden by default, until the collapse?",
-    desc: "It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. It's also worth noting that just about any HTML can go within the .accordion-body, though the transition does limit overflow.",
-  },
-  {
-    title: "How to Enroll This Online Courses?",
-    desc: "This is the first item's accordion body. It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. It's also worth noting that just about any HTML can go within the .accordion-body, though the transition does limit overflow.",
-  },
-  {
-    title: "Where It is hidden by default, until the collapse?",
-    desc: "It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. It's also worth noting that just about any HTML can go within the .accordion-body, though the transition does limit overflow.",
-  },
-  {
-    title: "How It is hidden by default, until the collapse?",
-    desc: "It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. It's also worth noting that just about any HTML can go within the .accordion-body, though the transition does limit overflow.",
-  },
-];
 export const blog = [
   {
     id: 1,
@@ -586,55 +456,5 @@ export const blog = [
     date: "Setiap Senin",
     desc: "Maka sampaikanlah (Muhammad) secara terang-terangan segala apa yang diperintahkan (kepadamu) dan berpalinglah dari orang yang musyrik (QS. Al-Hijr [15]:94)",
     cover: "/images/ldk-ikhwan7.jpg",
-  },
-];
-export const testimonal = [
-  {
-    id: 1,
-    name: "ROGER SCOTT",
-    post: "MARKETING MANAGER",
-    desc: "Maka sampaikanlah (Muhammad) secara terang-terangan segala apa yang diperintahkan (kepadamu) dan berpalinglah dari orang yang musyrik (QS. Al-Hijr [15]:94)",
-    cover: "./images/testo/t1.webp",
-  },
-  {
-    id: 2,
-    name: "ROGER SCOTT",
-    post: "MARKETING MANAGER",
-    desc: "Maka sampaikanlah (Muhammad) secara terang-terangan segala apa yang diperintahkan (kepadamu) dan berpalinglah dari orang yang musyrik (QS. Al-Hijr [15]:94)",
-    cover: "./images/testo/t2.webp",
-  },
-  {
-    id: 3,
-    name: "ROGER SCOTT",
-    post: "MARKETING MANAGER",
-    desc: "Maka sampaikanlah (Muhammad) secara terang-terangan segala apa yang diperintahkan (kepadamu) dan berpalinglah dari orang yang musyrik (QS. Al-Hijr [15]:94)",
-    cover: "./images/testo/t3.webp",
-  },
-];
-
-export const tags = [
-  {
-    id: 1,
-    name: "#LDK_AlUkhuwah",
-  },
-  {
-    id: 2,
-    name: "#LDK_UNISMA",
-  },
-  {
-    id: 3,
-    name: "#LDKers",
-  },
-  {
-    id: 4,
-    name: "#CerdasKreatifBersahabat",
-  },
-  {
-    id: 5,
-    name: "#TaatDekatBermanfaat",
-  },
-  {
-    id: 6,
-    name: "#MuslimBersahabat",
   },
 ];
