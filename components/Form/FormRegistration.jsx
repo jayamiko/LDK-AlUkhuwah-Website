@@ -1,5 +1,14 @@
 import { fakultas } from "../../data/data";
 import InvalidField from "../utils/InvalidField";
+import {
+  FAI,
+  FAPERTA,
+  FE,
+  FISIP,
+  FKIP,
+  FKSB,
+  FT,
+} from "../../data/fakultas/fakultas";
 
 export const FormRegistration = ({
   formRef,
@@ -12,6 +21,26 @@ export const FormRegistration = ({
   handleChange,
   handleSubmit,
 }) => {
+  function selectArray() {
+    if (personalMember.fakultas === "FT") {
+      return FT;
+    } else if (personalMember.fakultas === "FAPERTA") {
+      return FAPERTA;
+    } else if (personalMember.fakultas === "FE") {
+      return FE;
+    } else if (personalMember.fakultas === "FISIP") {
+      return FISIP;
+    } else if (personalMember.fakultas === "FKIP") {
+      return FKIP;
+    } else if (personalMember.fakultas === "FKSB") {
+      return FKSB;
+    } else {
+      return FAI;
+    }
+  }
+
+  console.log(personalMember.fakultas);
+
   return (
     <form
       name="submit-to-google-sheet"
@@ -190,6 +219,31 @@ export const FormRegistration = ({
               >
                 Jurusan
               </label>
+              <div className="flex flex-wrap w-full md:w-full">
+                <select
+                  className="form-control customPlaceholder"
+                  id="jurusan"
+                  name="jurusan"
+                  value={personalMember.jurusan}
+                  onChange={handleChange}
+                >
+                  {selectArray().map((list, index) => {
+                    return (
+                      <option key={index} className="text-gray-400">
+                        {list.jurusan}
+                      </option>
+                    );
+                  })}
+                </select>
+              </div>
+            </div>
+            {/* <div>
+              <label
+                htmlFor="jurusan"
+                className="font-semibold text-sm lg:text-base"
+              >
+                Jurusan
+              </label>
               {warning && (
                 <InvalidField
                   text="Wajib Diisi"
@@ -205,7 +259,7 @@ export const FormRegistration = ({
                 placeholder="Jurusan"
                 onChange={handleChange}
               />
-            </div>
+            </div> */}
             <div>
               <label
                 htmlFor="alasan"
@@ -235,7 +289,7 @@ export const FormRegistration = ({
         <div className="flex md:justify-center my-3">
           <button
             type="submit"
-            className="bg-egg-green font-semibold px-5 py-1 rounded-md text-white uppercase hover:font-bold"
+            className="bg-primary font-semibold px-5 py-2 rounded-md text-white uppercase hover:font-bold"
           >
             Submit
           </button>
