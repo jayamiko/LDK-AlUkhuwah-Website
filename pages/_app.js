@@ -1,23 +1,22 @@
 import "../styles/globals.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "swiper/css/bundle";
-import Header from '../components/layout/Header/Header'
-import Footer from '../components/layout/Footer/Footer'
+import Header from "../components/layout/Header/Header";
+import Footer from "../components/layout/Footer/Footer";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 
-export const UKM = 'Lembaga Dakwah Kampus'
-export const alUkhuwah = "LDK Al Ukhuwah"
-export const kampus = "Universitas Islam '45 Bekasi"
-export const emailLDK = "ldkunisma45@gmail.com"
+export const UKM = "Lembaga Dakwah Kampus";
+export const alUkhuwah = "LDK Al Ukhuwah";
+export const kampus = "Universitas Islam '45 Bekasi";
+export const emailLDK = "ldkunisma45@gmail.com";
 
 function MyApp({ Component, pageProps }) {
-
   return (
     <>
-      <Component {...pageProps}/>
+      <Component {...pageProps} />
       <Footer />
     </>
-  ) 
+  );
 }
 
 export default MyApp;
