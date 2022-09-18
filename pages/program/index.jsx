@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import Head from "next/head";
 import { blog } from "../../data/data";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
