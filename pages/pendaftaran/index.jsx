@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import emailjs from "emailjs-com";
 import { UKM, kampus } from "../_app";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTimes, faBars } from "@fortawesome/free-solid-svg-icons";
@@ -12,9 +13,11 @@ import HeadTop from "../../components/layout/Header/Head.jsx";
 import { menu } from "../../data/data";
 import Head from "next/head";
 
+// For Spread Sheet data
 const scriptURL =
   "https://script.google.com/macros/s/AKfycbxBND5Bi5PYyIYkqwU-bnjaOhIe2EfG79qs1aVsryR8_MGOy-8h1_IyFYyJ1spb0EXD/exec";
 const url = `https://docs.google.com/spreadsheets/d/e/2PACX-1vQak6neQTX9aNzNmi7hBJnzSRkKsFlvOQeg2TISgnZiW3n5C4LvMjZjj9WSYVFI7HIsSPMY3Ej1JkeW/pub?gid=0&single=true&output=csv`;
+// For Email Js
 
 const RegistrationPage = () => {
   const formRef = useRef(null);
@@ -32,8 +35,9 @@ const RegistrationPage = () => {
     },
   ]);
 
-  const [click, setClick] = useState(false);
   const [success, setSuccess] = useState(false);
+  const [emailSuccess, setEmailSuccess] = useState(false);
+  const [click, setClick] = useState(false);
   const [warning, setWarning] = useState(false);
   const [title, setTitle] = useState("Bergabung Bersama Kami!");
   const [name, setName] = useState("");
@@ -49,11 +53,24 @@ const RegistrationPage = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const { fullName, email, usia, whatsapp, jurusan, alasan } = personalMember;
+    const { fullName, email, usia, whatsapp, alasan } = personalMember;
 
-    if (!fullName || !email || !usia || !whatsapp || !jurusan || !alasan) {
+    if (!fullName || !email || !usia || !whatsapp || !alasan) {
       setWarning(true);
     } else {
+      emailjs
+        .sendForm(
+          `service_pb42pzg`,
+          `template_24gojzs`,
+          e.target,
+          `eSWxzIrgCgFSCDcXx`
+        )
+        .then((res) => {
+          if (res.status === 200) {
+            setEmailSuccess(true);
+            console.log(emailSuccess);
+          }
+        });
       fetch(scriptURL, { method: "POST", body: new FormData(formRef.current) })
         .then((response) => {
           console.log("Successfully", response);

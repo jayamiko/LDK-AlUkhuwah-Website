@@ -39,8 +39,6 @@ export const FormRegistration = ({
     }
   }
 
-  console.log(personalMember.fakultas);
-
   return (
     <form
       name="submit-to-google-sheet"
