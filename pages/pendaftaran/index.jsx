@@ -8,8 +8,9 @@ import styles from "./pendaftaran.module.css";
 import Papa from "papaparse";
 import { DataGrid } from "@mui/x-data-grid";
 import FormRegistration from "../../components/Form/FormRegistration";
-import Head from "../../components/layout/Header/Head.jsx";
+import HeadTop from "../../components/layout/Header/Head.jsx";
 import { menu } from "../../data/data";
+import Head from "next/head";
 
 const scriptURL =
   "https://script.google.com/macros/s/AKfycbxBND5Bi5PYyIYkqwU-bnjaOhIe2EfG79qs1aVsryR8_MGOy-8h1_IyFYyJ1spb0EXD/exec";
@@ -23,7 +24,7 @@ const RegistrationPage = () => {
       fullName: "",
       email: "",
       age: "",
-      jenisKelamin: "Pria",
+      jenisKelamin: "Laki-laki",
       whatsapp: "",
       fakultas: "FAI",
       jurusan: "",
@@ -60,6 +61,11 @@ const RegistrationPage = () => {
           setTitle("Selamat Datang di LDK Al-Ukhuwah");
           setName(personalMember.fullName);
           setGender(personalMember.jenisKelamin);
+          setInterval(() => {
+            setTitle("Bergabung Bersama Kami!");
+            setName("");
+            setGender("");
+          }, 3000);
           setPersonalMember({
             fullName: "",
             email: "",
@@ -121,9 +127,12 @@ const RegistrationPage = () => {
 
   return (
     <>
-      <section className={`coverPendaftaran`}>
-        <div className="h-1/4 flex flex-col-reverse md:flex-col md:px-5 lg:m-0 w-full z-50">
-          <Head />
+      <Head>
+        <title>LDK UNISMA - Pendaftaran</title>
+      </Head>
+      <section className="coverPendaftaran">
+        <div className="h-fit flex flex-col md:px-5 lg:m-0 w-full z-50">
+          <HeadTop />
           <header
             className={`${styles.bgHeader} w-full md:container mx-auto md:inline items-center m-0 overflow-hidden md:rounded-3xl`}
           >
