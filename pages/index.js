@@ -1,21 +1,22 @@
 import React, { useState, useEffect } from "react";
-import { faArrowRight } from "@fortawesome/free-solid-svg-icons"
-import { alUkhuwah } from "./_app"
+import Head from "next/head";
+import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
+import { alUkhuwah } from "./_app";
 import { blog } from "../data/data";
 import AboutCard from "../components/Card/AboutCard";
 import CourseCard from "../components/Card/CourseCard";
-import Button from "../components/utils/Button"
+import Button from "../components/utils/Button";
 import DepartementSlide from "../components/Card/DeptSlide";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faSearch } from "@fortawesome/free-solid-svg-icons"
+import { faSearch } from "@fortawesome/free-solid-svg-icons";
+import ComingSoonPage from "../components/ComingSoon";
 
 const HomePage = () => {
-
   const [query, setQuery] = useState("");
   const [resultQuery, setResultQuery] = useState([]);
 
   const searching = () => {
-    const resultSearch = blog.filter(item => {
+    const resultSearch = blog.filter((item) => {
       const title = item.title.toLowerCase().includes(query.toLowerCase());
       if (query === "") {
         return item;
@@ -24,18 +25,25 @@ const HomePage = () => {
       }
     });
     setResultQuery(resultSearch);
-  }
-  
+  };
+
   useEffect(() => {
-    searching()
-  }, [query])
+    searching();
+  }, [query]);
 
   return (
     <>
+      <Head>
+        <title>LDK Al-Ukhuwah UNISMA</title>
+      </Head>
+      <ComingSoonPage />
       <section id="hero" className="coverHero z-10">
         <div className="relative h-screen flex container z-20 md:pt-44 w-full">
-          <div className="grid grid-cols-1 my-auto">
-            <div id="heading" className="text-white w-full mt-5 md:w-4/5 lg:w-2/3 mx-auto">
+          {/* <div className="grid grid-cols-1 my-auto">
+            <div
+              id="heading"
+              className="text-white w-full mt-5 md:w-4/5 lg:w-2/3 mx-auto"
+            >
               <h2 className="text-sky-600 brightness-125 font-semibold text-xl text-center">
                 #CerdasKreatifBersahabat
               </h2>
@@ -47,16 +55,20 @@ const HomePage = () => {
                 yang diperintahkan (kepadamu) dan berpalinglah dari orang yang
                 musyrik (QS. Al-Hijr [15]:94)
               </p>
-            <div className="w-full flex justify-center">
+              <div className="w-full flex justify-center">
                 <div className="w-1/2 sm:w-1/3">
-                  <Button path="/pendaftaran" text="Yuk Gabung LDK" icon={faArrowRight} />
+                  <Button
+                    path="/pendaftaran"
+                    text="Yuk Gabung LDK"
+                    icon={faArrowRight}
+                  />
                 </div>
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
       </section>
-      <AboutCard />
+      {/* <AboutCard />
       <section id="departement" className="h-[90vh] py-12 my-20 bg-[url(/images/ldk-akhwat2.jpg)] bg-center bg-no-repeat bg-cover">
         <div className="relative container mx-auto px-4 h-full flex items-center">
           <DepartementSlide />
@@ -85,7 +97,7 @@ const HomePage = () => {
           </div>
           <CourseCard resultQuery={resultQuery} />
         </div>
-      </section>
+      </section> */}
     </>
   );
 };
