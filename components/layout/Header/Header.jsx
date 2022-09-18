@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Link from "next/link";
-import Head from "./Head";
+import HeadTop from "./Head";
 import { UKM, kampus } from "../../../pages/_app";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTimes, faBars } from "@fortawesome/free-solid-svg-icons";
@@ -13,7 +13,7 @@ const Header = () => {
 
   return (
     <div className="absolute flex flex-col-reverse md:flex-col md:px-5 lg:mx-0 w-full z-50">
-      <Head />
+      <HeadTop />
       <header
         className={`${styles.bgHeader} w-full md:container mx-auto md:inline items-center m-0 overflow-hidden md:rounded-3xl`}
       >
