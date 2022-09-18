@@ -1,11 +1,11 @@
 import React, { useState } from "react";
-import Link from 'next/link'
-import Head from "./Head";
-import { UKM, kampus} from '../../../pages/_app'
+import Link from "next/link";
+import HeadTop from "./Head";
+import { UKM, kampus } from "../../../pages/_app";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {faTimes, faBars} from "@fortawesome/free-solid-svg-icons";
+import { faTimes, faBars } from "@fortawesome/free-solid-svg-icons";
 import styles from "./Header.module.css";
-import { menu } from "../../../data/data"
+import { menu } from "../../../data/data";
 import Image from "next/image";
 
 const Header = () => {
@@ -13,28 +13,31 @@ const Header = () => {
 
   return (
     <div className="absolute flex flex-col-reverse md:flex-col md:px-5 lg:mx-0 w-full z-50">
-      <Head />
+      <HeadTop />
       <header
         className={`${styles.bgHeader} w-full md:container mx-auto md:inline items-center m-0 overflow-hidden md:rounded-3xl`}
       >
         <nav className={click ? "flex" : "flex justify-between items-center"}>
           <ul
             className={
-              click ? `${styles.mobileNav} hidden z-50 py-8 px-5 mb-5` : "my-auto h-full hidden md:flex justify-between space-x-7 uppercase py-10 px-5"
+              click
+                ? `${styles.mobileNav} hidden z-50 py-8 px-5 mb-5`
+                : "my-auto h-full hidden md:flex justify-between space-x-7 uppercase py-10 px-5"
             }
             onClick={() => setClick(false)}
           >
-            {menu.map((menus, index)=>{
+            {menu.map((menus, index) => {
               return (
                 <li key={index}>
                   <Link href={menus.path}>
-                    <a 
-                      className={`${styles.linkMenu} font-bold hover:font-extrabold hover:scale-105`}>
-                        {menus.name}
+                    <a
+                      className={`${styles.linkMenu} font-bold hover:font-extrabold hover:scale-105`}
+                    >
+                      {menus.name}
                     </a>
                   </Link>
                 </li>
-              )
+              );
             })}
           </ul>
           <div
@@ -69,7 +72,11 @@ const Header = () => {
             </div>
           </div>
           <div className={click ? "w-full font-roboto md:hidden" : "hidden"}>
-            <div className={click ? "flex md:hidden text-white items-center" : "hidden"}>
+            <div
+              className={
+                click ? "flex md:hidden text-white items-center" : "hidden"
+              }
+            >
               <Link href={`/`}>
                 <a>
                   <Image
@@ -93,7 +100,9 @@ const Header = () => {
               </div>
             </div>
             <ul
-              className={click ? `${styles.mobileNav} space-y-2` : "flex md:hidden"}
+              className={
+                click ? `${styles.mobileNav} space-y-2` : "flex md:hidden"
+              }
               onClick={() => setClick(false)}
             >
               {menu.map((menus, index) => {
@@ -103,7 +112,7 @@ const Header = () => {
                       <a className={styles.linkMenu}>{menus.name}</a>
                     </Link>
                   </li>
-                )
+                );
               })}
             </ul>
           </div>
@@ -112,14 +121,14 @@ const Header = () => {
             onClick={() => setClick(!click)}
           >
             {click ? (
-              <FontAwesomeIcon 
-                  icon={faTimes}
-                  className="text-white text-2xl mt-10"
+              <FontAwesomeIcon
+                icon={faTimes}
+                className="text-white text-2xl mt-10"
               ></FontAwesomeIcon>
-              ) : (
-              <FontAwesomeIcon 
-                  icon={faBars}
-                  className="text-white text-2xl"
+            ) : (
+              <FontAwesomeIcon
+                icon={faBars}
+                className="text-white text-2xl"
               ></FontAwesomeIcon>
             )}
           </button>
