@@ -8,7 +8,6 @@ import styles from "./program.module.css";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-import Head from "next/head";
 // import required modules
 import { Autoplay, Pagination } from "swiper";
 import Title from "../../components/utils/Title";
