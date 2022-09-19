@@ -12,6 +12,7 @@ import FormRegistration from "../../components/Form/FormRegistration";
 import HeadTop from "../../components/layout/Header/Head.jsx";
 import { menu } from "../../data/data";
 import Head from "next/head";
+import Footer from "../../components/layout/Footer/Footer";
 
 // For Spread Sheet data
 const scriptURL =
@@ -146,6 +147,10 @@ const RegistrationPage = () => {
     <>
       <Head>
         <title>LDK UNISMA - Pendaftaran</title>
+        <meta
+          name="description"
+          content="Pendaftaran LDK Al-Ukhuwah UNISMA BEKASI"
+        />
       </Head>
       <section className="coverPendaftaran">
         <div className="h-fit flex flex-col md:px-5 lg:m-0 w-full z-50">
@@ -219,7 +224,7 @@ const RegistrationPage = () => {
                     </div>
                   </div>
                 </div>
-                <ul
+                {/* <ul
                   className={
                     click ? `${styles.mobileNav} space-y-2` : "flex md:hidden"
                   }
@@ -234,9 +239,9 @@ const RegistrationPage = () => {
                       </li>
                     );
                   })}
-                </ul>
+                </ul> */}
               </div>
-              <button
+              {/* <button
                 className={`mr-3 p-2 h-fit md:hidden`}
                 onClick={() => setClick(!click)}
               >
@@ -251,7 +256,7 @@ const RegistrationPage = () => {
                     className="text-white text-2xl"
                   ></FontAwesomeIcon>
                 )}
-              </button>
+              </button> */}
             </nav>
           </header>
         </div>
@@ -281,6 +286,7 @@ const RegistrationPage = () => {
           rowsPerPageOptions={[5]}
         />
       </div>
+      <Footer />
     </>
   );
 };

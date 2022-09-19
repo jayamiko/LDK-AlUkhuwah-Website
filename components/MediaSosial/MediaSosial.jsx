@@ -11,7 +11,10 @@ function MediaSosial() {
             <a
               index={sosmed.id}
               href={sosmed.link}
-              className={`flex items-center justify-center hover:brightness-110 rounded-full w-8 h-8 md:w-9 md:h-9 lg:w-10 lg:h-10 xl:w-11 xl:h-11 ${sosmed.color} hover:scale-110`}
+              className={`flex items-center justify-center hover:brightness-110 rounded-full w-8 h-8 md:w-9 md:h-9 lg:w-10 lg:h-10 xl:w-11 xl:h-11 hover:scale-110`}
+              style={{
+                background: `${sosmed.color}`,
+              }}
             >
               <FontAwesomeIcon
                 icon={sosmed.icon}

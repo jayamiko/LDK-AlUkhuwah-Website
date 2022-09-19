@@ -30,6 +30,7 @@
     "react-bootstrap": "^2.4.0",
     "react-dom": "18.2.0",
     "react-icons": "^4.4.0",
+    "react-phone-number-input": "^3.2.11",
     "swiper": "^8.0.0"
   },
   "devDependencies": {

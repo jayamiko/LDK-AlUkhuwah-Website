@@ -58,25 +58,25 @@ export const mediasosial = [
     id: "Facebook",
     icon: faFacebookF,
     link: "https://web.facebook.com/ldkunisma.bekasi?_rdc=1&_rdr/",
-    color: "bg-blue-500",
+    color: "#3b82f6",
   },
   {
     id: "Youtube",
     icon: faYoutube,
     link: "https://www.youtube.com/channel/UCkpwGcpCbk2893j5qFyxePA",
-    color: "bg-red-500",
+    color: "#ef4444",
   },
   {
     id: "Instagram",
     icon: faInstagram,
     link: "https://www.instagram.com/ldkunisma45bekasi/",
-    color: "bg-pink-500",
+    color: "#ec4899",
   },
   {
     id: "Twitter",
     icon: faTwitter,
     link: "https://twitter.com/ldk_unisma45",
-    color: "bg-sky-500",
+    color: "#0ea5e9",
   },
 ];
 export const departement = [

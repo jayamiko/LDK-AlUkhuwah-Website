@@ -11,6 +11,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import ComingSoonPage from "../components/ComingSoon";
 
+const description = `Lembaga Dakwah Kampus (LDK) Al-Ukhuwah merupakan salah satu Unit Kegiatan Mahasiswa (UKM) yang ada di kampus Universitas Islam ‘45’ Bekasi. LDK Al-Ukhuwah adalah UKM yang bergerak di bidang pendidikan keilmuan agama & umum, pembinaan karakter & mental, penguatan rohani & jasmani, penembangan prestasi, dan pengasahan kreativitas.`;
+
 const HomePage = () => {
   const [query, setQuery] = useState("");
   const [resultQuery, setResultQuery] = useState([]);
@@ -35,10 +37,11 @@ const HomePage = () => {
     <>
       <Head>
         <title>LDK Al-Ukhuwah UNISMA</title>
+        <meta name="description" content={description} />
       </Head>
-      <ComingSoonPage />
-      <section id="hero" className="coverHero z-10">
-        <div className="relative h-screen flex container z-20 md:pt-44 w-full">
+      <section id="hero" className="coverHero">
+        <div className="relative flex container z-20 md:pt-44 w-full">
+          <ComingSoonPage />
           {/* <div className="grid grid-cols-1 my-auto">
             <div
               id="heading"
