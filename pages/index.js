@@ -38,6 +38,10 @@ const HomePage = () => {
       <Head>
         <title>LDK Al-Ukhuwah UNISMA</title>
         <meta name="description" content={description} />
+        <meta
+          name="google-site-verification"
+          content="UxKlaNnZWzouoetVRx_2hJjkWwij95qWTjeo38MaeSE"
+        />
       </Head>
       <section id="hero" className="coverHero">
         <div className="relative flex container z-20 md:pt-44 w-full">
