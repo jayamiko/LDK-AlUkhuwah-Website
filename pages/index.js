@@ -43,10 +43,10 @@ const HomePage = () => {
           content="UxKlaNnZWzouoetVRx_2hJjkWwij95qWTjeo38MaeSE"
         />
       </Head>
-      <section id="hero" className="coverHero">
-        <div className="relative flex container z-20 md:pt-44 w-full">
-          <ComingSoonPage />
-          {/* <div className="grid grid-cols-1 my-auto">
+      <section id="hero" className="coverHero border-2 border-red-500">
+        {/* <div className="relative border-4 flex container z-20 md:pt-44 w-full"> */}
+        <ComingSoonPage />
+        {/* <div className="grid grid-cols-1 my-auto">
             <div
               id="heading"
               className="text-white w-full mt-5 md:w-4/5 lg:w-2/3 mx-auto"
@@ -73,7 +73,7 @@ const HomePage = () => {
               </div>
             </div>
           </div> */}
-        </div>
+        {/* </div> */}
       </section>
       {/* <AboutCard />
       <section id="departement" className="h-[90vh] py-12 my-20 bg-[url(/images/ldk-akhwat2.jpg)] bg-center bg-no-repeat bg-cover">
