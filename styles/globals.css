@@ -38,6 +38,14 @@ a {
   background-color: #fff;
 }
 
+.text-shadow-black {
+  text-shadow: 2px 2px #000;
+}
+
+.text-shadow-white {
+  text-shadow: 2px 2px #fff;
+}
+
 .coverHero {
   background: url("/images/LDK-Flag.jpg");
   background-size: cover;

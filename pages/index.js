@@ -43,7 +43,7 @@ const HomePage = () => {
           content="UxKlaNnZWzouoetVRx_2hJjkWwij95qWTjeo38MaeSE"
         />
       </Head>
-      <section id="hero" className="coverHero border-2 border-red-500">
+      <section id="hero" className="coverHero">
         {/* <div className="relative border-4 flex container z-20 md:pt-44 w-full"> */}
         <ComingSoonPage />
         {/* <div className="grid grid-cols-1 my-auto">

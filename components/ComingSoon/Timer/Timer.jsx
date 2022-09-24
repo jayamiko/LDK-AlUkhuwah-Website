@@ -7,12 +7,13 @@ class CountDown extends Component {
     super(props);
     this.count = this.count.bind(this);
     this.state = {
-      days: 0,
+      days: 26,
       minutes: 0,
       hours: 0,
       secounds: 0,
       time_up: "",
     };
+    this.date = props.date;
     this.x = null;
     this.deadline = null;
   }
@@ -43,7 +44,7 @@ class CountDown extends Component {
     }
   }
   componentDidMount() {
-    this.deadline = new Date("Oct 08, 2022 21:00:00").getTime();
+    this.deadline = new Date(this.date).getTime();
 
     this.x = setInterval(this.count, 1000);
   }
@@ -51,7 +52,7 @@ class CountDown extends Component {
   render() {
     const { days, seconds, hours, minutes } = this.state;
     return (
-      <div className={styles.countdown}>
+      <div className={`${styles.countdown} text-shadow-black`}>
         <div className="w-1/4 float-left">
           <div className={styles.box}>
             <p id="day">{days}</p>
