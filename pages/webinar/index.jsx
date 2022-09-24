@@ -24,7 +24,7 @@ const Webinar = () => {
         id="webinar"
         className="h-fit bg-center bg-cover bg-[url('/images/webinar/talkshow.jpg')] z-10"
       >
-        <div className="h-fit flex flex-col md:px-5 lg:m-0 w-full z-50">
+        <div className="lg:min-h-screen h-fit flex flex-col md:px-5 lg:m-0 w-full z-50">
           <HeadTop />
           <header
             className={`${styles.bgHeader} w-full md:container mx-auto md:inline items-center m-0 overflow-hidden md:rounded-3xl`}
