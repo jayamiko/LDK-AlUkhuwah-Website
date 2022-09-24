@@ -146,7 +146,7 @@ const Webinar = () => {
                 <p className="font-titan text-shadow-black uppercase m-0 tracking-wide text-2xl md:text-4xl">
                   Special Webinar!
                 </p>
-                <h1 className="font-wolf text-shadow-white text-cyan-500 m-0 px-4 text-6xl sm:text-8xl lg:text-9xl">
+                <h1 className="font-wolf text-shadow-white text-cyan-500 m-0 px-4 text-5xl sm:text-8xl lg:text-9xl">
                   Talk Show
                 </h1>
                 <i className="lg:text-shadow-black">
