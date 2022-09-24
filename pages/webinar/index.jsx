@@ -42,7 +42,7 @@ const Webinar = () => {
                 <div
                   className={click ? "hidden" : "md:hidden flex items-center"}
                 >
-                  <Link href={`/`}>
+                  <Link href="/">
                     <a>
                       <Image
                         src="/images/ldk-icon.png"
@@ -73,7 +73,7 @@ const Webinar = () => {
                     click ? "flex md:hidden text-white items-center" : "hidden"
                   }
                 >
-                  <Link href={`/`}>
+                  <Link href="">
                     <a>
                       <Image
                         src="/images/ldk-icon.png"
@@ -150,9 +150,9 @@ const Webinar = () => {
                   Talk Show
                 </h1>
                 <i className="lg:text-shadow-black">
-                  "Persiapan Memasuki Dunia Kampus"
+                  {"Persiapan Memasuki Dunia Kampus"}
                 </i>
-                <div className="lg:w-1/2 my-2">
+                <div className="w-full lg:w-1/2 my-2">
                   <Button
                     path="https://forms.gle/9XwV91H46qzy1KXs8"
                     blank={true}
