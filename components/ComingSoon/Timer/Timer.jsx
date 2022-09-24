@@ -52,7 +52,7 @@ class CountDown extends Component {
   render() {
     const { days, seconds, hours, minutes } = this.state;
     return (
-      <div className={`${styles.countdown} text-shadow-black`}>
+      <div className={`${styles.countdown} lg:text-shadow-black`}>
         <div className="w-1/4 float-left">
           <div className={styles.box}>
             <p id="day">{days}</p>
