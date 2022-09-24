@@ -13,8 +13,7 @@ module.exports = {
       },
       fontFamily: {
         roboto: ["Roboto", "sans-serif"],
-        wolf: ["Wolf in the City", "sans-serif"],
-        "wolf-light": ["Wolf in the City Light", "sans-serif"],
+        wolf: ["Wolf in the City", "Titan One", "sans-serif"],
         titan: ["Titan One", "Roboto", "sans-serif"],
         edu: ["Edu SA Beginner", "Roboto", "sans-serif"],
       },

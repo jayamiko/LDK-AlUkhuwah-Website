@@ -22,7 +22,7 @@ const Webinar = () => {
       </Head>
       <section
         id="webinar"
-        className="h-screen 2xl:h-fit bg-center bg-cover bg-[url('/images/webinar/talkshow.jpg')] z-10"
+        className="h-fit bg-center bg-cover bg-[url('/images/webinar/talkshow.jpg')] z-10"
       >
         <div className="h-fit flex flex-col md:px-5 lg:m-0 w-full z-50">
           <HeadTop />
@@ -132,7 +132,7 @@ const Webinar = () => {
           </header>
         </div>
         <div className="py-4 lg:py-0">
-          <div className="container mx-auto px-5 flex flex-col-reverse lg:flex-row">
+          <div className="container mx-auto px-2 sm:px-5 flex flex-col-reverse lg:flex-row">
             <div className="w-full lg:w-1/2 flex justify-center lg:justify-start items-center">
               <Image
                 src="/images/webinar/webinar.jpg"
@@ -146,7 +146,7 @@ const Webinar = () => {
                 <p className="font-titan text-shadow-black uppercase m-0 text-2xl">
                   Special Webinar!
                 </p>
-                <h1 className="font-wolf text-shadow-white text-cyan-500 m-0 px-4 text-8xl lg:text-9xl">
+                <h1 className="font-wolf text-shadow-white text-cyan-500 m-0 px-4 text-6xl sm:text-8xl lg:text-9xl">
                   Talk Show
                 </h1>
                 <i className="lg:text-shadow-black">
