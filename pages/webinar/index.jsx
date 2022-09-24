@@ -22,9 +22,9 @@ const Webinar = () => {
       </Head>
       <section
         id="webinar"
-        className="h-fit bg-center bg-cover bg-[url('/images/webinar/talkshow.jpg')] z-10"
+        className="min-h-screen h-fit lg:h-screen bg-center bg-cover bg-[url('/images/webinar/talkshow.jpg')] z-10"
       >
-        <div className="lg:min-h-screen h-fit flex flex-col md:px-5 lg:m-0 w-full z-50">
+        <div className="h-fit flex flex-col md:px-5 lg:m-0 w-full z-50">
           <HeadTop />
           <header
             className={`${styles.bgHeader} w-full md:container mx-auto md:inline items-center m-0 overflow-hidden md:rounded-3xl`}
@@ -136,14 +136,14 @@ const Webinar = () => {
             <div className="w-full lg:w-1/2 flex justify-center lg:justify-start items-center">
               <Image
                 src="/images/webinar/webinar.jpg"
-                width={420}
-                height={420}
+                width={400}
+                height={400}
                 alt=""
               />
             </div>
             <div className="w-full lg:w-1/2 items-center">
               <div className="w-full text-white flex flex-col items-center lg:items-start">
-                <p className="font-titan text-shadow-black uppercase m-0 text-2xl">
+                <p className="font-titan text-shadow-black uppercase m-0 tracking-wide text-2xl md:text-4xl">
                   Special Webinar!
                 </p>
                 <h1 className="font-wolf text-shadow-white text-cyan-500 m-0 px-4 text-6xl sm:text-8xl lg:text-9xl">
