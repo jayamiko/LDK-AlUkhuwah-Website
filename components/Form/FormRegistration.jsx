@@ -39,6 +39,8 @@ export const FormRegistration = ({
     }
   }
 
+  console.log(personalMember);
+
   return (
     <form
       name="submit-to-google-sheet"
@@ -115,24 +117,24 @@ export const FormRegistration = ({
             <div className="flex justify-between flex-wrap">
               <div className="w-1/5 md:w-2/5">
                 <label
-                  htmlFor="usia"
+                  htmlFor="tanggalLahir"
                   className="font-semibold text-sm lg:text-base"
                 >
-                  Usia
+                  Tanggal Lahir
                 </label>
                 {warning && (
                   <InvalidField
                     text="Wajib Diisi"
-                    state={personalMember.usia}
+                    state={personalMember.tanggalLahir}
                   />
                 )}
                 <input
-                  type="text"
+                  type="date"
                   className="form-control customPlaceholder"
-                  value={personalMember.usia}
-                  id="usia"
-                  name="usia"
-                  placeholder="Usia"
+                  value={personalMember.tanggalLahir}
+                  id="tanggalLahir"
+                  name="tanggalLahir"
+                  placeholder="Tanggal Lahir"
                   onChange={handleChange}
                 />
               </div>
@@ -185,79 +187,81 @@ export const FormRegistration = ({
           </div>
 
           <div className="md:w-1/2 lg:w-full">
-            <div>
-              <label
-                htmlFor="fakultas"
-                className="font-semibold text-sm lg:text-base"
-              >
-                Fakultas
-              </label>
-              <div className="flex flex-wrap w-full md:w-full">
-                <select
-                  className="form-control customPlaceholder"
-                  id="fakultas"
-                  name="fakultas"
-                  value={personalMember.fakultas}
-                  onChange={handleChange}
+            <div className="flex justify-between gap-4">
+              <div className="w-1/3">
+                <label
+                  htmlFor="fakultas"
+                  className="font-semibold text-sm lg:text-base"
                 >
-                  {fakultas.map((list, index) => {
-                    return (
-                      <option key={index} className="text-gray-400">
-                        {list.name}
-                      </option>
-                    );
-                  })}
-                </select>
+                  Fakultas
+                </label>
+                <div className="flex flex-wrap w-full md:w-full">
+                  <select
+                    className="form-control customPlaceholder"
+                    id="fakultas"
+                    name="fakultas"
+                    value={personalMember.fakultas}
+                    onChange={handleChange}
+                  >
+                    {fakultas.map((list, index) => {
+                      return (
+                        <option key={index} className="text-gray-400">
+                          {list.name}
+                        </option>
+                      );
+                    })}
+                  </select>
+                </div>
+              </div>
+              <div className="w-2/3">
+                <label
+                  htmlFor="jurusan"
+                  className="font-semibold text-sm lg:text-base"
+                >
+                  Jurusan
+                </label>
+                <div className="flex flex-wrap w-full md:w-full">
+                  <select
+                    className="form-control customPlaceholder"
+                    id="jurusan"
+                    name="jurusan"
+                    value={personalMember.jurusan}
+                    onChange={handleChange}
+                  >
+                    {selectArray().map((list, index) => {
+                      return (
+                        <option key={index} className="text-gray-400">
+                          {list.jurusan}
+                        </option>
+                      );
+                    })}
+                  </select>
+                </div>
               </div>
             </div>
             <div>
               <label
-                htmlFor="jurusan"
+                htmlFor="pengalamanOrganisasi"
                 className="font-semibold text-sm lg:text-base"
               >
-                Jurusan
-              </label>
-              <div className="flex flex-wrap w-full md:w-full">
-                <select
-                  className="form-control customPlaceholder"
-                  id="jurusan"
-                  name="jurusan"
-                  value={personalMember.jurusan}
-                  onChange={handleChange}
-                >
-                  {selectArray().map((list, index) => {
-                    return (
-                      <option key={index} className="text-gray-400">
-                        {list.jurusan}
-                      </option>
-                    );
-                  })}
-                </select>
-              </div>
-            </div>
-            {/* <div>
-              <label
-                htmlFor="jurusan"
-                className="font-semibold text-sm lg:text-base"
-              >
-                Jurusan
+                Pengalaman Organisasi
               </label>
               {warning && (
                 <InvalidField
                   text="Wajib Diisi"
-                  state={personalMember.jurusan}
+                  state={personalMember.pengalamanOrganisasi}
                 />
               )}
-              <input
+              <textarea
                 type="text"
-                className="form-control customPlaceholder"
-                value={personalMember.jurusan}
-                id="jurusan"
-                name="jurusan"
-                placeholder="Jurusan"
+                className="form-control md:h-20 customPlaceholder"
+                value={personalMember.pengalamanOrganisasi}
+                id="pengalamanOrganisasi"
+                name="pengalamanOrganisasi"
+                placeholder="Ceritakan Pengalaman Organisasimu"
                 onChange={handleChange}
               />
-            </div> */}
+            </div>
             <div>
               <label
                 htmlFor="alasan"
@@ -273,7 +277,7 @@ export const FormRegistration = ({
               )}
               <textarea
                 type="text"
-                className="form-control md:h-24 customPlaceholder"
+                className="form-control md:h-14 customPlaceholder"
                 value={personalMember.alasan}
                 id="alasan"
                 name="alasan"

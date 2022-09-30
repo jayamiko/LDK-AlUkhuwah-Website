@@ -14,7 +14,7 @@ const HeadTop = () => {
         <Link href={`/`}>
           <a>
             <Image
-              src="/images/ldk-icon.png"
+              src="/ldk-icon.png"
               width={150}
               height={125}
               alt="logo-ldk"

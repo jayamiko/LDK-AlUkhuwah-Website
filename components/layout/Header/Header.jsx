@@ -51,7 +51,7 @@ const Header = () => {
               <Link href={`/`}>
                 <a>
                   <Image
-                    src="/images/ldk-icon.png"
+                    src="/ldk-icon.png"
                     width={150}
                     height={150}
                     className="w-20 sm:w-28 md:w-40"
@@ -80,7 +80,7 @@ const Header = () => {
               <Link href={`/`}>
                 <a>
                   <Image
-                    src="/images/ldk-icon.png"
+                    src="/ldk-icon.png"
                     width={150}
                     height={150}
                     className="w-20 sm:w-28 md:w-40"

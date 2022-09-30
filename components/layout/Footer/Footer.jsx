@@ -1,8 +1,12 @@
 import React from "react";
-import { alUkhuwah, kampus, emailLDK } from '../../../pages/_app'
+import { alUkhuwah, kampus, emailLDK } from "../../../pages/_app";
 import MediaSosial from "../../MediaSosial/MediaSosial";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {faMap, faPaperPlane, faPhone} from "@fortawesome/free-solid-svg-icons";
+import {
+  faMap,
+  faPaperPlane,
+  faPhone,
+} from "@fortawesome/free-solid-svg-icons";
 
 const Footer = () => {
   return (
@@ -29,29 +33,29 @@ const Footer = () => {
                 Departemen di {alUkhuwah}
               </h2>
             </div>
-            <ul className="m-0 py-2 flex flex-row justify-center text-sm md:space-x-6 hover:text-slate-200 hover:font-semibold p-0 gap-2">
+            <ul className="m-0 py-2 flex flex-row justify-center text-sm md:space-x-6 p-0 gap-2">
               <div className="text-xs sm:text-sm md:text-base w-2/6 sm:w-full">
                 <ul className="list-disc p-0">
-                  <li className="m-0 cursor-pointer ">
+                  <li className="m-0">
                     <i>Kesekretariatan</i>
                   </li>
-                  <li className="m-0 cursor-pointer">
+                  <li className="m-0">
                     <i>Perekonomian</i>
                   </li>
-                  <li className="m-0 cursor-pointer">
+                  <li className="m-0">
                     <i>Kaderisasi</i>
                   </li>
                 </ul>
               </div>
               <div className="text-xs sm:text-sm md:text-base w-2/6 sm:w-full">
                 <ul className="list-disc p-0">
-                  <li className="m-0 cursor-pointer">
+                  <li className="m-0">
                     <i>Humas Media</i>
                   </li>
-                  <li className="m-0 cursor-pointer">
+                  <li className="m-0">
                     <i>Keputrian</i>
                   </li>
-                  <li className="m-0 cursor-pointer">
+                  <li className="m-0">
                     <i>Syiar</i>
                   </li>
                 </ul>
@@ -67,21 +71,21 @@ const Footer = () => {
             </div>
             <ul className="text-xs sm:text-sm w-2/3 sm:w-full list-outside p-0 space-y-2 py-1">
               <li>
-                <FontAwesomeIcon 
+                <FontAwesomeIcon
                   icon={faMap}
                   className="text-white mr-2"
                 ></FontAwesomeIcon>
                 Jl. Cut Meutia No. 83 Bekasi Timur
               </li>
               <li>
-                <FontAwesomeIcon 
+                <FontAwesomeIcon
                   icon={faPhone}
                   className="text-white mr-2"
                 ></FontAwesomeIcon>
                 0855-9163-3631
               </li>
               <li>
-                <FontAwesomeIcon 
+                <FontAwesomeIcon
                   icon={faPaperPlane}
                   className="text-white mr-2"
                 ></FontAwesomeIcon>

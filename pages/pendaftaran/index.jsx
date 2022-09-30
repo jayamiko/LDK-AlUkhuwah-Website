@@ -3,14 +3,14 @@ import Link from "next/link";
 import Image from "next/image";
 import emailjs from "emailjs-com";
 import { UKM, kampus } from "../_app";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faTimes, faBars } from "@fortawesome/free-solid-svg-icons";
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import { faTimes, faBars } from "@fortawesome/free-solid-svg-icons";
 import styles from "./pendaftaran.module.css";
 import Papa from "papaparse";
 import { DataGrid } from "@mui/x-data-grid";
 import FormRegistration from "../../components/Form/FormRegistration";
 import HeadTop from "../../components/layout/Header/Head.jsx";
-import { menu } from "../../data/data";
+// import { menu } from "../../data/data";
 import Head from "next/head";
 import Footer from "../../components/layout/Footer/Footer";
 
@@ -27,11 +27,12 @@ const RegistrationPage = () => {
     {
       fullName: "",
       email: "",
-      age: "",
+      tanggalLahir: "",
       jenisKelamin: "Laki-laki",
       whatsapp: "",
       fakultas: "FAI",
       jurusan: "",
+      pengalamanOrganisasi: "",
       alasan: "",
     },
   ]);
@@ -54,9 +55,23 @@ const RegistrationPage = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const { fullName, email, usia, whatsapp, alasan } = personalMember;
+    const {
+      fullName,
+      email,
+      tanggalLahir,
+      whatsapp,
+      pengalamanOrganisasi,
+      alasan,
+    } = personalMember;
 
-    if (!fullName || !email || !usia || !whatsapp || !alasan) {
+    if (
+      (!fullName ||
+        !email ||
+        !tanggalLahir ||
+        !whatsapp ||
+        !pengalamanOrganisasi,
+      !alasan)
+    ) {
       setWarning(true);
     } else {
       emailjs
@@ -69,7 +84,6 @@ const RegistrationPage = () => {
         .then((res) => {
           if (res.status === 200) {
             setEmailSuccess(true);
-            console.log(emailSuccess);
           }
         });
       fetch(scriptURL, { method: "POST", body: new FormData(formRef.current) })
@@ -87,11 +101,12 @@ const RegistrationPage = () => {
           setPersonalMember({
             fullName: "",
             email: "",
-            usia: "",
+            tanggalLahir: "",
             jenisKelamin: "Laki-laki",
             whatsapp: "",
             fakultas: "FAI",
             jurusan: "",
+            pengalamanOrganisasi: "",
             alasan: "",
           });
         })
@@ -116,32 +131,32 @@ const RegistrationPage = () => {
     });
   }, [personalMember, url, formRef]);
 
-  const columns = [
-    { field: "id", headerName: "No", width: 60 },
-    { field: "fullName", headerName: "Full Name", width: 350 },
-    { field: "usia", headerName: "Usia", width: 80 },
-    { field: "jenisKelamin", headerName: "Jenis Kelamin", width: 120 },
-    {
-      field: "fakultas",
-      headerName: "Fakultas/Jurusan",
-      width: 320,
-    },
-    {
-      field: "timestamp",
-      headerName: "Tanggal Masuk",
-      width: 150,
-      // valueGetter: (params) =>
-      //   `${params.row.fullName || ''} ${params.row.fakultas || ''}`,
-    },
-  ];
+  // const columns = [
+  //   { field: "id", headerName: "No", width: 60 },
+  //   { field: "fullName", headerName: "Full Name", width: 350 },
+  //   { field: "usia", headerName: "Usia", width: 80 },
+  //   { field: "jenisKelamin", headerName: "Jenis Kelamin", width: 120 },
+  //   {
+  //     field: "fakultas",
+  //     headerName: "Fakultas/Jurusan",
+  //     width: 320,
+  //   },
+  //   {
+  //     field: "timestamp",
+  //     headerName: "Tanggal Masuk",
+  //     width: 150,
+  //     // valueGetter: (params) =>
+  //     //   `${params.row.fullName || ''} ${params.row.fakultas || ''}`,
+  //   },
+  // ];
 
-  const dataRow = dataCSV.map((item, index) => ({
-    ...item,
-    id: index + 1,
-    age: item.usia,
-    jenisKelamin: item.jenisKelamin,
-    fakultas: `${item.fakultas} / ${item.jurusan}`,
-  }));
+  // const dataRow = dataCSV.map((item, index) => ({
+  //   ...item,
+  //   id: index + 1,
+  //   age: item.usia,
+  //   jenisKelamin: item.jenisKelamin,
+  //   fakultas: `${item.fakultas} / ${item.jurusan}`,
+  // }));
 
   return (
     <>
@@ -174,7 +189,7 @@ const RegistrationPage = () => {
                   <Link href={`/`}>
                     <a>
                       <Image
-                        src="/images/ldk-icon.png"
+                        src="/ldk-icon.png"
                         width={150}
                         height={150}
                         className="w-20 sm:w-28 md:w-40"
@@ -205,7 +220,7 @@ const RegistrationPage = () => {
                   <Link href={`/`}>
                     <a>
                       <Image
-                        src="/images/ldk-icon.png"
+                        src="/ldk-icon.png"
                         width={150}
                         height={150}
                         className="w-20 sm:w-28 md:w-40"
@@ -261,7 +276,7 @@ const RegistrationPage = () => {
           </header>
         </div>
 
-        <div className={`${styles.form} container mx-auto xl:h-3/4`}>
+        <div className={`${styles.form} container mx-auto`}>
           <FormRegistration
             formRef={formRef}
             success={success}
@@ -275,7 +290,7 @@ const RegistrationPage = () => {
           />
         </div>
       </section>
-      <div
+      {/* <div
         className="container mx-auto my-16"
         style={{ height: 630, width: "100%" }}
       >
@@ -285,7 +300,7 @@ const RegistrationPage = () => {
           pageSize={10}
           rowsPerPageOptions={[5]}
         />
-      </div>
+      </div> */}
       <Footer />
     </>
   );
