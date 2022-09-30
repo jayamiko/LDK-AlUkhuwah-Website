@@ -6,8 +6,8 @@ import "@fortawesome/fontawesome-svg-core/styles.css";
 
 export const UKM = "Lembaga Dakwah Kampus";
 export const alUkhuwah = "LDK Al Ukhuwah";
-export const kampus = "Universitas Islam '45 Bekasi";
-export const emailLDK = "ldkunisma45@gmail.com";
+export const kampus = "Universitas Islam '45' Bekasi";
+export const emailLDK = "ukm@ldkunismabekasi.org";
 
 function MyApp({ Component, pageProps }) {
   return (

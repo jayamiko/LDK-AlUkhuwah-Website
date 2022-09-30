@@ -39,8 +39,6 @@ export const FormRegistration = ({
     }
   }
 
-  console.log(personalMember);
-
   return (
     <form
       name="submit-to-google-sheet"
@@ -50,9 +48,9 @@ export const FormRegistration = ({
       onSubmit={handleSubmit}
     >
       <div className="w-full text-white">
-        <div className="flex flex-col items-center py-2">
+        <div className="flex flex-col items-center py-2 my-4">
           <h2
-            className={`uppercase m-0 font-medium font-titan md:text-center text-lg sm:text-xl lg:text-2xl tracking-wide ${
+            className={`uppercase font-medium font-titan md:text-center text-lg sm:text-xl lg:text-2xl tracking-wide ${
               title !== "Bergabung Bersama Kami!"
                 ? "text-green-500 brightness-125"
                 : "text-white"
@@ -115,7 +113,7 @@ export const FormRegistration = ({
               />
             </div>
             <div className="flex justify-between flex-wrap">
-              <div className="w-1/5 md:w-2/5">
+              <div className="w-3/5 md:w-2/5">
                 <label
                   htmlFor="tanggalLahir"
                   className="font-semibold text-sm lg:text-base"
@@ -160,7 +158,7 @@ export const FormRegistration = ({
                   </option>
                 </select>
               </div>
-              <div className="w-2/5 md:w-full">
+              <div className="w-full">
                 <label
                   htmlFor="whatsapp"
                   className="font-semibold text-sm lg:text-base"
@@ -291,7 +289,7 @@ export const FormRegistration = ({
         <div className="flex md:justify-center my-3">
           <button
             type="submit"
-            className="bg-primary font-semibold px-5 py-2 rounded-md text-white uppercase hover:font-bold"
+            className="bg-cyan-500 font-semibold px-5 py-2 rounded-md text-white uppercase hover:font-bold"
           >
             Submit
           </button>

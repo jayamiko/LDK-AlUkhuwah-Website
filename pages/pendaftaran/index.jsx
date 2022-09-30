@@ -7,7 +7,7 @@ import { UKM, kampus } from "../_app";
 // import { faTimes, faBars } from "@fortawesome/free-solid-svg-icons";
 import styles from "./pendaftaran.module.css";
 import Papa from "papaparse";
-import { DataGrid } from "@mui/x-data-grid";
+// import { DataGrid } from "@mui/x-data-grid";
 import FormRegistration from "../../components/Form/FormRegistration";
 import HeadTop from "../../components/layout/Header/Head.jsx";
 // import { menu } from "../../data/data";
