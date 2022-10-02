@@ -1,6 +1,7 @@
 import React from "react";
 import Timer from "./Timer/Timer";
 import styles from "./index.module.css";
+import Button from "../utils/Button";
 import MediaSosial from "../MediaSosial/MediaSosial";
 
 export default function ComingSoonPage() {
@@ -14,6 +15,9 @@ export default function ComingSoonPage() {
           LDK Al-Ukhuwah UNISMA Bekasi
         </h2>
         <Timer date="Oct 26, 2022 12:00:00" />
+        <div className="w-2/3 md:w-1/3 mx-auto my-2">
+          <Button path="/pendaftaran" text="PENDAFTARAN" />
+        </div>
         <div className="w-full flex justify-center my-3">
           <MediaSosial />
         </div>
