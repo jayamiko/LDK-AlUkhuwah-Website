@@ -13,6 +13,7 @@ import HeadTop from "../../components/layout/Header/Head.jsx";
 // import { menu } from "../../data/data";
 import Head from "next/head";
 import Footer from "../../components/layout/Footer/Footer";
+import swal from "sweetalert2";
 
 // For Spread Sheet data
 const scriptURL =
@@ -38,6 +39,7 @@ const RegistrationPage = () => {
   ]);
 
   const [success, setSuccess] = useState(false);
+  const [loading, setLoading] = useState(false);
   const [emailSuccess, setEmailSuccess] = useState(false);
   const [click, setClick] = useState(false);
   const [warning, setWarning] = useState(false);
@@ -53,8 +55,11 @@ const RegistrationPage = () => {
     });
   };
 
+  console.log(name);
+
   const handleSubmit = (e) => {
     e.preventDefault();
+    setLoading(true);
     const {
       fullName,
       email,
@@ -89,10 +94,30 @@ const RegistrationPage = () => {
       fetch(scriptURL, { method: "POST", body: new FormData(formRef.current) })
         .then((response) => {
           console.log("Successfully", response);
+          setLoading(false);
           setSuccess(true);
           setTitle("Selamat Datang di LDK Al-Ukhuwah");
           setName(personalMember.fullName);
           setGender(personalMember.jenisKelamin);
+          swal.fire(
+            `Selamat Bergabung!`,
+            `${
+              personalMember.jenisKelamin === "Perempuan"
+                ? `Ukh, ${personalMember.fullName} &#128519; <br /> 
+                <a href="https://chat.whatsapp.com/CFvgTHSOHIB3wx0xGWaaLb" target="_blank">
+                  <button className="w-full h-10 rounded-md bg-cyan-500 shadow-md text-emerald-500 font-semibold text-xs sm:text-sm xl:text-base">
+                    Masuk Grup WhatsApp
+                  </button>
+                </a>`
+                : `Akh, ${personalMember.fullName} &#128519; <br /> 
+                <a href="https://chat.whatsapp.com/Ep3aTOSQzi0Kye6laINkzU" target="_blank">
+                  <button className="w-full h-10 rounded-md bg-cyan-500 shadow-md text-emerald-500 font-semibold text-xs sm:text-sm xl:text-base">
+                    Masuk Grup WhatsApp
+                  </button>
+                </a>`
+            }`,
+            "success"
+          );
           setInterval(() => {
             setTitle("Bergabung Bersama Kami!");
             setName("");
@@ -287,6 +312,7 @@ const RegistrationPage = () => {
             gender={gender}
             handleChange={handleChange}
             handleSubmit={handleSubmit}
+            loading={loading}
           />
         </div>
       </section>

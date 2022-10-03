@@ -20,6 +20,7 @@ export const FormRegistration = ({
   gender,
   handleChange,
   handleSubmit,
+  loading,
 }) => {
   function selectArray() {
     if (personalMember.fakultas === "FT") {
@@ -37,6 +38,29 @@ export const FormRegistration = ({
     } else {
       return FAI;
     }
+  }
+
+  function ButtonSubmit() {
+    return (
+      <>
+        {loading ? (
+          <button
+            type="submit"
+            className="cursor-no-drop bg-cyan-500 opacity-70 font-semibold px-5 py-2 rounded-md text-white uppercase hover:font-bold"
+            disabled
+          >
+            Submit..
+          </button>
+        ) : (
+          <button
+            type="submit"
+            className="bg-cyan-500 font-semibold px-5 py-2 rounded-md text-white uppercase hover:font-bold"
+          >
+            Submit
+          </button>
+        )}
+      </>
+    );
   }
 
   return (
@@ -286,14 +310,7 @@ export const FormRegistration = ({
           </div>
         </div>
 
-        <div className="flex md:justify-center my-3">
-          <button
-            type="submit"
-            className="bg-cyan-500 font-semibold px-5 py-2 rounded-md text-white uppercase hover:font-bold"
-          >
-            Submit
-          </button>
-        </div>
+        <div className="flex md:justify-center my-3">{ButtonSubmit()}</div>
       </div>
     </form>
   );
