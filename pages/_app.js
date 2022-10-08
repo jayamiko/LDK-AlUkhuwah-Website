@@ -1,6 +1,7 @@
 import "../styles/globals.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "swiper/css/bundle";
+import Header from "../components/layout/Header/Header";
 import Footer from "../components/layout/Footer/Footer";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 
@@ -12,8 +13,9 @@ export const emailLDK = "ukm@ldkunismabekasi.org";
 function MyApp({ Component, pageProps }) {
   return (
     <>
+      {/* <Header /> */}
       <Component {...pageProps} />
-      {/* <Footer /> */}
+      <Footer />
     </>
   );
 }

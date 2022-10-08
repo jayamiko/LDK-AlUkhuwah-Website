@@ -1,7 +1,7 @@
 .form {
   display: flex;
-  place-items: center;
-  height: 75%;
+  place-items: end;
+  height: 100vh;
 }
 
 .linkMenu {

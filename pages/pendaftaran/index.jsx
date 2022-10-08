@@ -9,6 +9,7 @@ import styles from "./pendaftaran.module.css";
 import Papa from "papaparse";
 // import { DataGrid } from "@mui/x-data-grid";
 import FormRegistration from "../../components/Form/FormRegistration";
+import Header from "../../components/layout/Header/Header";
 import HeadTop from "../../components/layout/Header/Head.jsx";
 // import { menu } from "../../data/data";
 import Head from "next/head";
@@ -55,7 +56,7 @@ const RegistrationPage = () => {
     });
   };
 
-  console.log(name);
+  // console.log(dataCSV.email.includes("abdullahraihan43@gmail.com"));
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -193,114 +194,7 @@ const RegistrationPage = () => {
         />
       </Head>
       <section className="coverPendaftaran">
-        <div className="h-fit flex flex-col md:px-5 lg:m-0 w-full z-50">
-          <HeadTop />
-          <header
-            className={`${styles.bgHeader} w-full md:container mx-auto md:inline items-center m-0 overflow-hidden md:rounded-3xl`}
-          >
-            <nav
-              className={click ? "flex" : "flex justify-between items-center"}
-            >
-              <div
-                className={
-                  click
-                    ? "hidden"
-                    : `${styles.start} md:p-0 w-full float-right max-h-32 h-full lg:hidden`
-                }
-              >
-                <div
-                  className={click ? "hidden" : "md:hidden flex items-center"}
-                >
-                  <Link href={`/`}>
-                    <a>
-                      <Image
-                        src="/ldk-icon.png"
-                        width={150}
-                        height={150}
-                        className="w-20 sm:w-28 md:w-40"
-                        alt="logo-ldk"
-                      />
-                    </a>
-                  </Link>
-                  <div className="w-full justify-between">
-                    <div className="flex flex-col my-auto uppercase">
-                      <h4 className="font-roboto text-base sm:text-xl md:text-2xl 2xl:text-3xl w-full font-bold">
-                        {UKM}
-                      </h4>
-                      <span className="text-xs sm:text-sm md:text-base font-edu font-bold tracking-wide">
-                        {kampus}
-                      </span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div
-                className={click ? "w-full font-roboto md:hidden" : "hidden"}
-              >
-                <div
-                  className={
-                    click ? "flex md:hidden text-white items-center" : "hidden"
-                  }
-                >
-                  <Link href={`/`}>
-                    <a>
-                      <Image
-                        src="/ldk-icon.png"
-                        width={150}
-                        height={150}
-                        className="w-20 sm:w-28 md:w-40"
-                        alt="logo-ldk"
-                      />
-                    </a>
-                  </Link>
-                  <div className="w-full flex justify-between">
-                    <div className="flex flex-col my-auto uppercase">
-                      <h4 className="text-xl w-full sm:text-3xl sm:w-full md:text-4xl lg:text-5xl font-bold">
-                        {UKM}
-                      </h4>
-                      <span className="text-xs sm:text-sm font-edu font-bold tracking-wide md:text-base">
-                        {kampus}
-                      </span>
-                    </div>
-                  </div>
-                </div>
-                {/* <ul
-                  className={
-                    click ? `${styles.mobileNav} space-y-2` : "flex md:hidden"
-                  }
-                  onClick={() => setClick(false)}
-                >
-                  {menu.map((menus, index) => {
-                    return (
-                      <li key={index}>
-                        <Link href={menus.path}>
-                          <a className={styles.linkMenu}>{menus.name}</a>
-                        </Link>
-                      </li>
-                    );
-                  })}
-                </ul> */}
-              </div>
-              {/* <button
-                className={`mr-3 p-2 h-fit md:hidden`}
-                onClick={() => setClick(!click)}
-              >
-                {click ? (
-                  <FontAwesomeIcon
-                    icon={faTimes}
-                    className="text-white text-2xl mt-10"
-                  ></FontAwesomeIcon>
-                ) : (
-                  <FontAwesomeIcon
-                    icon={faBars}
-                    className="text-white text-2xl"
-                  ></FontAwesomeIcon>
-                )}
-              </button> */}
-            </nav>
-          </header>
-        </div>
-
+        <Header />
         <div className={`${styles.form} container mx-auto`}>
           <FormRegistration
             formRef={formRef}
@@ -327,7 +221,6 @@ const RegistrationPage = () => {
           rowsPerPageOptions={[5]}
         />
       </div> */}
-      <Footer />
     </>
   );
 };

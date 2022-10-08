@@ -15,8 +15,8 @@ const HeadTop = () => {
           <a>
             <Image
               src="/ldk-icon.png"
-              width={150}
-              height={125}
+              width={125}
+              height={100}
               alt="logo-ldk"
               className="cursor-pointer"
             />

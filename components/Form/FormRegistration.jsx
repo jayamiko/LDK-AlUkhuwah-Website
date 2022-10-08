@@ -66,13 +66,13 @@ export const FormRegistration = ({
   return (
     <form
       name="submit-to-google-sheet"
-      className="flex items-center w-full space-y-1"
+      className="flex items-center mt-28 w-full space-y-1"
       method="post"
       ref={formRef}
       onSubmit={handleSubmit}
     >
       <div className="w-full text-white">
-        <div className="flex flex-col items-center py-2 my-4">
+        <div className="flex flex-col items-center py-1 my-1">
           <h2
             className={`uppercase font-medium font-titan md:text-center text-lg sm:text-xl lg:text-2xl tracking-wide ${
               title !== "Bergabung Bersama Kami!"

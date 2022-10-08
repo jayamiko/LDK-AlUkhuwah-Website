@@ -17,7 +17,11 @@ const Header = () => {
       <header
         className={`${styles.bgHeader} w-full md:container mx-auto md:inline items-center m-0 overflow-hidden md:rounded-3xl`}
       >
-        <nav className={click ? "flex" : "flex justify-between items-center"}>
+        <nav
+          className={
+            click ? "flex py-2" : "py-2 flex justify-between items-center"
+          }
+        >
           <ul
             className={
               click
@@ -52,14 +56,14 @@ const Header = () => {
                 <a>
                   <Image
                     src="/ldk-icon.png"
-                    width={150}
-                    height={150}
+                    width={100}
+                    height={100}
                     className="w-20 sm:w-28 md:w-40"
                     alt="logo-ldk"
                   />
                 </a>
               </Link>
-              <div className="w-full justify-between">
+              <div className="w-full justify-between ml-2">
                 <div className="flex flex-col my-auto uppercase">
                   <h4 className="font-roboto text-lg sm:text-2xl md:text-3xl 2xl:text-4xl w-5/6 sm:w-full font-bold">
                     {UKM}
@@ -81,16 +85,16 @@ const Header = () => {
                 <a>
                   <Image
                     src="/ldk-icon.png"
-                    width={150}
-                    height={150}
+                    width={100}
+                    height={100}
                     className="w-20 sm:w-28 md:w-40"
                     alt="logo-ldk"
                   />
                 </a>
               </Link>
-              <div className="w-full flex justify-between">
+              <div className="w-full flex justify-between ml-2">
                 <div className="flex flex-col my-auto uppercase">
-                  <h4 className="text-xl w-full sm:text-3xl sm:w-full md:text-4xl lg:text-5xl font-bold">
+                  <h4 className="font-roboto text-lg sm:text-2xl md:text-3xl 2xl:text-4xl w-full font-bold">
                     {UKM}
                   </h4>
                   <span className="text-xs sm:text-sm font-edu font-bold tracking-wide md:text-base">
