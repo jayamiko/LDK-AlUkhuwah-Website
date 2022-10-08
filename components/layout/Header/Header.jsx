@@ -12,21 +12,19 @@ const Header = () => {
   const [click, setClick] = useState(false);
 
   return (
-    <div className="absolute flex flex-col-reverse md:flex-col md:px-5 lg:mx-0 w-full z-50">
+    <div className="flex flex-col-reverse md:flex-col md:px-5 lg:mx-0 w-full z-50">
       <HeadTop />
       <header
         className={`${styles.bgHeader} w-full md:container mx-auto md:inline items-center m-0 overflow-hidden md:rounded-3xl`}
       >
         <nav
-          className={
-            click ? "flex py-2" : "py-2 flex justify-between items-center"
-          }
+          className={click ? "flex py-2" : "flex justify-between items-center"}
         >
           <ul
             className={
               click
                 ? `${styles.mobileNav} hidden z-50 py-8 px-5 mb-5`
-                : "my-auto h-full hidden md:flex justify-between space-x-7 uppercase py-10 px-5"
+                : "m-auto h-full hidden md:flex justify-between space-x-10 uppercase py-10 px-5"
             }
             onClick={() => setClick(false)}
           >
@@ -35,7 +33,7 @@ const Header = () => {
                 <li key={index}>
                   <Link href={menus.path}>
                     <a
-                      className={`${styles.linkMenu} font-bold hover:font-extrabold hover:scale-105`}
+                      className={`${styles.linkMenu} font-bold hover:font-extrabold text-white hover:scale-105 text-base`}
                     >
                       {menus.name}
                     </a>

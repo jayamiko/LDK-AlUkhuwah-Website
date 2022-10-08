@@ -195,19 +195,21 @@ const RegistrationPage = () => {
       </Head>
       <section className="coverPendaftaran">
         <Header />
-        <div className={`${styles.form} container mx-auto`}>
-          <FormRegistration
-            formRef={formRef}
-            success={success}
-            personalMember={personalMember}
-            warning={warning}
-            title={title}
-            name={name}
-            gender={gender}
-            handleChange={handleChange}
-            handleSubmit={handleSubmit}
-            loading={loading}
-          />
+        <div>
+          <div className="container mx-auto py-0 xl:py-4">
+            <FormRegistration
+              formRef={formRef}
+              success={success}
+              personalMember={personalMember}
+              warning={warning}
+              title={title}
+              name={name}
+              gender={gender}
+              handleChange={handleChange}
+              handleSubmit={handleSubmit}
+              loading={loading}
+            />
+          </div>
         </div>
       </section>
       {/* <div

@@ -1,8 +1,9 @@
-.form {
+/* .form {
   display: flex;
   place-items: end;
   height: 100vh;
-}
+  border: solid red 2px;
+} */
 
 .linkMenu {
   color: #fff;

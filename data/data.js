@@ -19,8 +19,8 @@ export const menu = [
     name: "Pendaftaran",
   },
   {
-    path: "/dokumentasi",
-    name: "Dokumentasi",
+    path: "/events",
+    name: "Event",
   },
   {
     path: "/program",

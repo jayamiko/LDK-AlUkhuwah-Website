@@ -46,7 +46,7 @@ export const FormRegistration = ({
         {loading ? (
           <button
             type="submit"
-            className="cursor-no-drop bg-cyan-500 opacity-70 font-semibold px-5 py-2 rounded-md text-white uppercase hover:font-bold"
+            className="mx-auto w-40 h-10 my-3 2xl:w-48 2xl:h-12 cursor-no-drop bg-cyan-500 opacity-70 font-semibold rounded-md text-white uppercase hover:font-bold"
             disabled
           >
             Submit..
@@ -54,7 +54,7 @@ export const FormRegistration = ({
         ) : (
           <button
             type="submit"
-            className="bg-cyan-500 font-semibold px-5 py-2 rounded-md text-white uppercase hover:font-bold"
+            className="mx-auto w-40 h-10 my-3 2xl:w-48 2xl:h-12 bg-cyan-500 font-semibold rounded-md text-white uppercase hover:font-bold"
           >
             Submit
           </button>
@@ -66,7 +66,7 @@ export const FormRegistration = ({
   return (
     <form
       name="submit-to-google-sheet"
-      className="flex items-center mt-28 w-full space-y-1"
+      className="flex items-center mt-28 md:mt-0 2xl:mt-10 w-full space-y-1"
       method="post"
       ref={formRef}
       onSubmit={handleSubmit}
@@ -74,7 +74,7 @@ export const FormRegistration = ({
       <div className="w-full text-white">
         <div className="flex flex-col items-center py-1 my-1">
           <h2
-            className={`uppercase font-medium font-titan md:text-center text-lg sm:text-xl lg:text-2xl tracking-wide ${
+            className={`uppercase font-medium font-titan md:text-center text-lg sm:text-xl lg:text-2xl 2xl:text-3xl tracking-wide ${
               title !== "Bergabung Bersama Kami!"
                 ? "text-green-500 brightness-125"
                 : "text-white"
@@ -93,10 +93,10 @@ export const FormRegistration = ({
 
         <div className="w-full flex flex-col md:flex-row md:space-x-2 lg:space-x-10">
           <div className="md:w-1/2 lg:w-full">
-            <div>
+            <div id="fullName">
               <label
                 htmlFor="fullName"
-                className="font-semibold text-sm lg:text-base"
+                className="font-semibold text-sm lg:text-base 2xl:text-lg"
               >
                 Nama Lengkap
               </label>
@@ -116,10 +116,10 @@ export const FormRegistration = ({
                 onChange={handleChange}
               />
             </div>
-            <div>
+            <div id="email">
               <label
                 htmlFor="email"
-                className="font-semibold text-sm lg:text-base"
+                className="font-semibold text-sm lg:text-base 2xl:text-lg"
               >
                 Alamat Email
               </label>
@@ -137,10 +137,10 @@ export const FormRegistration = ({
               />
             </div>
             <div className="flex justify-between flex-wrap">
-              <div className="w-3/5 md:w-2/5">
+              <div id="tanggalLahir" className="w-3/5 md:w-2/5">
                 <label
                   htmlFor="tanggalLahir"
-                  className="font-semibold text-sm lg:text-base"
+                  className="font-semibold text-sm lg:text-base 2xl:text-lg"
                 >
                   Tanggal Lahir
                 </label>
@@ -160,10 +160,10 @@ export const FormRegistration = ({
                   onChange={handleChange}
                 />
               </div>
-              <div className="w-2/6 md:w-1/2">
+              <div id="jenisKelamin" className="w-2/6 md:w-1/2">
                 <label
                   htmlFor="jenisKelamin"
-                  className="font-semibold text-sm lg:text-base"
+                  className="font-semibold text-sm lg:text-base 2xl:text-lg"
                 >
                   Jenis Kelamin
                 </label>
@@ -182,10 +182,10 @@ export const FormRegistration = ({
                   </option>
                 </select>
               </div>
-              <div className="w-full">
+              <div id="whatsapp" className="w-full">
                 <label
                   htmlFor="whatsapp"
-                  className="font-semibold text-sm lg:text-base"
+                  className="font-semibold text-sm lg:text-base 2xl:text-lg"
                 >
                   Whatsapp
                 </label>
@@ -210,10 +210,10 @@ export const FormRegistration = ({
 
           <div className="md:w-1/2 lg:w-full">
             <div className="flex justify-between gap-4">
-              <div className="w-1/3">
+              <div id="fakultas" className="w-1/3">
                 <label
                   htmlFor="fakultas"
-                  className="font-semibold text-sm lg:text-base"
+                  className="font-semibold text-sm lg:text-base 2xl:text-lg"
                 >
                   Fakultas
                 </label>
@@ -235,10 +235,10 @@ export const FormRegistration = ({
                   </select>
                 </div>
               </div>
-              <div className="w-2/3">
+              <div id="jurusan" className="w-2/3">
                 <label
                   htmlFor="jurusan"
-                  className="font-semibold text-sm lg:text-base"
+                  className="font-semibold text-sm lg:text-base 2xl:text-lg"
                 >
                   Jurusan
                 </label>
@@ -261,10 +261,10 @@ export const FormRegistration = ({
                 </div>
               </div>
             </div>
-            <div>
+            <div id="pengalamanOrganisasi">
               <label
                 htmlFor="pengalamanOrganisasi"
-                className="font-semibold text-sm lg:text-base"
+                className="font-semibold text-sm lg:text-base 2xl:text-lg"
               >
                 Pengalaman Organisasi
               </label>
@@ -284,10 +284,10 @@ export const FormRegistration = ({
                 onChange={handleChange}
               />
             </div>
-            <div>
+            <div id="alasan">
               <label
                 htmlFor="alasan"
-                className="font-semibold text-sm lg:text-base"
+                className="font-semibold text-sm lg:text-base 2xl:text-lg"
               >
                 Alasan Masuk LDK ?
               </label>
@@ -299,7 +299,7 @@ export const FormRegistration = ({
               )}
               <textarea
                 type="text"
-                className="form-control md:h-14 customPlaceholder"
+                className="form-control md:h-18 customPlaceholder"
                 value={personalMember.alasan}
                 id="alasan"
                 name="alasan"
@@ -310,7 +310,7 @@ export const FormRegistration = ({
           </div>
         </div>
 
-        <div className="flex md:justify-center my-3">{ButtonSubmit()}</div>
+        <div className="flex">{ButtonSubmit()}</div>
       </div>
     </form>
   );

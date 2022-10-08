@@ -5,15 +5,13 @@
 }
 
 .linkMenu {
-  color: #FFF;
-  text-shadow: 1px 1px rgb(8 145 178);
-  font-size: 16px;
+  /* text-shadow: 1px 1px rgb(8 145 178); */
   text-decoration: none;
-  letter-spacing : 0.2px
+  letter-spacing: 0.2px;
 }
 
 .linkMenu:hover {
-  color: #FFF;
+  color: #06b6d4 !important;
   font-weight: 700;
 }
 
