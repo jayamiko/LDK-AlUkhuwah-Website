@@ -18,7 +18,9 @@ const Header = () => {
         className={`${styles.bgHeader} w-full md:container mx-auto md:inline items-center m-0 overflow-hidden md:rounded-3xl`}
       >
         <nav
-          className={click ? "flex py-2" : "flex justify-between items-center"}
+          className={
+            click ? "flex py-2" : "flex py-2 justify-between items-center"
+          }
         >
           <ul
             className={
@@ -102,9 +104,7 @@ const Header = () => {
               </div>
             </div>
             <ul
-              className={
-                click ? `${styles.mobileNav} space-y-2` : "flex md:hidden"
-              }
+              className={click ? `mt-2 space-y-2` : "flex md:hidden"}
               onClick={() => setClick(false)}
             >
               {menu.map((menus, index) => {

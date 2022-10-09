@@ -21,6 +21,8 @@ export const FormRegistration = ({
   handleChange,
   handleSubmit,
   loading,
+  existEmail,
+  existWhatsapp,
 }) => {
   function selectArray() {
     if (personalMember.fakultas === "FT") {
@@ -66,7 +68,7 @@ export const FormRegistration = ({
   return (
     <form
       name="submit-to-google-sheet"
-      className="flex items-center mt-28 md:mt-0 2xl:mt-10 w-full space-y-1"
+      className="flex items-center mt-10 md:mt-0 2xl:mt-10 w-full space-y-1"
       method="post"
       ref={formRef}
       onSubmit={handleSubmit}
@@ -125,6 +127,11 @@ export const FormRegistration = ({
               </label>
               {warning && (
                 <InvalidField text="Wajib Diisi" state={personalMember.email} />
+              )}
+              {existEmail && (
+                <div className="inline-block text-orange-500 text-xs lg:text-sm font-bold italic lg:px-1">
+                  <span>(Email sudah terdaftar)</span>
+                </div>
               )}
               <input
                 type="email"
@@ -194,6 +201,11 @@ export const FormRegistration = ({
                     text="Wajib Diisi"
                     state={personalMember.whatsapp}
                   />
+                )}
+                {existWhatsapp && (
+                  <div className="inline-block text-orange-500 text-xs lg:text-sm font-bold italic lg:px-1">
+                    <span>(No Whatsapp sudah terdaftar)</span>
+                  </div>
                 )}
                 <input
                   type="text"

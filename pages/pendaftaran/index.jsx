@@ -10,11 +10,11 @@ import Papa from "papaparse";
 // import { DataGrid } from "@mui/x-data-grid";
 import FormRegistration from "../../components/Form/FormRegistration";
 import Header from "../../components/layout/Header/Header";
-import HeadTop from "../../components/layout/Header/Head.jsx";
 // import { menu } from "../../data/data";
 import Head from "next/head";
 import Footer from "../../components/layout/Footer/Footer";
 import swal from "sweetalert2";
+import { idID } from "@mui/material/locale";
 
 // For Spread Sheet data
 const scriptURL =
@@ -41,8 +41,8 @@ const RegistrationPage = () => {
 
   const [success, setSuccess] = useState(false);
   const [loading, setLoading] = useState(false);
-  const [emailSuccess, setEmailSuccess] = useState(false);
-  const [click, setClick] = useState(false);
+  const [existEmail, setExistEmail] = useState(false);
+  const [existWhatsapp, setExistWhatsapp] = useState(false);
   const [warning, setWarning] = useState(false);
   const [title, setTitle] = useState("Bergabung Bersama Kami!");
   const [name, setName] = useState("");
@@ -56,11 +56,10 @@ const RegistrationPage = () => {
     });
   };
 
-  // console.log(dataCSV.email.includes("abdullahraihan43@gmail.com"));
+  console.log(personalMember.whatsapp);
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setLoading(true);
     const {
       fullName,
       email,
@@ -70,6 +69,12 @@ const RegistrationPage = () => {
       alasan,
     } = personalMember;
 
+    const existEmailData = dataCSV.find((data) => data.email === email);
+    const existWhatsappData = dataCSV.find(
+      (data) => `0${data.whatsapp}` === whatsapp
+    );
+
+    setLoading(true);
     if (
       (!fullName ||
         !email ||
@@ -80,65 +85,76 @@ const RegistrationPage = () => {
     ) {
       setWarning(true);
     } else {
-      emailjs
-        .sendForm(
-          `service_pb42pzg`,
-          `template_24gojzs`,
-          e.target,
-          `eSWxzIrgCgFSCDcXx`
-        )
-        .then((res) => {
-          if (res.status === 200) {
-            setEmailSuccess(true);
-          }
-        });
-      fetch(scriptURL, { method: "POST", body: new FormData(formRef.current) })
-        .then((response) => {
-          console.log("Successfully", response);
-          setLoading(false);
-          setSuccess(true);
-          setTitle("Selamat Datang di LDK Al-Ukhuwah");
-          setName(personalMember.fullName);
-          setGender(personalMember.jenisKelamin);
-          swal.fire(
-            `Selamat Bergabung!`,
-            `${
-              personalMember.jenisKelamin === "Perempuan"
-                ? `Ukh, ${personalMember.fullName} &#128519; <br /> 
-                <a href="https://chat.whatsapp.com/CFvgTHSOHIB3wx0xGWaaLb" target="_blank">
-                  <button className="w-full h-10 rounded-md bg-cyan-500 shadow-md text-emerald-500 font-semibold text-xs sm:text-sm xl:text-base">
-                    Masuk Grup WhatsApp
-                  </button>
-                </a>`
-                : `Akh, ${personalMember.fullName} &#128519; <br /> 
-                <a href="https://chat.whatsapp.com/Ep3aTOSQzi0Kye6laINkzU" target="_blank">
-                  <button className="w-full h-10 rounded-md bg-cyan-500 shadow-md text-emerald-500 font-semibold text-xs sm:text-sm xl:text-base">
-                    Masuk Grup WhatsApp
-                  </button>
-                </a>`
-            }`,
-            "success"
-          );
-          setInterval(() => {
-            setTitle("Bergabung Bersama Kami!");
-            setName("");
-            setGender("");
-          }, 3000);
-          setPersonalMember({
-            fullName: "",
-            email: "",
-            tanggalLahir: "",
-            jenisKelamin: "Laki-laki",
-            whatsapp: "",
-            fakultas: "FAI",
-            jurusan: "",
-            pengalamanOrganisasi: "",
-            alasan: "",
+      if (!existEmailData && !existWhatsappData) {
+        emailjs
+          .sendForm(
+            process.env.NEXT_PUBLIC_SERVICE,
+            process.env.NEXT_PUBLIC_TEMPLATEID,
+            e.target,
+            process.env.NEXT_PUBLIC_KEY
+          )
+          .then((res) => {
+            if (res.status === 200) {
+              setSuccess(true);
+            }
           });
+        fetch(scriptURL, {
+          method: "POST",
+          body: new FormData(formRef.current),
         })
-        .catch((error) => {
-          console.error("Error!", error.message);
-        });
+          .then((response) => {
+            console.log("Successfully", response);
+
+            setLoading(false);
+            setExistEmail(false);
+            setExistWhatsapp(false);
+            setTitle("Selamat Datang di LDK Al-Ukhuwah");
+            setName(personalMember.fullName);
+            setGender(personalMember.jenisKelamin);
+            swal.fire(
+              `Selamat Bergabung!`,
+              `${
+                personalMember.jenisKelamin === "Perempuan"
+                  ? `Ukh, ${personalMember.fullName} &#128519; <br /> 
+                  <a href="https://chat.whatsapp.com/CFvgTHSOHIB3wx0xGWaaLb" target="_blank">
+                    <button className="w-full h-10 rounded-md bg-cyan-500 shadow-md text-emerald-500 font-semibold text-xs sm:text-sm xl:text-base">
+                      Masuk Grup WhatsApp
+                    </button>
+                  </a>`
+                  : `Akh, ${personalMember.fullName} &#128519; <br /> 
+                  <a href="https://chat.whatsapp.com/Ep3aTOSQzi0Kye6laINkzU" target="_blank">
+                    <button className="w-full h-10 rounded-md bg-cyan-500 shadow-md text-emerald-500 font-semibold text-xs sm:text-sm xl:text-base">
+                      Masuk Grup WhatsApp
+                    </button>
+                  </a>`
+              }`,
+              "success"
+            );
+            setInterval(() => {
+              setTitle("Bergabung Bersama Kami!");
+              setName("");
+              setGender("");
+            }, 3000);
+            setPersonalMember({
+              fullName: "",
+              email: "",
+              tanggalLahir: "",
+              jenisKelamin: "Laki-laki",
+              whatsapp: "",
+              fakultas: "FAI",
+              jurusan: "",
+              pengalamanOrganisasi: "",
+              alasan: "",
+            });
+          })
+          .catch((error) => {
+            console.error("Error!", error.message);
+          });
+      } else {
+        setLoading(false);
+        existEmailData ? setExistEmail(true) : setExistEmail(false);
+        existWhatsappData ? setExistWhatsapp(true) : setExistWhatsapp(false);
+      }
     }
   };
 
@@ -208,6 +224,8 @@ const RegistrationPage = () => {
               handleChange={handleChange}
               handleSubmit={handleSubmit}
               loading={loading}
+              existEmail={existEmail}
+              existWhatsapp={existWhatsapp}
             />
           </div>
         </div>
