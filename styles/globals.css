@@ -53,6 +53,7 @@ a {
   background-position-y: bottom;
   background-repeat: no-repeat;
   width: 100%;
+  min-height: fit-content;
   height: 100vh;
 }
 

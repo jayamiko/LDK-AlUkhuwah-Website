@@ -80,7 +80,7 @@ const HomePage = () => {
                     icon={faArrowRight}
                   />
                 </div>
-                <div className="w-1/5">
+                <div className="w-2/5 lg:w-1/5">
                   <Button
                     path="/event"
                     text="Event"
