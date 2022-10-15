@@ -23,7 +23,7 @@ const EventComing = () => {
         <Col lg="6" md="6">
           <SectionSubtitle subtitle="Event Akan Datang" />
           <div>
-            <h2 className="font-mountains leading-normal text-yellow-500 text-shadow-black text-6xl">
+            <h2 className="font-mountains leading-normal text-yellow-500 text-shadow-black text-4xl lg:text-6xl">
               Open House & Silaturahmi Akbar
             </h2>
             <h6>

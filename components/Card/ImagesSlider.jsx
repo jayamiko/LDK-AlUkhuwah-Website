@@ -19,6 +19,7 @@ class ImagesSlider extends Component {
             slidesToShow: 1,
             slidesToScroll: 1,
             dots: false,
+            autoplay: true,
           },
         },
         {

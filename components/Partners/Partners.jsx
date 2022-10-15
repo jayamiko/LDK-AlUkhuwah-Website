@@ -4,7 +4,7 @@ import SectionSubtitle from "../utils/SectionSubtitle";
 
 function Partners() {
   return (
-    <div className="container mx-auto py-10">
+    <div className="container mx-auto lg:py-10">
       <div className="grid grid-cols-3" style={{ minHeight: "300px" }}>
         <div className="relative">
           <Image

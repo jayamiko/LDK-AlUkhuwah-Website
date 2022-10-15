@@ -49,7 +49,7 @@ const AboutUs = () => {
                 <span className={`${classes.about__icon}`}>
                   <i className="ri-checkbox-circle-line"></i>
                 </span>
-                Talkshow
+                Akhwat Gathering
               </h6>
 
               <h6 className=" d-flex align-items-center gap-2 mt-3 fw-normal">
@@ -57,22 +57,6 @@ const AboutUs = () => {
                   <i className="ri-checkbox-circle-line"></i>
                 </span>
                 Bazaar
-              </h6>
-            </div>
-
-            <div>
-              <h6 className=" d-flex align-items-center gap-2 mt-3 fw-normal">
-                <span className={`${classes.about__icon}`}>
-                  <i className="ri-checkbox-circle-line"></i>
-                </span>
-                Leadership
-              </h6>
-
-              <h6 className=" d-flex align-items-center gap-2 mt-3 fw-normal">
-                <span className={`${classes.about__icon}`}>
-                  <i className="ri-checkbox-circle-line"></i>
-                </span>
-                Akhwat Gathering
               </h6>
             </div>
           </div>
