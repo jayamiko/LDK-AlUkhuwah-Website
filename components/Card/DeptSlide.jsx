@@ -1,25 +1,31 @@
-import React, {useState} from 'react'
+import React, { useState } from "react";
 import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faUserGroup, faStarAndCrescent, faCalendarTimes, faArrowLeft, faArrowRight, faStarHalfStroke } from "@fortawesome/free-solid-svg-icons"
-import { departement } from '../../data/data'
+import {
+  faUserGroup,
+  faStarAndCrescent,
+  faCalendarTimes,
+  faArrowLeft,
+  faArrowRight,
+  faStarHalfStroke,
+} from "@fortawesome/free-solid-svg-icons";
+import { departement } from "../../data/data";
 
 export default function DepartementCard() {
+  const [stateStart, setStateStart] = useState(0);
+  const [stateEnd, setStateEnd] = useState(1);
 
-  const [stateStart, setStateStart] = useState(0)
-  const [stateEnd, setStateEnd] = useState(1)
-  
-  function next(){
-    if(stateEnd !== departement.length) {
-      setStateStart(stateStart + 1)
-      setStateEnd(stateEnd + 1)
+  function next() {
+    if (stateEnd !== departement.length) {
+      setStateStart(stateStart + 1);
+      setStateEnd(stateEnd + 1);
     }
   }
-  
-  function prev(){
-    if(stateStart !== 0) {
-      setStateStart(stateStart - 1)
-      setStateEnd(stateEnd - 1)
+
+  function prev() {
+    if (stateStart !== 0) {
+      setStateStart(stateStart - 1);
+      setStateEnd(stateEnd - 1);
     }
   }
 
@@ -27,7 +33,7 @@ export default function DepartementCard() {
     <>
       <div className="h-full w-full mx-auto rounded-2xl bg-black opacity-50 bg-no-repeat bg-cover bg-center brightness-50"></div>
       <div className="absolute h-full w-[90%] sm:w-[91%] md:w-[93%] lg:w-[95%] xl:w-[96%] mx-auto rounded-2xl">
-        {departement.slice(stateStart, stateEnd).map((item)=>{
+        {departement.slice(stateStart, stateEnd).map((item) => {
           return (
             <>
               <div className="w-full h-1/2 shadow-md rounded-xl">
@@ -43,12 +49,14 @@ export default function DepartementCard() {
               </div>
 
               <div className="w-full h-fit brightness-125">
-                <p className="mt-2 mb-0 font-bold pl-1 text-center lg:text-left text-sm text-primary">Departemen LDK Al-Ukhuwah</p>
+                <p className="mt-2 mb-0 font-bold pl-1 text-center lg:text-left text-sm text-primary">
+                  Departemen LDK Al-Ukhuwah
+                </p>
                 <h1 className="mt-0 mb-2 uppercase text-egg-green text-center lg:text-left text-2xl font-black tracking-wide">
                   {item.title}
-                  <FontAwesomeIcon 
-                      icon={faStarAndCrescent}
-                      className="ml-2 text-egg-green text-2xl"
+                  <FontAwesomeIcon
+                    icon={faStarAndCrescent}
+                    className="ml-2 text-egg-green text-2xl"
                   ></FontAwesomeIcon>
                 </h1>
 
@@ -56,7 +64,7 @@ export default function DepartementCard() {
                   {item.desc}
                 </p>
 
-                <div className="text-white flex justify-center items-center px-2 gap-2">
+                {/* <div className="text-white flex justify-center items-center px-2 gap-2">
                   <div className="w-fit flex items-center text-sm">
                     <FontAwesomeIcon 
                       icon={faUserGroup}
@@ -78,38 +86,48 @@ export default function DepartementCard() {
                     ></FontAwesomeIcon>
                     <span>+{item.programs} Program</span>
                   </div>
-                </div>
+                </div> */}
                 <div className="py-4 px-2 text-white flex justify-center gap-2">
-                  <div 
+                  <div
                     className="flex items-center hover:text-red-600 hover:font-semibold cursor-pointer w-fit"
                     onClick={() => prev()}
                   >
-                    <FontAwesomeIcon 
+                    <FontAwesomeIcon
                       icon={faArrowLeft}
-                      className={`${stateStart === 0 && 'text-gray-500'} mr-2`}
+                      className={`${stateStart === 0 && "text-gray-500"} mr-2`}
                     ></FontAwesomeIcon>
-                    <span className={`${stateStart === 0 && 'text-gray-500'}`}>Prev</span>
+                    <span className={`${stateStart === 0 && "text-gray-500"}`}>
+                      Prev
+                    </span>
                   </div>
                   <div className="flex items-center hover:font-semibold  cursor-pointer w-fit">
-                    <FontAwesomeIcon 
+                    <FontAwesomeIcon
                       icon={faStarHalfStroke}
                       className="animate-spin text-cyan-500"
                     ></FontAwesomeIcon>
                   </div>
-                  <div 
+                  <div
                     className="flex items-center hover:text-green-500 hover:font-semibold cursor-pointer w-fit"
                     onClick={() => next()}
                   >
-                    <span className={`${stateEnd === departement.length && 'text-gray-500'}`}>Next</span>
-                    <FontAwesomeIcon 
+                    <span
+                      className={`${
+                        stateEnd === departement.length && "text-gray-500"
+                      }`}
+                    >
+                      Next
+                    </span>
+                    <FontAwesomeIcon
                       icon={faArrowRight}
-                      className={`${stateEnd === departement.length && 'text-gray-500'} ml-2`}
+                      className={`${
+                        stateEnd === departement.length && "text-gray-500"
+                      } ml-2`}
                     ></FontAwesomeIcon>
                   </div>
                 </div>
               </div>
             </>
-          )
+          );
         })}
       </div>
     </>

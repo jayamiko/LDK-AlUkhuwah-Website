@@ -1,0 +1,32 @@
+.about__icon i {
+  color: #01d293;
+}
+
+.about__img__box {
+  width: 200px !important;
+}
+
+.about__img__box img {
+  overflow: hidden;
+  min-width: 200px;
+  width: 100% !important;
+  max-height: 290px;
+  border-radius: 6px;
+}
+
+@media only screen and (max-width: 992px) {
+  .about__img__gallery {
+    justify-content: center !important;
+    margin-top: 50px;
+  }
+
+  .about__content h3 {
+    font-size: 1.3rem;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .about__img__box {
+    width: 150px !important;
+  }
+}

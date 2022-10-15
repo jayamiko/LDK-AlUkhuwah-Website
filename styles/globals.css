@@ -137,6 +137,23 @@ a {
   object-fit: cover;
 }
 
+.slick-slide {
+  cursor: grab;
+  height: 320px;
+  box-sizing: border-box;
+}
+
+.slider-gallery img {
+  min-height: 275px;
+  max-height: 275px;
+  min-width: 350px;
+  height: 100%;
+  width: 100%;
+  padding-right: 4px;
+  /* border: 2.5px solid white; */
+  box-sizing: border-box;
+}
+
 @media screen and (max-width: 1024px) {
   .coverHero {
     min-height: 85vh !important;

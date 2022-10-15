@@ -19,12 +19,95 @@ export const menu = [
     name: "Pendaftaran",
   },
   {
-    path: "/events",
+    path: "/event",
     name: "Event",
   },
+];
+export const galleries = [
   {
-    path: "/program",
-    name: "Program",
+    title: "Bazaar LDK",
+    image: "./images/bazaar.jpg",
+    alt: "bazaar",
+  },
+  {
+    title: "Open House",
+    image: "./images/open-house.jpeg",
+    alt: "open-house",
+  },
+  {
+    title: "Upgrading Skill",
+    image: "./images/LDK3.jpg",
+    alt: "upgrading-skill",
+  },
+  {
+    title: "Gebyar UKM",
+    image: "./images/LDK2.jpg",
+    alt: "gebyar-ukm",
+  },
+  {
+    title: "Ukhuwah Sport",
+    image: "./images/LDK11.jpg",
+    alt: "panahan",
+  },
+  {
+    title: "Talkshow",
+    image: "./images/talkshow.jpg",
+    alt: "talkshow",
+  },
+  {
+    title: "Takjil On The Road",
+    image: "./images/takjilontheroad.jpg",
+    alt: "takjil-on-the-road",
+  },
+  {
+    title: "Leadership Motivation Training",
+    image: "./images/LMT.jpg",
+    alt: "LMT",
+  },
+  {
+    title: "Kajian",
+    image: "./images/kajian.jpeg",
+    alt: "kajian-offline",
+  },
+  {
+    title: "Al-Kahfi Time",
+    image: "./images/kajian-online.jpeg",
+    alt: "alkahfi-time",
+  },
+  {
+    title: "Dauroh Awal",
+    image: "./images/LDK9.jpg",
+    alt: "dauroh-awwal",
+  },
+  {
+    title: "Rihlah Tadabur Alam",
+    image: "./images/ldk-ikhwan7.jpg",
+    alt: "rihlah-tadabur-alam",
+  },
+  {
+    title: "Night Camp",
+    image: "./images/ldk-ikhwan4.jpg",
+    alt: "night-camp",
+  },
+  {
+    title: "Peduli Palestina",
+    image: "./images/ldk-ikhwan5.jpg",
+    alt: "peduli-palestina",
+  },
+  {
+    title: "Akhwat Gathering",
+    image: "./images/akhwat-gathering.jpeg",
+    alt: "akhwat-gathering",
+  },
+  {
+    title: "Halal Bi Halal",
+    image: "./images/halalbihalal.jpeg",
+    alt: "halbi",
+  },
+  {
+    title: "Rapat Proker",
+    image: "./images/LDK7.jpg",
+    alt: "rapat-proker",
   },
 ];
 export const tags = [

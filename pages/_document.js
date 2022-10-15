@@ -11,6 +11,11 @@ class DefaultDocument extends Document {
           href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap"
           rel="stylesheet"
         ></link>
+        {/* FONT MOUNTAINS */}
+        <link
+          href="http://fonts.cdnfonts.com/css/beyond-the-mountains"
+          rel="stylesheet"
+        ></link>
         {/* FONT WOLF IN THE CITY */}
         <link
           href="http://fonts.cdnfonts.com/css/wolf-in-the-city"

@@ -7,11 +7,11 @@ class CountDown extends Component {
     super(props);
     this.count = this.count.bind(this);
     this.state = {
-      days: 26,
+      days: 15,
       minutes: 0,
       hours: 0,
       secounds: 0,
-      time_up: "",
+      time_up: "09:00:00",
     };
     this.date = props.date;
     this.x = null;
@@ -52,7 +52,9 @@ class CountDown extends Component {
   render() {
     const { days, seconds, hours, minutes } = this.state;
     return (
-      <div className={`${styles.countdown} lg:text-shadow-black`}>
+      <div
+        className={`${styles.countdown} text-white text-shadow-black lg:text-shadow-black`}
+      >
         <div className="w-1/4 float-left">
           <div className={styles.box}>
             <p id="day">{days}</p>

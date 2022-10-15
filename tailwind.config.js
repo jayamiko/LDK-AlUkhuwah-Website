@@ -16,6 +16,7 @@ module.exports = {
         wolf: ["Wolf in the City", "Titan One", "sans-serif"],
         titan: ["Titan One", "Roboto", "sans-serif"],
         edu: ["Edu SA Beginner", "Roboto", "sans-serif"],
+        mountains: ["Beyond The Mountains", "Titan One", "Wolf in the City"],
       },
     },
   },
