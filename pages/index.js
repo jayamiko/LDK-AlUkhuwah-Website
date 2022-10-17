@@ -97,10 +97,10 @@ const HomePage = () => {
       <section id="about" className="mt-6">
         <AboutUs />
       </section>
-      <section id="partners" className="mt-20 bg-gray-100">
+      <section id="partners" className="bg-gray-100">
         <Partners />
       </section>
-      <section id="event-coming" className="mt-20">
+      <section id="event-coming">
         <EventComing />
       </section>
       <section id="gallery" className="mt-20 py-20 bg-gray-100">

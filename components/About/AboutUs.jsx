@@ -27,38 +27,48 @@ const AboutUs = () => {
             kreativitas.
           </p>
 
-          <div className=" d-flex align-items-center gap-5">
-            <div>
-              <h6 className=" d-flex align-items-center gap-2 mt-3 fw-normal">
-                <span className={`${classes.about__icon}`}>
-                  <i className="ri-checkbox-circle-line"></i>
-                </span>
-                Mentoring
-              </h6>
+          <div className="grid grid-cols-2 md:grid-cols-3">
+            <h6 className=" d-flex align-items-center gap-2 mt-3 fw-normal">
+              <span className={`${classes.about__icon}`}>
+                <i className="ri-checkbox-circle-line"></i>
+              </span>
+              Ukhuwah Sport
+            </h6>
 
-              <h6 className=" d-flex align-items-center gap-2 mt-3 fw-normal">
-                <span className={`${classes.about__icon}`}>
-                  <i className="ri-checkbox-circle-line"></i>
-                </span>
-                Panahan
-              </h6>
-            </div>
+            <h6 className=" d-flex align-items-center gap-2 mt-3 fw-normal">
+              <span className={`${classes.about__icon}`}>
+                <i className="ri-checkbox-circle-line"></i>
+              </span>
+              Panahan
+            </h6>
 
-            <div>
-              <h6 className=" d-flex align-items-center gap-2 mt-3 fw-normal">
-                <span className={`${classes.about__icon}`}>
-                  <i className="ri-checkbox-circle-line"></i>
-                </span>
-                Akhwat Gathering
-              </h6>
+            <h6 className=" d-flex align-items-center gap-2 mt-3 fw-normal">
+              <span className={`${classes.about__icon}`}>
+                <i className="ri-checkbox-circle-line"></i>
+              </span>
+              Talkshow
+            </h6>
 
-              <h6 className=" d-flex align-items-center gap-2 mt-3 fw-normal">
-                <span className={`${classes.about__icon}`}>
-                  <i className="ri-checkbox-circle-line"></i>
-                </span>
-                Bazaar
-              </h6>
-            </div>
+            <h6 className=" d-flex align-items-center gap-2 mt-3 fw-normal">
+              <span className={`${classes.about__icon}`}>
+                <i className="ri-checkbox-circle-line"></i>
+              </span>
+              Bazaar
+            </h6>
+
+            <h6 className=" d-flex align-items-center gap-2 mt-3 fw-normal">
+              <span className={`${classes.about__icon}`}>
+                <i className="ri-checkbox-circle-line"></i>
+              </span>
+              Akhwat Gathering
+            </h6>
+
+            <h6 className=" d-flex align-items-center gap-2 mt-3 fw-normal">
+              <span className={`${classes.about__icon}`}>
+                <i className="ri-checkbox-circle-line"></i>
+              </span>
+              Leadership
+            </h6>
           </div>
 
           <div className="mt-4">

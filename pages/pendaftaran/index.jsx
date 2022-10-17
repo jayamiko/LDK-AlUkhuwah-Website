@@ -1,6 +1,4 @@
 import React, { useState, useRef, useEffect } from "react";
-import Link from "next/link";
-import Image from "next/image";
 import emailjs from "emailjs-com";
 import { UKM, kampus } from "../_app";
 // import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -12,14 +10,12 @@ import FormRegistration from "../../components/Form/FormRegistration";
 import Header from "../../components/layout/Header/Header";
 // import { menu } from "../../data/data";
 import Head from "next/head";
-import Footer from "../../components/layout/Footer/Footer";
 import swal from "sweetalert2";
-import { idID } from "@mui/material/locale";
 
 // For Spread Sheet data
 const scriptURL =
   "https://script.google.com/macros/s/AKfycbxBND5Bi5PYyIYkqwU-bnjaOhIe2EfG79qs1aVsryR8_MGOy-8h1_IyFYyJ1spb0EXD/exec";
-const url = `https://docs.google.com/spreadsheets/d/e/2PACX-1vQak6neQTX9aNzNmi7hBJnzSRkKsFlvOQeg2TISgnZiW3n5C4LvMjZjj9WSYVFI7HIsSPMY3Ej1JkeW/pub?gid=0&single=true&output=csv`;
+const url = `https://docs.google.com/spreadsheets/d/e/2PACX-1vT2Kdpc-_D5FgG8qPrPGj1SZaMdxfJTkcVGiQp5VQmz1FTcSAeTtb_Lq6Ubi4V2HrBtZVGFCIqhLdgf/pub?gid=0&single=true&output=csv`;
 // For Email Js
 
 const RegistrationPage = () => {
@@ -55,8 +51,6 @@ const RegistrationPage = () => {
       [name]: value,
     });
   };
-
-  console.log(personalMember.whatsapp);
 
   const handleSubmit = (e) => {
     e.preventDefault();

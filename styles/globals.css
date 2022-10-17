@@ -46,6 +46,11 @@ a {
   text-shadow: 2px 2px #fff;
 }
 
+.containerBox {
+  border: solid 1px red;
+  height: 100vh;
+}
+
 .coverHero {
   background: url("/images/LDK-Flag.jpg");
   background-size: cover;
@@ -62,6 +67,26 @@ a {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: bottom;
+  width: 100%;
+  height: fit-content;
+}
+
+.coverTestimonial {
+  background-image: url("/images/coding-background.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-y: center;
+  background-position-x: left;
+  width: 100%;
+  height: fit-content;
+}
+
+.coverRegistration {
+  background-image: url("/images/coding-background.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-y: center;
+  background-position-x: left;
   width: 100%;
   min-height: 100vh;
   height: fit-content;

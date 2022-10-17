@@ -22,6 +22,10 @@ export const menu = [
     path: "/event",
     name: "Event",
   },
+  {
+    path: "/testimonial",
+    name: "Testimonial",
+  },
 ];
 export const galleries = [
   {

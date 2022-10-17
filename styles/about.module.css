@@ -15,6 +15,9 @@
 }
 
 @media only screen and (max-width: 992px) {
+  .about__img__box img {
+    max-height: 220px;
+  }
   .about__img__gallery {
     justify-content: center !important;
     margin-top: 50px;
