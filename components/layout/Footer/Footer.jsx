@@ -33,7 +33,7 @@ const Footer = () => {
             ></FontAwesomeIcon>
             {emailLDK}
           </span>
-          <ul className="flex space-x-2 sm:space-x-4">
+          <ul className="flex space-x-2 sm:space-x-4 flex-wrap justify-center">
             {menu.map((menus, index) => {
               return (
                 <li key={index}>
@@ -46,7 +46,7 @@ const Footer = () => {
               );
             })}
           </ul>
-          <i className="text-sm text-slate-600">
+          <i className="text-sm text-slate-600 text-center">
             Copyright @ 2022 {`${alUkhuwah} ${kampus} `}All Right Reserved
           </i>
           <div className="flex my-4">
