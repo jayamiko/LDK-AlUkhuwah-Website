@@ -148,10 +148,10 @@ const RegistrationPage = () => {
           <div className="h-[80vh] mx-auto py-0 xl:py-4">
             <div className="text-white h-full flex flex-col justify-center items-center">
               <div className="text-white space-y-8 flex flex-col items-center">
-                <h2 className="text-4xl sm:text-5xl lg:text-7xl font-mountains">
+                <h2 className="text-3xl sm:text-5xl lg:text-7xl font-mountains">
                   Course Coding Gratis
                 </h2>
-                <div className="w-full h-14 grid grid-cols-7">
+                <div className="w-full h-14 md:h-16 grid grid-cols-5 md:grid-cols-7">
                   <div className="relative">
                     <Image
                       src="/images/coding/html.png"
@@ -187,14 +187,14 @@ const RegistrationPage = () => {
                       objectFit="contain"
                     />
                   </div>
-                  <div className="relative">
+                  <div className="relative hidden md:block">
                     <Image
                       src="/images/coding/axios.png"
                       layout="fill"
                       objectFit="contain"
                     />
                   </div>
-                  <div className="relative">
+                  <div className="relative hidden md:block">
                     <Image
                       src="/images/coding/tailwindcss.png"
                       layout="fill"
