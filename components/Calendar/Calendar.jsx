@@ -20,7 +20,7 @@ const localizer = dateFnsLocalizer({
   locales,
 });
 
-const EventComponent =
+const eventComponent =
   ({ schedule }) =>
   (props) => {
     console.log(schedule);
@@ -38,7 +38,7 @@ const EventComponent =
                 : "orange",
           }}
         >
-          <div className="rbc-event-content" title="This is EventTile">
+          <div className="rbc-event-content" title={props.title}>
             <h5 className="text-xs sm:text-sm md:text-base">{props.title}</h5>
           </div>
         </div>
@@ -97,7 +97,7 @@ function FullCalendarComp() {
         endAccessor="end"
         style={{ height: 500 }}
         components={{
-          event: EventComponent({ schedule }),
+          event: eventComponent({ schedule }),
         }}
       />
     </div>
