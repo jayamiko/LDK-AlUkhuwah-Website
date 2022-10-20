@@ -20,10 +20,8 @@ const localizer = dateFnsLocalizer({
   locales,
 });
 
-const eventComponent =
-  ({ schedule }) =>
-  (props) => {
-    console.log(schedule);
+const eventComponent = ({ schedule }) =>
+  function event() {
     return (
       <div className="rbc-row-segment">
         <h2 className="hidden">{schedule[0].title}</h2>
