@@ -176,8 +176,13 @@ a {
   height: 100%;
   width: 100%;
   padding-right: 4px;
-  /* border: 2.5px solid white; */
   box-sizing: border-box;
+}
+
+.rbc-row .rbc-row-segment .rbc-event {
+  background: transparent;
+  width: 100%;
+  font-size: 14px;
 }
 
 @media screen and (max-width: 1024px) {
@@ -189,5 +194,8 @@ a {
 @media screen and (max-width: 768px) {
   .coverHero {
     min-height: 100vh !important;
+  }
+  .rbc-row .rbc-row-segment .rbc-event {
+    height: 22px;
   }
 }

@@ -1,53 +1,105 @@
-import * as React from "react";
-import {
-  ScheduleComponent,
-  WorkWeek,
-  Week,
-  Month,
-  Inject,
-  ViewsDirective,
-  ViewDirective,
-} from "@syncfusion/ej2-react-schedule";
-// import { defaultData } from "./datasource";
-import { extend } from "@syncfusion/ej2-base";
+import format from "date-fns/format";
+import getDay from "date-fns/getDay";
+import parse from "date-fns/parse";
+import startOfWeek from "date-fns/startOfWeek";
+import React from "react";
+import { Calendar, dateFnsLocalizer } from "react-big-calendar";
+import "react-big-calendar/lib/css/react-big-calendar.css";
+// import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
+import { schedule } from "../../data/schedule/schedule";
 
-class FullCalendarComp extends React.Component {
-  constructor() {
-    super(...arguments);
-    this.data = extend(
-      [
-        {
-          Id: 2,
-          Subject: "Meeting",
-          StartTime: new Date(2018, 1, 15, 10, 0),
-          EndTime: new Date(2018, 1, 15, 12, 30),
-          IsAllDay: false,
-          Status: "Completed",
-          Priority: "High",
-        },
-      ],
-      null,
-      true
-    );
-  }
-  render() {
+const locales = {
+  "en-US": require("date-fns/locale/en-US"),
+};
+const localizer = dateFnsLocalizer({
+  format,
+  parse,
+  startOfWeek,
+  getDay,
+  locales,
+});
+
+const EventComponent =
+  ({ schedule }) =>
+  (props) => {
     return (
-      <ScheduleComponent
-        width="100%"
-        height="550px"
-        selectedDate={new Date(2018, 1, 15)}
-        currentView="Month"
-        eventSettings={{ dataSource: this.data }}
-      >
-        <ViewsDirective>
-          <ViewDirective option="WorkWeek" startHour="10:00" endHour="18:00" />
-          <ViewDirective option="Week" startHour="07:00" endHour="15:00" />
-          <ViewDirective option="Month" showWeekend={false} />
-        </ViewsDirective>
-        <Inject services={[WorkWeek, Week, Month]} />
-      </ScheduleComponent>
+      <div className="rbc-row-segment">
+        <div
+          className="rbc-event"
+          style={{
+            background:
+              props.event.status == "learn"
+                ? "#00bcd4"
+                : props.event.status === "task"
+                ? "green"
+                : "orange",
+          }}
+        >
+          <div className="rbc-event-content" title="This is EventTile">
+            <h5 className="text-xs sm:text-sm md:text-base">{props.title}</h5>
+          </div>
+        </div>
+      </div>
     );
-  }
+  };
+
+function FullCalendarComp() {
+  return (
+    <div>
+      <h1 className="font-mountains text-cyan-500 text-center lg:text-6xl">
+        Schedule
+      </h1>
+      <div className="flex justify-center space-x-5 my-4">
+        <div className="flex items-center space-x-2">
+          <div className="bg-cyan-500 w-3 h-3"></div>
+          <label>Materi</label>
+        </div>
+        <div className="flex items-center space-x-2">
+          <div className="bg-green-600 w-3 h-3"></div>
+          <label>Task</label>
+        </div>
+        <div className="flex items-center space-x-2">
+          <div className="bg-orange-400 w-3 h-3"></div>
+          <label>Presentasi</label>
+        </div>
+      </div>
+      {/* <h2>Add New Event</h2>
+      <div>
+        <input
+          type="text"
+          placeholder="Add Title"
+          style={{ width: "20%", marginRight: "10px" }}
+          value={newEvent.title}
+          onChange={(e) => setNewEvent({ ...newEvent, title: e.target.value })}
+        />
+        <DatePicker
+          placeholderText="Start Date"
+          style={{ marginRight: "10px" }}
+          selected={newEvent.start}
+          onChange={(start) => setNewEvent({ ...newEvent, start })}
+        />
+        <DatePicker
+          placeholderText="End Date"
+          selected={newEvent.end}
+          onChange={(end) => setNewEvent({ ...newEvent, end })}
+        />
+        <button stlye={{ marginTop: "10px" }} onClick={handleAddEvent}>
+          Add Event
+        </button>
+      </div> */}
+      <Calendar
+        localizer={localizer}
+        events={schedule}
+        startAccessor="start"
+        endAccessor="end"
+        style={{ height: 500 }}
+        components={{
+          event: EventComponent({ schedule }),
+        }}
+      />
+    </div>
+  );
 }
 
 export default FullCalendarComp;
