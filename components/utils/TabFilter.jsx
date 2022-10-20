@@ -1,48 +1,56 @@
-import React, { useState } from 'react'
-import Tabs from '@mui/material/Tabs';
-import Tab from '@mui/material/Tab';
+import React, { useState } from "react";
+import Tabs from "@mui/material/Tabs";
+import Tab from "@mui/material/Tab";
 
-export default function TabFilter({ resultQuery, resultData, setResultData}) {
+export default function TabFilter({ resultQuery, resultData, setResultData }) {
+  const [label, setLabel] = useState("All Video");
 
-  const [label, setLabel] = useState("Umum & Internal")
-  
-  function filterDataByAudience(category = "Umum & Internal") {
-    const filterByAudience = resultQuery.filter(content => content.audience === category)
-    return filterByAudience
+  function filterDataByAudience(category = "HTML") {
+    console.log("Category", category);
+    const filterByAudience = resultQuery.filter(
+      (content) => content.category === category
+    );
+    // console.log(filterByAudience);
+    return filterByAudience;
   }
 
   const handleChange = (event) => {
-    setLabel(event.target.textContent)
-    if (label === "Umum") {
-      setResultData(filterDataByAudience("Umum"));
-    } else if (label === "Internal") {
-      setResultData(filterDataByAudience("Internal"));
+    setLabel(event.target.textContent);
+    if (event.target.textContent === "HTML") {
+      console.log("HTML");
+      setResultData(filterDataByAudience("HTML"));
+    } else if (event.target.textContent === "CSS") {
+      console.log("CSS");
+      setResultData(filterDataByAudience("CSS"));
+    } else if (event.target.textContent === "Javascript") {
+      console.log("Javascript");
+      setResultData(filterDataByAudience("Javascript"));
     } else {
+      console.log("All Video");
       setResultData(resultQuery);
     }
   };
 
   function styleTab(category) {
     const style = {
-      borderBottom: label === category ? 'solid rgb(6 182 212) 2px' : 'none',
-      fontWeight: label === category ? 'bold' : 'normal',
-    }
-    return style
+      borderBottom: label === category ? "solid rgb(6 182 212) 2px" : "none",
+      fontWeight: label === category ? "bold" : "normal",
+      color: label === category ? "rgb(6 182 212)" : "black",
+    };
+    return style;
   }
 
   return (
-    <Tabs value={resultData} onChange={handleChange} 
-      className="my-3"
-    >
-      <Tab 
-        label={"Umum & Internal"} 
-        style={styleTab("Umum & Internal")}/>
-      <Tab 
-        label={"Umum"}
-        style={styleTab("Umum")}/>
-      <Tab 
-        label={"Internal"}
-        style={styleTab("Internal")}/>
-    </Tabs>
+    <div className="flex flex-col md:flex-row my-3">
+      <Tabs value={resultData} onChange={handleChange}>
+        <Tab label={"All Video"} style={styleTab("All Video")} />
+        <Tab label={"HTML"} style={styleTab("HTML")} />
+        <Tab label={"CSS"} style={styleTab("CSS")} />
+        <Tab label={"Javascript"} style={styleTab("Javascript")} />
+      </Tabs>
+      <Tabs value={resultData} onChange={handleChange}>
+        <Tab label={"React Js"} style={styleTab("React Js")} />
+      </Tabs>
+    </div>
   );
 }

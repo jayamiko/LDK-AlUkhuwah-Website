@@ -1,17 +1,73 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import { UKM, kampus } from "../_app";
+import moment from "moment";
 // import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // import { faTimes, faBars } from "@fortawesome/free-solid-svg-icons";
 import { menu } from "../../data/data";
+import { schedule } from "../../data/schedule/schedule";
+import { codingLogos } from "../../data/logos/logos";
 import styles from "../../components/layout/Header/Header.module.css";
 import Head from "next/head";
 import HeadTop from "../../components/layout/Header/Head";
 import Link from "next/link";
 import FullCalendarComp from "../../components/Calendar/Calendar";
+import TutorialVideos from "../../components/Videos/TutorialVideos";
+import RecordVideos from "../../components/Videos/RecordVideos";
 
 const RegistrationPage = () => {
+  const [event, setEvent] = useState({});
   const [click, setClick] = useState(false);
+  let date = new Date();
+  let start = new Date();
+
+  start.setFullYear(2022, 9, 15);
+
+  function statusEvent(start) {
+    if (start > date) {
+      return "Coming Soon";
+    } else if (start < date) {
+      return "Sudah Selesai";
+    } else if (date === start) {
+      return "Sedang Berlangsung";
+    }
+  }
+
+  const onButtonClick = () => {
+    // using Java Script method to get PDF file
+    fetch("pdf/Silabus.pdf").then((response) => {
+      response.blob().then((blob) => {
+        // Creating new object of PDF file
+        const fileURL = window.URL.createObjectURL(blob);
+        // Setting various property values
+        let alink = document.createElement("a");
+        alink.href = fileURL;
+        alink.download = "pdf/Silabus.pdf";
+        alink.click();
+      });
+    });
+  };
+
+  const eventData = schedule.map((event) => {
+    return {
+      title: event.title,
+      type: statusEvent(event.start),
+      date: event.start,
+    };
+  });
+
+  function getEventUpComing() {
+    const filterEventbyType = eventData.filter(
+      (event) => event.type === "Coming Soon"
+    );
+    const result = filterEventbyType[0];
+    setEvent(result);
+  }
+
+  useEffect(() => {
+    getEventUpComing();
+  }, []);
+
   return (
     <>
       <Head>
@@ -150,75 +206,48 @@ const RegistrationPage = () => {
             <div className="text-white h-full flex flex-col justify-center items-center">
               <div className="text-white space-y-8 flex flex-col items-center">
                 <h2 className="text-3xl sm:text-5xl lg:text-7xl font-mountains">
-                  Course Coding Gratis
+                  Forum Course Coding
                 </h2>
-                <div className="w-full h-14 md:h-16 grid grid-cols-5 md:grid-cols-7">
-                  <div className="relative">
-                    <Image
-                      src="/images/coding/html.png"
-                      layout="fill"
-                      objectFit="contain"
-                    />
-                  </div>
-                  <div className="relative">
-                    <Image
-                      src="/images/coding/css.png"
-                      layout="fill"
-                      objectFit="contain"
-                    />
-                  </div>
-                  <div className="relative">
-                    <Image
-                      src="/images/coding/javascript.png"
-                      layout="fill"
-                      objectFit="contain"
-                    />
-                  </div>
-                  <div className="relative">
-                    <Image
-                      src="/images/coding/react.png"
-                      layout="fill"
-                      objectFit="contain"
-                    />
-                  </div>
-                  <div className="relative">
-                    <Image
-                      src="/images/coding/git.png"
-                      layout="fill"
-                      objectFit="contain"
-                    />
-                  </div>
-                  <div className="relative hidden md:block">
-                    <Image
-                      src="/images/coding/axios.png"
-                      layout="fill"
-                      objectFit="contain"
-                    />
-                  </div>
-                  <div className="relative hidden md:block">
-                    <Image
-                      src="/images/coding/tailwindcss.png"
-                      layout="fill"
-                      objectFit="contain"
-                    />
-                  </div>
+                <div className="w-full h-24 md:h-16 gap-2 grid grid-cols-3 md:grid-cols-6">
+                  {codingLogos.map((logo, index) => {
+                    return (
+                      <div key={index} className="relative">
+                        <Image
+                          src={logo.src}
+                          layout="fill"
+                          objectFit="contain"
+                          alt={logo.title}
+                        />
+                      </div>
+                    );
+                  })}
                 </div>
-                {/* <Link href="https://docs.google.com/forms/d/e/1FAIpQLSdQiLSL5y7iIPpRCXcnrC_T-9qXwNxl4NZWlu_WnDhn8zQUjw/viewform">
-                  <a target="_blank">
-                    <button className="bg-cyan-500 font-roboto text-white rounded-md py-2 px-10 uppercase font-bold tracking-wider mx-auto">
-                      Registration
-                    </button>
-                  </a>
-                </Link> */}
+                <div className="flex flex-col items-center">
+                  <i className="text-green-500 text-shadow-black">
+                    Materi Selanjutnya :
+                  </i>
+                  <h4>{event.title}</h4>
+                  <p className="text-sm">{moment(event.date).format("llll")}</p>
+                  <button
+                    onClick={onButtonClick}
+                    className="bg-red-700 font-edu text-white rounded-md py-2 px-10 uppercase font-black mx-auto hover:scale-110"
+                  >
+                    Download SILABUS
+                  </button>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </section>
-      <section id="schedule">
-        <div className="container mx-auto my-10">
-          <FullCalendarComp />
-        </div>
+      <section id="record" className="my-20">
+        <RecordVideos />
+      </section>
+      <section id="tutorial" className="my-20">
+        <TutorialVideos />
+      </section>
+      <section id="schedule" className="py-10">
+        <FullCalendarComp />
       </section>
     </>
   );

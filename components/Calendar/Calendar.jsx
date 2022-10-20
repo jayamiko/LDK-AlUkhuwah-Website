@@ -22,7 +22,6 @@ const localizer = dateFnsLocalizer({
 
 const eventComponent = ({ schedule }) =>
   function event(props) {
-    console.log(props);
     return (
       <div className="rbc-row-segment">
         <div
@@ -48,7 +47,7 @@ eventComponent.displayName = "Event Component";
 
 function FullCalendarComp() {
   return (
-    <div>
+    <div className="container mx-auto">
       <h1 className="font-mountains text-cyan-500 text-center lg:text-6xl">
         Schedule
       </h1>
