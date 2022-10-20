@@ -21,10 +21,10 @@ const localizer = dateFnsLocalizer({
 });
 
 const eventComponent = ({ schedule }) =>
-  function event() {
+  function event(props) {
+    console.log(props);
     return (
       <div className="rbc-row-segment">
-        <h2 className="hidden">{schedule[0].title}</h2>
         <div
           className="rbc-event"
           style={{
@@ -37,7 +37,7 @@ const eventComponent = ({ schedule }) =>
           }}
         >
           <div className="rbc-event-content" title={props.title}>
-            <h5 className="text-xs sm:text-sm md:text-base">{props.title}</h5>
+            <h5 className="text-xs md:text-sm lg:text-base">{props.title}</h5>
           </div>
         </div>
       </div>
