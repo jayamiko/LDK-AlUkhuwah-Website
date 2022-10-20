@@ -8,6 +8,7 @@ import styles from "../../components/layout/Header/Header.module.css";
 import Head from "next/head";
 import HeadTop from "../../components/layout/Header/Head";
 import Link from "next/link";
+import FullCalendarComp from "../../components/Calendar/Calendar";
 
 const RegistrationPage = () => {
   const [click, setClick] = useState(false);
@@ -202,16 +203,21 @@ const RegistrationPage = () => {
                     />
                   </div>
                 </div>
-                <Link href="https://docs.google.com/forms/d/e/1FAIpQLSdQiLSL5y7iIPpRCXcnrC_T-9qXwNxl4NZWlu_WnDhn8zQUjw/viewform">
+                {/* <Link href="https://docs.google.com/forms/d/e/1FAIpQLSdQiLSL5y7iIPpRCXcnrC_T-9qXwNxl4NZWlu_WnDhn8zQUjw/viewform">
                   <a target="_blank">
                     <button className="bg-cyan-500 font-roboto text-white rounded-md py-2 px-10 uppercase font-bold tracking-wider mx-auto">
                       Registration
                     </button>
                   </a>
-                </Link>
+                </Link> */}
               </div>
             </div>
           </div>
+        </div>
+      </section>
+      <section id="schedule">
+        <div className="container mx-auto my-10">
+          <FullCalendarComp />
         </div>
       </section>
     </>

@@ -62,7 +62,7 @@ export const FormTestimonial = ({
 
   return (
     <form
-      name="submit-to-google-sheet"
+      name="submit-to-testimoni-sheet"
       className="flex items-center mt-10 md:mt-0 2xl:mt-10 w-full space-y-1"
       method="post"
       ref={formRef}
@@ -77,25 +77,22 @@ export const FormTestimonial = ({
 
         <div className="w-full flex flex-col md:flex-row md:space-x-2 lg:space-x-10">
           <div className="md:w-1/2 lg:w-full">
-            <div id="fullName">
+            <div id="name">
               <label
-                htmlFor="fullName"
+                htmlFor="name"
                 className="font-semibold text-sm lg:text-base 2xl:text-lg"
               >
                 Nama Lengkap
               </label>
               {warning && (
-                <InvalidField
-                  text="Wajib Diisi"
-                  state={personalMember.fullName}
-                />
+                <InvalidField text="Wajib Diisi" state={personalMember.name} />
               )}
               <input
                 type="text"
                 className="form-control customPlaceholder"
-                value={personalMember.fullName}
-                id="fullName"
-                name="fullName"
+                value={personalMember.name}
+                id="name"
+                name="name"
                 placeholder="Nama Lengkap"
                 onChange={handleChange}
               />
@@ -130,18 +127,18 @@ export const FormTestimonial = ({
                   onChange={handleChange}
                 />
               </div>
-              <div id="jenisKelamin" className="w-2/6 md:w-1/2">
+              <div id="gender" className="w-2/6 md:w-1/2">
                 <label
-                  htmlFor="jenisKelamin"
+                  htmlFor="gender"
                   className="font-semibold text-sm lg:text-base 2xl:text-lg"
                 >
                   Jenis Kelamin
                 </label>
                 <select
                   className="form-control customPlaceholder"
-                  id="jenisKelamin"
-                  name="jenisKelamin"
-                  value={personalMember.jenisKelamin}
+                  id="gender"
+                  name="gender"
+                  value={personalMember.gender}
                   onChange={handleChange}
                 >
                   <option className="text-gray-400" value="Laki-laki">
@@ -151,6 +148,23 @@ export const FormTestimonial = ({
                     Perempuan
                   </option>
                 </select>
+              </div>
+              <div id="angkatan" className="w-2/6 md:w-1/2">
+                <label
+                  htmlFor="angkatan"
+                  className="font-semibold text-sm lg:text-base 2xl:text-lg"
+                >
+                  Angkatan
+                </label>
+                <input
+                  type="text"
+                  className="form-control customPlaceholder"
+                  value={personalMember.angkatan}
+                  id="angkatan"
+                  name="angkatan"
+                  placeholder="cth: 2019"
+                  onChange={handleChange}
+                />
               </div>
             </div>
             <div id="posisi">
@@ -180,19 +194,19 @@ export const FormTestimonial = ({
 
           <div className="md:w-1/2 lg:w-full">
             <div className="flex justify-between gap-4">
-              <div id="fakultas" className="w-1/3">
+              <div id="asalFakultas" className="w-1/3">
                 <label
-                  htmlFor="fakultas"
+                  htmlFor="asalFakultas"
                   className="font-semibold text-sm lg:text-base 2xl:text-lg"
                 >
-                  Fakultas
+                  asalFakultas
                 </label>
                 <div className="flex flex-wrap w-full md:w-full">
                   <select
                     className="form-control customPlaceholder"
-                    id="fakultas"
-                    name="fakultas"
-                    value={personalMember.fakultas}
+                    id="asalFakultas"
+                    name="asalFakultas"
+                    value={personalMember.asalFakultas}
                     onChange={handleChange}
                   >
                     {fakultas.map((list, index) => {
@@ -205,19 +219,19 @@ export const FormTestimonial = ({
                   </select>
                 </div>
               </div>
-              <div id="jurusan" className="w-2/3">
+              <div id="prodi" className="w-2/3">
                 <label
-                  htmlFor="jurusan"
+                  htmlFor="prodi"
                   className="font-semibold text-sm lg:text-base 2xl:text-lg"
                 >
-                  Jurusan
+                  prodi
                 </label>
                 <div className="flex flex-wrap w-full md:w-full">
                   <select
                     className="form-control customPlaceholder"
-                    id="jurusan"
-                    name="jurusan"
-                    value={personalMember.jurusan}
+                    id="prodi"
+                    name="prodi"
+                    value={personalMember.prodi}
                     onChange={handleChange}
                   >
                     {selectArray().map((list, index) => {
