@@ -217,7 +217,7 @@ const RegistrationPage = () => {
       </section>
       <section id="schedule">
         <div className="container mx-auto my-10">
-          <FullCalendarComp />
+          {/* <FullCalendarComp /> */}
         </div>
       </section>
     </>
