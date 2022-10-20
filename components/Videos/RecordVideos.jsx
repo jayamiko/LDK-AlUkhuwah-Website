@@ -7,7 +7,6 @@ function RecordVideos() {
   useEffect(() => {
     setResultData(meetings);
   }, []);
-  console.log(resultData);
   return (
     <div className="container mx-auto">
       <h1 className="font-mountains text-cyan-500 text-center lg:text-6xl">
@@ -29,9 +28,9 @@ function RecordVideos() {
                     height="100%"
                     src={youtube.src}
                     title={youtube.title}
-                    frameborder="0"
+                    frameBorder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen
+                    allowFullScreen
                   ></iframe>
                   <h4>{youtube.title}</h4>
                   <hr />

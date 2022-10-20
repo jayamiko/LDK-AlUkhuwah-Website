@@ -16,9 +16,9 @@ function TutorialVideos() {
                 height="100%"
                 src={youtube.src}
                 title={youtube.title}
-                frameborder="0"
+                frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen
+                allowFullScreen
               ></iframe>
               <h5 className="mb-6">{youtube.title}</h5>
               <hr />
