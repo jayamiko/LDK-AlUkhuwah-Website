@@ -46,6 +46,8 @@ const eventComponent =
     );
   };
 
+eventComponent.displayName = "Event Component";
+
 function FullCalendarComp() {
   return (
     <div>
