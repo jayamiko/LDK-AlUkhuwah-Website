@@ -2,12 +2,7 @@ import React from "react";
 import { alUkhuwah, kampus, emailLDK } from "../../../pages/_app";
 import MediaSosial from "../../MediaSosial/MediaSosial";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faMap,
-  faPaperPlane,
-  faPhone,
-} from "@fortawesome/free-solid-svg-icons";
-import { faGoogle } from "@fortawesome/free-brands-svg-icons";
+import { faPaperPlane } from "@fortawesome/free-solid-svg-icons";
 import Image from "next/image";
 import Link from "next/link";
 import { menu } from "../../../data/data";
