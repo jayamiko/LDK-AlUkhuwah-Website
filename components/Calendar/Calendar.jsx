@@ -61,18 +61,12 @@ const eventComponent = ({
         <Modal show={show} onHide={handleClose}>
           <Modal.Header closeButton>
             <Modal.Title className="uppercase font-bold text-cyan-500">
-              {props.event.status === "learn"
-                ? "Sesi Materi"
-                : props.event.status === "presentation"
-                ? "Sesi Presentasi"
-                : props.event.status === "task"
-                ? "Tugas"
-                : "Materi Tambahan"}
+              Course Schedule
             </Modal.Title>
           </Modal.Header>
           <Modal.Body>
             <div className="flex flex-col items-center">
-              <h5 className="font-medium">Materi :</h5>
+              <h5 className="font-medium">Today's Course :</h5>
               <h3 className="font-medium text-cyan-500">{title}</h3>
             </div>
           </Modal.Body>
