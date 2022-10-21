@@ -71,10 +71,10 @@ const RegistrationPage = () => {
   return (
     <>
       <Head>
-        <title>LDK UNISMA - Forum Coding</title>
+        <title>LDK UNISMA - Forum Course Coding</title>
         <meta
-          name="LDK Forum Coding"
-          content="Forum Coding LDK Al-Ukhuwah UNISMA BEKASI"
+          name="LDK - Forum Course Coding"
+          content="Forum Course Coding LDK Al-Ukhuwah UNISMA BEKASI"
         />
       </Head>
       <section className="coverRegistration">
