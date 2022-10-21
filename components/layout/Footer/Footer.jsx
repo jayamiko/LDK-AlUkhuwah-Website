@@ -15,10 +15,7 @@ import { menu } from "../../../data/data";
 const Footer = () => {
   return (
     <>
-      <footer
-        className="bg-cyan-500 relative flex flex-col justify-between z-50"
-        // style={{ height: "50vh" }}
-      >
+      <footer className="bg-cyan-500 relative flex flex-col justify-between z-50">
         <div className="container mx-auto px-4 py-2 flex flex-col items-center space-y-2">
           <Image
             src="/images/ldk-icon.png"
@@ -33,7 +30,7 @@ const Footer = () => {
             ></FontAwesomeIcon>
             {emailLDK}
           </span>
-          <ul className="flex space-x-2 sm:space-x-4 flex-wrap justify-center">
+          <ul className="grid grid-cols-3 lg:flex sm:space-x-4">
             {menu.map((menus, index) => {
               return (
                 <li key={index}>

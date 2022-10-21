@@ -1,15 +1,27 @@
 export const youtubes = [
   {
     title: "Download & Install VS Code New 2022",
-    src: "https://www.youtube.com/embed/oWriY67kGQ0",
-  },
-  {
-    title: "Cara Menginstall Git di Windows 10",
-    src: "https://www.youtube.com/embed/LPa6VOVUcIE",
+    src: "https://www.youtube.com/embed/HjNXLRo2RwI",
+    channel: "Mas Rasid",
+    note: "",
   },
   {
     title: "Instalasi & Konfigurasi NodeJS + Install NPM",
     src: "https://www.youtube.com/embed/VfN1_pEdQAA",
+    channel: "Web Programming UNPAS",
+    note: "Dalam video tersebut menginstall Node Js versi 14 keatas, disarankan kamu install yang versi 16 keatas (terbaru)",
+  },
+  {
+    title: "Cara Menginstall Git di Windows 10",
+    src: "https://www.youtube.com/embed/LPa6VOVUcIE",
+    channel: "Dunia Cara",
+    note: "",
+  },
+  {
+    title: "Cara Membuat Akun Github",
+    src: "https://www.youtube.com/embed/V8V2CBlarEU",
+    channel: "meida efi",
+    note: "Fokus cara membuat akunnya saja!",
   },
 ];
 
