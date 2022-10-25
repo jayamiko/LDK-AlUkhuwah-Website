@@ -68,6 +68,17 @@ const eventComponent = ({
             <div className="flex flex-col items-center">
               <h5 className="font-medium">Today{"'"}s Course :</h5>
               <h3 className="font-medium text-cyan-500">{title}</h3>
+              <Link href="https://meet.google.com/jdu-rcmc-rtg">
+                <a
+                  href="https://meet.google.com/jdu-rcmc-rtg"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <button className="bg-emerald-500 font-roboto font-black text-white rounded-md my-2 py-2 px-10 uppercase mx-auto hover:scale-110">
+                    Join Meet
+                  </button>
+                </a>
+              </Link>
             </div>
           </Modal.Body>
           <Modal.Footer>
