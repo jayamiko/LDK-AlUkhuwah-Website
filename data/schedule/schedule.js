@@ -4,7 +4,7 @@ export const schedule = [
     allDay: false,
     start: new Date(2022, 9, 26, 20, 0, 0),
     end: new Date(2022, 9, 26, 21, 0, 0),
-    status: "learn",
+    status: "extra",
   },
   {
     title: "Introduction HTML",

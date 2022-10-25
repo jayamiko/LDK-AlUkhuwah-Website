@@ -33,20 +33,20 @@ const RegistrationPage = () => {
     }
   }
 
-  const onButtonClick = () => {
-    // using Java Script method to get PDF file
-    fetch("pdf/Silabus.pdf").then((response) => {
-      response.blob().then((blob) => {
-        // Creating new object of PDF file
-        const fileURL = window.URL.createObjectURL(blob);
-        // Setting various property values
-        let alink = document.createElement("a");
-        alink.href = fileURL;
-        alink.download = "pdf/Silabus.pdf";
-        alink.click();
-      });
-    });
-  };
+  // const onButtonClick = () => {
+  //   // using Java Script method to get PDF file
+  //   fetch("pdf/Silabus.pdf").then((response) => {
+  //     response.blob().then((blob) => {
+  //       // Creating new object of PDF file
+  //       const fileURL = window.URL.createObjectURL(blob);
+  //       // Setting various property values
+  //       let alink = document.createElement("a");
+  //       alink.href = fileURL;
+  //       alink.download = "pdf/Silabus.pdf";
+  //       alink.click();
+  //     });
+  //   });
+  // };
 
   const eventData = schedule.map((event) => {
     return {
@@ -215,19 +215,24 @@ const RegistrationPage = () => {
                   })}
                 </div>
                 <div className="flex flex-col items-center">
-                  <i className="text-green-500 text-shadow-black">
+                  <i className="text-emerald-500 text-shadow-black">
                     Materi Selanjutnya :
                   </i>
                   <h4>{event.title}</h4>
                   <p className="text-sm">{moment(event.date).format("llll")}</p>
-                  <a href="meet.google.com/jdu-rcmc-rtg" target="_blank">
-                    <button
-                      // onClick={onButtonClick}
-                      className="bg-cyan-500 font-edu text-white rounded-md py-2 px-10 uppercase font-black mx-auto hover:scale-110"
+                  <Link href="https://meet.google.com/jdu-rcmc-rtg">
+                    <a
+                      href="https://meet.google.com/jdu-rcmc-rtg"
+                      target="_blank"
                     >
-                      Join The Meet
-                    </button>
-                  </a>
+                      <button
+                        // onClick={onButtonClick}
+                        className="bg-emerald-500 font-roboto font-black text-white rounded-md py-2 px-10 uppercase mx-auto hover:scale-110"
+                      >
+                        Join Meet
+                      </button>
+                    </a>
+                  </Link>
                 </div>
               </div>
             </div>

@@ -17,16 +17,16 @@ export default function TabFilter({ resultQuery, resultData, setResultData }) {
   const handleChange = (event) => {
     setLabel(event.target.textContent);
     if (event.target.textContent === "HTML") {
-      console.log("HTML");
       setResultData(filterDataByAudience("HTML"));
     } else if (event.target.textContent === "CSS") {
-      console.log("CSS");
       setResultData(filterDataByAudience("CSS"));
+    } else if (event.target.textContent === "Git") {
+      setResultData(filterDataByAudience("Git"));
     } else if (event.target.textContent === "Javascript") {
-      console.log("Javascript");
       setResultData(filterDataByAudience("Javascript"));
+    } else if (event.target.textContent === "React Js") {
+      setResultData(filterDataByAudience("React Js"));
     } else {
-      console.log("All Video");
       setResultData(resultQuery);
     }
   };
@@ -46,9 +46,10 @@ export default function TabFilter({ resultQuery, resultData, setResultData }) {
         <Tab label={"All Video"} style={styleTab("All Video")} />
         <Tab label={"HTML"} style={styleTab("HTML")} />
         <Tab label={"CSS"} style={styleTab("CSS")} />
-        <Tab label={"Javascript"} style={styleTab("Javascript")} />
+        <Tab label={"GIT"} style={styleTab("GIT")} />
       </Tabs>
       <Tabs value={resultData} onChange={handleChange}>
+        <Tab label={"Javascript"} style={styleTab("Javascript")} />
         <Tab label={"React Js"} style={styleTab("React Js")} />
       </Tabs>
     </div>
