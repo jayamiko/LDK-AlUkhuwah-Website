@@ -224,6 +224,7 @@ const RegistrationPage = () => {
                     <a
                       href="https://meet.google.com/jdu-rcmc-rtg"
                       target="_blank"
+                      rel="noreferrer"
                     >
                       <button
                         // onClick={onButtonClick}
