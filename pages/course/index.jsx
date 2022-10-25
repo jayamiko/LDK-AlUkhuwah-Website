@@ -220,12 +220,14 @@ const RegistrationPage = () => {
                   </i>
                   <h4>{event.title}</h4>
                   <p className="text-sm">{moment(event.date).format("llll")}</p>
-                  <button
-                    onClick={onButtonClick}
-                    className="bg-red-700 font-edu text-white rounded-md py-2 px-10 uppercase font-black mx-auto hover:scale-110"
-                  >
-                    Download SILABUS
-                  </button>
+                  <a href="meet.google.com/jdu-rcmc-rtg" target="_blank">
+                    <button
+                      // onClick={onButtonClick}
+                      className="bg-cyan-500 font-edu text-white rounded-md py-2 px-10 uppercase font-black mx-auto hover:scale-110"
+                    >
+                      Join The Meet
+                    </button>
+                  </a>
                 </div>
               </div>
             </div>
