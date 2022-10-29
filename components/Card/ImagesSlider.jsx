@@ -14,7 +14,7 @@ class ImagesSlider extends Component {
       slidesToScroll: 3,
       responsive: [
         {
-          breakpoint: 780,
+          breakpoint: 500,
           settings: {
             slidesToShow: 1,
             slidesToScroll: 1,
@@ -23,10 +23,19 @@ class ImagesSlider extends Component {
           },
         },
         {
-          breakpoint: 1280,
+          breakpoint: 780,
           settings: {
             slidesToShow: 2,
             slidesToScroll: 2,
+            dots: false,
+            autoplay: true,
+          },
+        },
+        {
+          breakpoint: 1280,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 3,
           },
         },
       ],

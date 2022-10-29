@@ -100,9 +100,9 @@ const HomePage = () => {
       <section id="partners" className="bg-gray-100">
         <Partners />
       </section>
-      <section id="event-coming">
+      {/* <section id="event-coming">
         <EventComing />
-      </section>
+      </section> */}
       <section id="gallery" className="mt-20 py-20 bg-gray-100">
         <ImagesSlider />
       </section>

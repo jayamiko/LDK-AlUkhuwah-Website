@@ -7,17 +7,10 @@ export const schedule = [
     status: "extra",
   },
   {
-    title: "Introduction HTML",
+    title: "Fundamental HTML",
     allDay: false,
     start: new Date(2022, 10, 2, 20, 0, 0),
     end: new Date(2022, 10, 2, 21, 0, 0),
-    status: "learn",
-  },
-  {
-    title: "Fundamental HTML",
-    allDay: false,
-    start: new Date(2022, 10, 4, 20, 0, 0),
-    end: new Date(2022, 10, 4, 21, 0, 0),
     status: "learn",
   },
   {

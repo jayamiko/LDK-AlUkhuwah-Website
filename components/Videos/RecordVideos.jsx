@@ -22,7 +22,7 @@ function RecordVideos() {
           <div className="gap-5 grid grid-cols-1 lg:grid-cols-2">
             {resultData.map((youtube, index) => {
               return (
-                <div key={index} className="h-[300px] sm:h-[350px]">
+                <div key={index} className="h-[280px] sm:h-[300px]">
                   <iframe
                     width="100%"
                     height="100%"
