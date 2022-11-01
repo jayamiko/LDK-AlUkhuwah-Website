@@ -9,8 +9,8 @@ export const schedule = [
   {
     title: "Fundamental HTML",
     allDay: false,
-    start: new Date(2022, 10, 2, 20, 0, 0),
-    end: new Date(2022, 10, 2, 21, 0, 0),
+    start: new Date(2022, 10, 1, 19, 30, 0),
+    end: new Date(2022, 10, 1, 21, 0, 0),
     status: "learn",
   },
   {
