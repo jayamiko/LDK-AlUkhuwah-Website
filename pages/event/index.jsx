@@ -74,11 +74,13 @@ const Webinar = () => {
                   <Timer date="Nov 8, 2022 20:00:00" />
                 </div>
                 <div className="space-x-4">
-                  <a>
-                    <button className="text-md rounded-sm py-2 px-4 lg:px-6 bg-emerald-600 hover:text-yellow-400 font-medium">
-                      Register Now
-                    </button>
-                  </a>
+                  <Link href="https://forms.gle/fF1S1MXa8dURqqga8">
+                    <a href="https://forms.gle/fF1S1MXa8dURqqga8" target="_blank">
+                      <button className="text-md rounded-sm py-2 px-4 lg:px-6 bg-emerald-600 hover:text-yellow-400 font-medium">
+                        Register Now
+                      </button>
+                    </a>
+                  </Link>
                   {statusEvent(new Date().setFullYear(2022, 10, 8))}
                 </div>
               </div>
