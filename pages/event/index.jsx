@@ -46,12 +46,50 @@ const Webinar = () => {
         />
       </Head>
       <section
-        id="open-house"
-        className="min-h-screen h-fit bg-center bg-cover bg-[url('/images/webinar/bgOpenhouse.jpg')] z-10"
+        id="talkshow-psikologi"
+        className="h-fit bg-center bg-cover bg-[url('/images/webinar/bgTalkshowPsikologi.jpg')] z-10"
       >
         <div className="h-fit flex flex-col md:px-5 lg:m-0 w-full z-50">
           <Header />
         </div>
+        <div className="py-4 lg:py-0">
+          <div className="container mx-auto px-2 sm:px-5 flex flex-col-reverse lg:flex-row">
+            <div className="w-full lg:w-1/2 mt-2 md:mt-0 flex justify-center lg:justify-start items-center">
+              <Image
+                src="/images/webinar/Talkshow-Psikologi.jpg"
+                width={350}
+                height={350}
+                alt="Talkshow-Psikologi"
+              />
+            </div>
+            <div className="w-full lg:w-1/2 items-center">
+              <div className="w-full text-white flex flex-col items-center lg:items-start">
+                <h1 className="font-wolf text-shadow-white text-cyan-500 m-0 px-4 text-8xl lg:text-9xl">
+                  Talk Show
+                </h1>
+                <i className="lg:text-shadow-black">
+                  TEMA : {"QUARTER LIFE CRISIS"}
+                </i>
+                <div className="w-full lg:w-1/2 my-2">
+                  <Timer date="Nov 8, 2022 20:00:00" />
+                </div>
+                <div className="space-x-4">
+                  <a>
+                    <button className="text-md rounded-sm py-2 px-4 lg:px-6 bg-emerald-600 hover:text-yellow-400 font-medium">
+                      Register Now
+                    </button>
+                  </a>
+                  {statusEvent(new Date().setFullYear(2022, 10, 8))}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section
+        id="open-house"
+        className="min-h-screen h-fit bg-center bg-cover bg-[url('/images/webinar/bgOpenhouse.jpg')] z-10"
+      >
         <div className="py-4 lg:py-0">
           <div className="container mx-auto px-2 sm:px-5">
             <div className="w-full flex justify-center items-center">
