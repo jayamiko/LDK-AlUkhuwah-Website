@@ -64,7 +64,7 @@ const Webinar = () => {
             </div>
             <div className="w-full lg:w-1/2 items-center">
               <div className="w-full text-white flex flex-col items-center lg:items-start">
-                <h1 className="font-wolf text-shadow-white text-cyan-500 m-0 px-4 text-8xl lg:text-9xl">
+                <h1 className="font-wolf text-shadow-white text-cyan-500 m-0 px-4 text-5xl sm:text-8xl lg:text-9xl">
                   Talk Show
                 </h1>
                 <i className="lg:text-shadow-black">
@@ -76,7 +76,7 @@ const Webinar = () => {
                 <div className="space-x-4">
                   <Link href="https://forms.gle/fF1S1MXa8dURqqga8">
                     <a href="https://forms.gle/fF1S1MXa8dURqqga8" target="_blank" rel="noreferrer">
-                      <button className="text-md rounded-sm py-2 px-4 lg:px-6 bg-emerald-600 hover:text-yellow-400 font-medium">
+                      <button className="text-md rounded-sm py-2 px-4 lg:px-6 bg-emerald-600 text-white hover:text-yellow-400 font-medium">
                         Register Now
                       </button>
                     </a>
