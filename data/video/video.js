@@ -18,10 +18,10 @@ export const youtubes = [
     note: "",
   },
   {
-    title: "Cara Membuat Akun Github",
-    src: "https://www.youtube.com/embed/V8V2CBlarEU",
-    channel: "meida efi",
-    note: "Fokus cara membuat akunnya saja!",
+    title: "Belajar HTML Dasar Full Episode",
+    src: "https://www.youtube.com/embed/tVBuw-RkUU4",
+    channel: "Belajar Coding",
+    note: "",
   },
 ];
 
