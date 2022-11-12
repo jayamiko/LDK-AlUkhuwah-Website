@@ -23,8 +23,8 @@ export const menu = [
     name: "Event",
   },
   {
-    path: "/testimonial",
-    name: "Testimonial",
+    path: "/dokumentasi",
+    name: "Dokumentasi",
   },
 ];
 export const galleries = [
@@ -55,7 +55,7 @@ export const galleries = [
   },
   {
     title: "Talkshow",
-    image: "./images/talkshow.jpg",
+    image: "./images/Talkshow-Psikologi.jpg",
     alt: "talkshow",
   },
   {
@@ -359,189 +359,5 @@ export const topProgram = [
   {
     id: "bursa-obrolan-muslimah",
     title: "BOM (Bursa Obrolan Muslimah)",
-  },
-];
-export const coursesCard = [
-  {
-    id: 1,
-    cover: "../images/courses/c1.png",
-    coursesName: "Introducing to Software Engineering",
-    courTeacher: [
-      {
-        dcover: "./images/back.webp",
-        name: "by John Smith",
-        totalTime: "50 lectures (190 hrs)",
-      },
-    ],
-    priceAll: "$100 All Course",
-    pricePer: "$15 per month",
-  },
-  {
-    id: 2,
-    cover: "../images/courses/c2.png",
-    coursesName: "Enhancing Adobe Photoshop CC 2020 Skills",
-    courTeacher: [
-      {
-        dcover: "./images/back.webp",
-        name: "by Ram Gurung",
-        totalTime: "30 lectures (125 hrs)",
-      },
-    ],
-    priceAll: "$200 All Course",
-    pricePer: "$25 per month",
-  },
-  {
-    id: 3,
-    cover: "../images/courses/c3.png",
-    coursesName: "HTML, CSS, and Javascript for Web Developers",
-    courTeacher: [
-      {
-        dcover: "./images/back.webp",
-        name: "by Saroj Nepal",
-        totalTime: "50 lectures (50 hrs)",
-      },
-    ],
-    priceAll: "$50 All Course",
-    pricePer: "$5 per month",
-  },
-  {
-    id: 4,
-    cover: "../images/courses/c4.png",
-    coursesName: "Introducing to Programming with WordPress",
-    courTeacher: [
-      {
-        dcover: "./images/back.webp",
-        name: "by Prabin Thapa Mager",
-        totalTime: "20 lectures (20 hrs)",
-      },
-    ],
-    priceAll: "$30 All Course",
-    pricePer: "$3 per month",
-  },
-  {
-    id: 5,
-    cover: "../images/courses/c5.png",
-    coursesName: "Introducing to Programming with ReactJS",
-    courTeacher: [
-      {
-        dcover: "./images/back.webp",
-        name: "by Sunil Bishowkaram",
-        totalTime: "100 lectures (150 hrs)",
-      },
-    ],
-    priceAll: "$300 All Course",
-    pricePer: "$30 per month",
-  },
-  {
-    id: 6,
-    cover: "../images/courses/c6.png",
-    coursesName: "Learn Frontend Programming Language",
-    courTeacher: [
-      {
-        dcover: "./images/back.webp",
-        name: "by Sunil Bishowkaram",
-        totalTime: "200 lectures (300 hrs)",
-      },
-    ],
-    priceAll: "$500 All Course",
-    pricePer: "$80 per month",
-  },
-  {
-    id: 7,
-    cover: "../images/courses/c7.png",
-    coursesName: "Introducing to with HTML / CSS",
-    courTeacher: [
-      {
-        dcover: "./images/back.webp",
-        name: "by Price",
-        totalTime: "20 lectures (50 hrs)",
-      },
-    ],
-    priceAll: "$20 All Course",
-    pricePer: "$2 per month",
-  },
-  {
-    id: 8,
-    cover: "../images/courses/c8.png",
-    coursesName: "Introducing to with JAVA",
-    courTeacher: [
-      {
-        dcover: "./images/back.webp",
-        name: "by Petter",
-        totalTime: "80 lectures (200 hrs)",
-      },
-    ],
-    priceAll: "$200 All Course",
-    pricePer: "$40 per month",
-  },
-  {
-    id: 9,
-    cover: "../images/courses/c9.png",
-    coursesName: "Introducing to with HTML / CSS / JAVASCRIPT",
-    courTeacher: [
-      {
-        dcover: "./images/back.webp",
-        name: "by Petter",
-        totalTime: "50 lectures (50 hrs)",
-      },
-    ],
-    priceAll: "$20 All Course",
-    pricePer: "$3 per month",
-  },
-];
-export const blog = [
-  {
-    id: 1,
-    title: "Tasqif",
-    audience: "Internal",
-    app: "WhatsApp",
-    date: "Setiap Rabu",
-    desc: "Maka sampaikanlah (Muhammad) secara terang-terangan segala apa yang diperintahkan (kepadamu) dan berpalinglah dari orang yang musyrik (QS. Al-Hijr [15]:94)",
-    cover: "/images/ldk-ikhwan3.jpg",
-  },
-  {
-    id: 2,
-    title: "Tahsin Ikhwan",
-    audience: "Internal",
-    app: "WhatsApp",
-    date: "Setiap Ahad",
-    desc: "Maka sampaikanlah (Muhammad) secara terang-terangan segala apa yang diperintahkan (kepadamu) dan berpalinglah dari orang yang musyrik (QS. Al-Hijr [15]:94)",
-    cover: "/images/ldk-akhwat1.jpg",
-  },
-  {
-    id: 3,
-    title: "Tahsin Akhwat",
-    audience: "Internal",
-    app: "WhatsApp",
-    date: "Setiap Ahad",
-    desc: "Maka sampaikanlah (Muhammad) secara terang-terangan segala apa yang diperintahkan (kepadamu) dan berpalinglah dari orang yang musyrik (QS. Al-Hijr [15]:94)",
-    cover: "/images/ldk-ikhwan4.jpg",
-  },
-  {
-    id: 4,
-    title: "Baca Kitab",
-    audience: "Umum",
-    app: "GMeet",
-    date: "Setiap Jum'at",
-    desc: "Maka sampaikanlah (Muhammad) secara terang-terangan segala apa yang diperintahkan (kepadamu) dan berpalinglah dari orang yang musyrik (QS. Al-Hijr [15]:94)",
-    cover: "/images/ldk-ikhwan5.jpg",
-  },
-  {
-    id: 5,
-    title: "Al-Kahfi Time",
-    audience: "Internal",
-    app: "GMeet",
-    date: "Setiap Kamis",
-    desc: "Maka sampaikanlah (Muhammad) secara terang-terangan segala apa yang diperintahkan (kepadamu) dan berpalinglah dari orang yang musyrik (QS. Al-Hijr [15]:94)",
-    cover: "/images/ldk-ikhwan6.jpg",
-  },
-  {
-    id: 6,
-    title: "Murajaah",
-    audience: "Umum",
-    app: "GMeet",
-    date: "Setiap Senin",
-    desc: "Maka sampaikanlah (Muhammad) secara terang-terangan segala apa yang diperintahkan (kepadamu) dan berpalinglah dari orang yang musyrik (QS. Al-Hijr [15]:94)",
-    cover: "/images/ldk-ikhwan7.jpg",
   },
 ];

@@ -1,0 +1,48 @@
+.carouselCover1 {
+  background-image: url("/images/ldk-ikhwan1.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  height: 100vh;
+}
+.carouselCover2 {
+  background-image: url("/images/akhwat-gathering.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  height: 100vh;
+}
+.carouselCover3 {
+  background-image: url("/images/ldk-akhwat2.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  height: 100vh;
+}
+.carouselCover4 {
+  background-image: url("/images/LDK3.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  height: 100vh;
+}
+.carouselCover5 {
+  background-image: url("/images/LDK10.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  height: 100vh;
+}
+.carouselCover6 {
+  background-image: url("/images/ldk-ikhwan4.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  height: 100vh;
+}

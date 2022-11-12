@@ -6,13 +6,12 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { alUkhuwah } from "./_app";
 import SectionSubtitle from "../components/utils/SectionSubtitle";
-import { blog } from "../data/data";
 import Header from "../components/layout/Header/Header";
 // import CourseCard from "../components/Card/CourseCard";
 import Button from "../components/utils/Button";
 import DepartementSlide from "../components/Card/DeptSlide";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faSearch } from "@fortawesome/free-solid-svg-icons";
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import { faSearch } from "@fortawesome/free-solid-svg-icons";
 // import ComingSoonPage from "../components/ComingSoon";
 import Testimonial from "../components/Card/Testimonial";
 import AboutUs from "../components/About/AboutUs";
@@ -23,25 +22,6 @@ import EventComing from "../components/EventComing/EventComing";
 const description = `Lembaga Dakwah Kampus (LDK) Al-Ukhuwah merupakan salah satu Unit Kegiatan Mahasiswa (UKM) yang ada di kampus Universitas Islam ‘45’ Bekasi. LDK Al-Ukhuwah adalah UKM yang bergerak di bidang pendidikan keilmuan agama & umum, pembinaan karakter & mental, penguatan rohani & jasmani, penembangan prestasi, dan pengasahan kreativitas.`;
 
 const HomePage = () => {
-  const [query, setQuery] = useState("");
-  const [resultQuery, setResultQuery] = useState([]);
-
-  const searching = () => {
-    const resultSearch = blog.filter((item) => {
-      const title = item.title.toLowerCase().includes(query.toLowerCase());
-      if (query === "") {
-        return item;
-      } else if (title) {
-        return item;
-      }
-    });
-    setResultQuery(resultSearch);
-  };
-
-  useEffect(() => {
-    searching();
-  }, [query]);
-
   return (
     <>
       <Head>
