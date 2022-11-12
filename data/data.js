@@ -55,7 +55,7 @@ export const galleries = [
   },
   {
     title: "Talkshow",
-    image: "./images/Talkshow-Psikologi.jpg",
+    image: "./images/webinar/Talkshow-Psikologi.jpg",
     alt: "talkshow",
   },
   {

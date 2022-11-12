@@ -119,42 +119,53 @@ function ProgramPage() {
             {dokumentasi
               .slice(dokumentasi.length - 1, dokumentasi.length)
               .map((item, index) => (
-                <div
-                  key={index}
-                  className="md:w-1/2 rounded-md p-2 overflow-hidden mb-4 hover:scale-105 hover:shadow-md hover:shadow-cyan-500/50"
-                >
-                  <div className="relative h-60 md:h-[400px]">
-                    <Image
-                      src="/images/photography.png"
-                      layout="fill"
-                      objectFit="cover"
-                      alt={`dokumentasi ${item.title}`}
-                      className="rounded-md"
-                    />
-                  </div>
-                  <div className="py-1 px-5">
-                    <h1 className="font-mountains text-cyan-500 text-2xl tracking-wide m-0 font-bold text-center">
-                      {item.title}
-                    </h1>
-                    <div className="text-sm flex justify-between my-2">
-                      <h1 className="text-slate-400 text-xs sm:text-sm m-0 font-bold">
-                        {item.program}
-                        <span className="text-red-500 italic text-xs sm:text-sm">
-                          (New)
-                        </span>
-                      </h1>
-                      <span className="text-xs sm:text-sm text-yellow-500">
-                        <FontAwesomeIcon
-                          icon={faPhotoFilm}
-                          className="mr-2"
-                        ></FontAwesomeIcon>
-                        <label>
-                          <b>{item.count}</b> Dokumen
-                        </label>
-                      </span>
-                    </div>
-                  </div>
-                </div>
+                <>
+                  <Link href={item.link}>
+                    <a
+                      href={item.link}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="no-underline"
+                    >
+                      <div
+                        key={index}
+                        className="md:w-1/2 rounded-md p-2 overflow-hidden mb-4 hover:scale-105 hover:shadow-md hover:shadow-cyan-500/50"
+                      >
+                        <div className="relative h-60 md:h-[400px]">
+                          <Image
+                            src="/images/photography.png"
+                            layout="fill"
+                            objectFit="cover"
+                            alt={`dokumentasi ${item.title}`}
+                            className="rounded-md"
+                          />
+                        </div>
+                        <div className="py-1 px-5">
+                          <h1 className="font-mountains text-cyan-500 text-2xl tracking-wide m-0 font-bold text-center">
+                            {item.title}
+                          </h1>
+                          <div className="text-sm flex justify-between my-2">
+                            <h1 className="text-slate-400 text-xs sm:text-sm m-0 font-bold">
+                              {item.program}
+                              <span className="text-red-500 italic text-xs sm:text-sm">
+                                (New)
+                              </span>
+                            </h1>
+                            <span className="text-xs sm:text-sm text-yellow-500">
+                              <FontAwesomeIcon
+                                icon={faPhotoFilm}
+                                className="mr-2"
+                              ></FontAwesomeIcon>
+                              <label>
+                                <b>{item.count}</b> Dokumen
+                              </label>
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </Link>
+                </>
               ))}
           </div>
         )}
