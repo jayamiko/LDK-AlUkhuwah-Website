@@ -15,7 +15,12 @@ const CourseCard = ({ resultData, search }) => {
           .map((item, index) => (
             <>
               <Link href={item.link}>
-                <a href={item.link} target="_blank" className="no-underline">
+                <a
+                  href={item.link}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="no-underline"
+                >
                   <div
                     key={index}
                     className="rounded-md p-2 overflow-hidden mb-4 hover:scale-105 hover:shadow-md hover:shadow-cyan-500/50"
