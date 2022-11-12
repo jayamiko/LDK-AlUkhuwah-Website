@@ -126,13 +126,13 @@ function ProgramPage() {
                       href={item.link}
                       target="_blank"
                       rel="noreferrer"
-                      className="no-underline"
+                      className="w-full flex justify-center no-underline"
                     >
                       <div
                         key={index}
                         className="md:w-1/2 rounded-md p-2 overflow-hidden mb-4 hover:scale-105 hover:shadow-md hover:shadow-cyan-500/50"
                       >
-                        <div className="relative h-60 md:h-[400px]">
+                        <div className="relative h-60 md:h-[360px]">
                           <Image
                             src="/images/photography.png"
                             layout="fill"
