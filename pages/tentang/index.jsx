@@ -1,4 +1,5 @@
 import React from "react";
+import Head from "next/head";
 import { kampus, alUkhuwah } from "../_app";
 import Title from "../../components/utils/Title";
 import {
@@ -12,6 +13,14 @@ import Header from "../../components/layout/Header/Header";
 const About = () => {
   return (
     <>
+      <Head>
+        <title>Tentang - LDK UNISMA Bekasi</title>
+        <meta name="description" content="Tentang LDK Unisma Bekasi" />
+        <meta
+          name="google-site-verification"
+          content="UxKlaNnZWzouoetVRx_2hJjkWwij95qWTjeo38MaeSE"
+        />
+      </Head>
       <section
         id="hero"
         className={`coverHero bg-[url('/images/LDK-Flag.jpg')] z-10`}

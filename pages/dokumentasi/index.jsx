@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import Head from "next/head";
 import Image from "next/image";
 import { dokumentasi } from "../../data/dokumentasi/dokumentasi";
 // Import Swiper React components
@@ -15,7 +16,7 @@ import Title from "../../components/utils/Title";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch, faPhotoFilm } from "@fortawesome/free-solid-svg-icons";
 import CourseCard from "../../components/Card/CourseCard";
-import SearchNotFound from "../../components/Animations/Search/Search";
+// import SearchNotFound from "../../components/Animations/Search/Search";
 
 function ProgramPage() {
   const carouselArray = [
@@ -51,6 +52,14 @@ function ProgramPage() {
 
   return (
     <>
+      <Head>
+        <title>Dokumentasi - LDK UNISMA Bekasi</title>
+        <meta name="description" content="Dokumentasi LDK Unisma Bekasi" />
+        <meta
+          name="google-site-verification"
+          content="UxKlaNnZWzouoetVRx_2hJjkWwij95qWTjeo38MaeSE"
+        />
+      </Head>
       <div className="relative h-fit">
         <div className="md:hidden">
           <Header />

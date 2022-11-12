@@ -39,10 +39,10 @@ const Webinar = () => {
   return (
     <>
       <Head>
-        <title>Special Webinar</title>
+        <title>Special Event</title>
         <meta
           name="description"
-          content="Special Webinar LDK Al-Ukhuwah UNISMA BEKASI"
+          content="Special Event LDK Al-Ukhuwah UNISMA BEKASI"
         />
       </Head>
       <section
@@ -75,7 +75,11 @@ const Webinar = () => {
                 </div>
                 <div className="space-x-4">
                   <Link href="https://forms.gle/fF1S1MXa8dURqqga8">
-                    <a href="https://forms.gle/fF1S1MXa8dURqqga8" target="_blank" rel="noreferrer">
+                    <a
+                      href="https://forms.gle/fF1S1MXa8dURqqga8"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
                       <button className="text-md rounded-sm py-2 px-4 lg:px-6 bg-emerald-600 text-white hover:text-yellow-400 font-medium">
                         Register Now
                       </button>
