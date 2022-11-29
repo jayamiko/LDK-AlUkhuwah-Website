@@ -56,7 +56,7 @@ const Webinar = () => {
           <div className="container mx-auto px-2 sm:px-5">
             <div className="w-full flex justify-center items-center">
               <div className="w-full text-white flex flex-col items-center">
-                <h1 className="font-mountains text-shadow-white text-sky-500 m-0 p-4 text-4xl sm:text-5xl lg:text-6xl">
+                <h1 className="font-mountains text-shadow-white text-sky-500 m-0 p-4 text-3xl sm:text-5xl lg:text-6xl">
                   Muslim Academic
                 </h1>
                 <h6 className="text-shadow-black text-center">
