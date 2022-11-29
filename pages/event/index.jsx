@@ -46,12 +46,53 @@ const Webinar = () => {
         />
       </Head>
       <section
-        id="talkshow-psikologi"
-        className="h-fit bg-center bg-cover bg-[url('/images/webinar/bgTalkshowPsikologi.jpg')] z-10"
+        id="muslim-academic"
+        className="min-h-screen h-fit bg-center bg-cover bg-[url('/images/webinar/bg-ma.jpg')] z-10"
       >
         <div className="h-fit flex flex-col md:px-5 lg:m-0 w-full z-50">
           <Header />
         </div>
+        <div className="py-4 lg:py-0">
+          <div className="container mx-auto px-2 sm:px-5">
+            <div className="w-full flex justify-center items-center">
+              <div className="w-full text-white flex flex-col items-center">
+                <h1 className="font-mountains text-shadow-white text-sky-500 m-0 p-4 text-4xl sm:text-5xl lg:text-6xl">
+                  Muslim Academic
+                </h1>
+                <h6 className="text-shadow-black text-center">
+                  {
+                    '"Optimasi Peran Mahasiswa Sebagai Pelopor Kebaikan di UNISMA Bekasi"'
+                  }
+                </h6>
+                <i className="text-shadow-black text-cyan-500">
+                  Jum'at, 9 Desember 2022
+                </i>
+                <div className="w-full my-2">
+                  <Timer date="Dec 9, 2022 20:00:00" />
+                </div>
+                <div className="space-x-4">
+                  <Link href="https://forms.gle/8XDjBEFdKbrWd7TF8">
+                    <a
+                      href="https://forms.gle/8XDjBEFdKbrWd7TF8"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      <button className="text-md rounded-md py-2 px-4 lg:px-6 bg-emerald-600 text-white hover:text-yellow-400 font-medium">
+                        Register Now
+                      </button>
+                    </a>
+                  </Link>
+                  {statusEvent(new Date().setFullYear(2022, 12, 9))}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section
+        id="talkshow-psikologi"
+        className="h-fit bg-center bg-cover bg-[url('/images/webinar/bgTalkshowPsikologi.jpg')] z-10"
+      >
         <div className="py-4 lg:py-0">
           <div className="container mx-auto px-2 sm:px-5 flex flex-col-reverse lg:flex-row">
             <div className="w-full lg:w-1/2 mt-2 md:mt-0 flex justify-center lg:justify-start items-center">
@@ -74,17 +115,6 @@ const Webinar = () => {
                   <Timer date="Nov 8, 2022 20:00:00" />
                 </div>
                 <div className="space-x-4">
-                  <Link href="https://forms.gle/fF1S1MXa8dURqqga8">
-                    <a
-                      href="https://forms.gle/fF1S1MXa8dURqqga8"
-                      target="_blank"
-                      rel="noreferrer"
-                    >
-                      <button className="text-md rounded-sm py-2 px-4 lg:px-6 bg-emerald-600 text-white hover:text-yellow-400 font-medium">
-                        Register Now
-                      </button>
-                    </a>
-                  </Link>
                   {statusEvent(new Date().setFullYear(2022, 10, 8))}
                 </div>
               </div>
