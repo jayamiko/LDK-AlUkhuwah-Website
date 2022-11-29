@@ -65,7 +65,7 @@ const Webinar = () => {
                   }
                 </h6>
                 <i className="text-shadow-black text-cyan-500">
-                  Jum'at, 9 Desember 2022
+                  Jum{"'"}at, 9 Desember 2022
                 </i>
                 <div className="w-full my-2">
                   <Timer date="Dec 9, 2022 20:00:00" />
