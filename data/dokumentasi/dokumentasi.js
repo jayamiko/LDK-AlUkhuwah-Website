@@ -83,4 +83,11 @@ export const dokumentasi = [
     link: "https://drive.google.com/drive/folders/1uRCYDq6t7ERRYVyDJKpUGfg-gH6-xDBu?usp=sharing",
     count: 16,
   },
+  {
+    id: 12,
+    title: "Pelantikan Kabinet Al-Fath",
+    program: "Pelantikan",
+    link: "https://drive.google.com/drive/folders/15xeSeV0Y1gNZobrw2Goe1re1W1qNhfmI?usp=sharing",
+    count: 68,
+  },
 ];
