@@ -17,7 +17,7 @@ import Testimonial from "../components/Card/Testimonial";
 import AboutUs from "../components/About/AboutUs";
 import ImagesSlider from "../components/Card/ImagesSlider";
 import Partners from "../components/Partners/Partners";
-import EventComing from "../components/EventComing/EventComing";
+// import EventComing from "../components/EventComing/EventComing";
 
 const description = `Lembaga Dakwah Kampus (LDK) Al-Ukhuwah merupakan salah satu Unit Kegiatan Mahasiswa (UKM) yang ada di kampus Universitas Islam ‘45’ Bekasi. LDK Al-Ukhuwah adalah UKM yang bergerak di bidang pendidikan keilmuan agama & umum, pembinaan karakter & mental, penguatan rohani & jasmani, penembangan prestasi, dan pengasahan kreativitas.`;
 
