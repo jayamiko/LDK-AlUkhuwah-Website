@@ -58,7 +58,7 @@ const Webinar = () => {
             <div className="w-full flex justify-center items-center">
               <div className="w-full text-white flex flex-col items-center">
                 <h1 className="font-mountains text-shadow-white text-sky-500 m-0 p-2 text-3xl sm:text-5xl lg:text-6xl">
-                  Event Seminar Online
+                  Event Seminar
                 </h1>
                 <h6 className="text-shadow-black text-center">
                   {
