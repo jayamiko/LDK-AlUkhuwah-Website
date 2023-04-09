@@ -90,4 +90,11 @@ export const dokumentasi = [
     link: "https://drive.google.com/drive/folders/15xeSeV0Y1gNZobrw2Goe1re1W1qNhfmI?usp=sharing",
     count: 68,
   },
+  {
+    id: 13,
+    title: "Rapat Kerja Kabinet Al-Fath",
+    program: "Rapat Kerja",
+    link: "https://drive.google.com/drive/folders/16u_l31xGzCgV7nTQD93gbcplbQ_YFFkW",
+    count: 18,
+  },
 ];
