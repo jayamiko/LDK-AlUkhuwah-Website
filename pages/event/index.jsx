@@ -10,7 +10,7 @@ import Timer from "../../components/ComingSoon/Timer/Timer";
 // import Button from "../../components/utils/Button";
 
 const Webinar = () => {
-  const formLink = "https://bit.ly/seminar_branding_insight";
+  const formLink = "https://forms.gle/C4bGFJq6xFbw66Ni8";
   let date = new Date();
   let start = new Date();
 
@@ -47,12 +47,47 @@ const Webinar = () => {
         />
       </Head>
       <section
-        id="seminar-online-ramadhan"
-        className="min-h-screen h-fit bg-center bg-cover bg-[url('/images/webinar/mosque.jpg')] z-10"
+        id="leaderhip-motivation-training"
+        className="min-h-screen h-fit bg-center bg-cover bg-[url('/images/webinar/leadership.jpeg')] z-10"
       >
         <div className="h-fit flex flex-col md:px-5 lg:m-0 w-full z-50">
           <Header />
         </div>
+        <div className="h-screen md:h-fit py-4 lg:py-0">
+          <div className="container h-fit mx-auto mt-16 md:mt-0 px-2 sm:px-5">
+            <div className="w-full flex justify-center items-center">
+              <div className="w-full text-white flex flex-col items-center">
+                <h1 className="font-mountains text-shadow-white text-sky-500 m-0 p-2 text-3xl sm:text-5xl lg:text-6xl">
+                  Leadership Motivation Training
+                </h1>
+                <h6 className="text-shadow-black text-center">
+                  Preparing The Next Muslim Leader Generation
+                </h6>
+                <i className="text-shadow-black">
+                  Sabtu, 8 Juli 2023 - Ahad, 9 Juli 2023
+                </i>
+                <div className="w-full my-2">
+                  <Timer date="Jul 8, 2023 09:00:00" />
+                </div>
+                <div className="space-x-4">
+                  <Link href={formLink}>
+                    <a href={formLink} target="_blank" rel="noreferrer">
+                      <button className="hover:scale-110 text-md rounded-md py-2 px-4 lg:px-6 bg-emerald-600 text-white hover:text-yellow-400 font-medium">
+                        Register Now
+                      </button>
+                    </a>
+                  </Link>
+                  {statusEvent(new Date().setFullYear(2023, 8, 8))}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section
+        id="seminar-online-ramadhan"
+        className="min-h-screen h-fit bg-center bg-cover bg-[url('/images/webinar/mosque.jpg')] z-10"
+      >
         <div className="h-screen md:h-fit py-4 lg:py-0">
           <div className="container h-fit mx-auto mt-16 md:mt-0 px-2 sm:px-5">
             <div className="w-full flex justify-center items-center">
@@ -77,13 +112,6 @@ const Webinar = () => {
                   <Timer date="Apr 7, 2023 09:00:00" />
                 </div>
                 <div className="space-x-4">
-                  <Link href={formLink}>
-                    <a href={formLink} target="_blank" rel="noreferrer">
-                      <button className="text-md rounded-md py-2 px-4 lg:px-6 bg-emerald-600 text-white hover:text-yellow-400 font-medium">
-                        Register Now
-                      </button>
-                    </a>
-                  </Link>
                   {statusEvent(new Date().setFullYear(2023, 4, 7))}
                 </div>
               </div>
