@@ -2,15 +2,11 @@ import React from "react";
 import Head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
-// import HeadTop from "../../components/layout/Header/Head";
 import Header from "../../components/layout/Header/Header";
-// import { kampus, UKM } from "../_app";
 import Timer from "../../components/ComingSoon/Timer/Timer";
-// import { faRegistered, faClose } from "@fortawesome/free-solid-svg-icons";
-// import Button from "../../components/utils/Button";
 
 const Webinar = () => {
-  const formLink = "https://forms.gle/C4bGFJq6xFbw66Ni8";
+  const formLink = "https://forms.gle/4tjTtqEvEMZg7THs6";
   let date = new Date();
   let start = new Date();
 
@@ -47,12 +43,45 @@ const Webinar = () => {
         />
       </Head>
       <section
-        id="leaderhip-motivation-training"
-        className="min-h-screen h-fit bg-center bg-cover bg-[url('/images/webinar/leadership.jpeg')] z-10"
+        id="seminar-zero-to-hero"
+        className="min-h-screen h-fit bg-center bg-cover bg-[url('/images/webinar/_.jpeg')] z-10"
       >
         <div className="h-fit flex flex-col md:px-5 lg:m-0 w-full z-50">
           <Header />
         </div>
+        <div className="h-screen md:h-fit py-4 lg:py-0">
+          <div className="container h-fit mx-auto mt-16 md:mt-0 px-2 sm:px-5">
+            <div className="w-full flex justify-center items-center">
+              <div className="w-full text-white flex flex-col items-center">
+                <h1 className="font-mountains text-shadow-white text-sky-500 m-0 p-2 text-3xl sm:text-5xl lg:text-6xl">
+                  SEMINAR
+                </h1>
+                <h6 className="text-shadow-black text-center">
+                  From Zero To Hero (Meniti Karir di Bangku Kuliah)
+                </h6>
+                <i className="text-shadow-black">Rabu, 27 September 2023</i>
+                <div className="w-full my-2">
+                  <Timer date="Sep 27, 2023 09:00:00" />
+                </div>
+                <div className="space-x-4">
+                  <Link href={formLink}>
+                    <a href={formLink} target="_blank" rel="noreferrer">
+                      <button className="hover:scale-110 text-md rounded-md py-2 px-4 lg:px-6 bg-emerald-600 text-white hover:text-yellow-400 font-medium">
+                        Register Now
+                      </button>
+                    </a>
+                  </Link>
+                  {statusEvent(new Date().setFullYear(2023, 9, 27))}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section
+        id="leaderhip-motivation-training"
+        className="min-h-screen h-fit bg-center bg-cover bg-[url('/images/webinar/leadership.jpeg')] z-10"
+      >
         <div className="h-screen md:h-fit py-4 lg:py-0">
           <div className="container h-fit mx-auto mt-16 md:mt-0 px-2 sm:px-5">
             <div className="w-full flex justify-center items-center">
