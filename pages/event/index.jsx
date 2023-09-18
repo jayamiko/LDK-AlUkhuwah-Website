@@ -10,7 +10,7 @@ const Webinar = () => {
   let date = new Date();
   let start = new Date();
 
-  start.setFullYear(2022, 9, 15);
+  start.setFullYear(2023, 9, 27);
 
   function statusEvent(start) {
     if (start > date) {
