@@ -44,7 +44,8 @@ const Webinar = () => {
       </Head>
       <section
         id="seminar-zero-to-hero"
-        className="min-h-screen h-fit bg-center bg-cover bg-[url('/images/webinar/_.jpeg')] z-10"
+        className="min-h-screen h-fit bg-cover bg-[url('/images/webinar/student.jpeg')] z-10"
+        style={{ backgroundPositionY: "40%" }}
       >
         <div className="h-fit flex flex-col md:px-5 lg:m-0 w-full z-50">
           <Header />
