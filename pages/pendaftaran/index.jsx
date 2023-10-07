@@ -1,9 +1,9 @@
 import React, { useState, useRef, useEffect } from "react";
 import emailjs from "emailjs-com";
-import { UKM, kampus } from "../_app";
+// import { UKM, kampus } from "../_app";
 // import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // import { faTimes, faBars } from "@fortawesome/free-solid-svg-icons";
-import styles from "./pendaftaran.module.css";
+// import styles from "./pendaftaran.module.css";
 import Papa from "papaparse";
 // import { DataGrid } from "@mui/x-data-grid";
 import FormRegistration from "../../components/Form/FormRegistration";
@@ -17,6 +17,9 @@ const scriptURL =
   "https://script.google.com/macros/s/AKfycbxBND5Bi5PYyIYkqwU-bnjaOhIe2EfG79qs1aVsryR8_MGOy-8h1_IyFYyJ1spb0EXD/exec";
 const url = `https://docs.google.com/spreadsheets/d/e/2PACX-1vT2Kdpc-_D5FgG8qPrPGj1SZaMdxfJTkcVGiQp5VQmz1FTcSAeTtb_Lq6Ubi4V2HrBtZVGFCIqhLdgf/pub?gid=0&single=true&output=csv`;
 // For Email Js
+
+const ikhwanGroupWA = "https://chat.whatsapp.com/Es7eN3cRVNCL9h1FbYRsfX";
+const akhwatGroupWA = "https://chat.whatsapp.com/H9Zo4dYnBtT7UpEhaYLBU5";
 
 const RegistrationPage = () => {
   const formRef = useRef(null);
@@ -110,13 +113,13 @@ const RegistrationPage = () => {
               `${
                 personalMember.jenisKelamin === "Perempuan"
                   ? `Ukh, ${personalMember.fullName} &#128519; <br /> 
-                  <a href="https://chat.whatsapp.com/CFvgTHSOHIB3wx0xGWaaLb" target="_blank">
+                  <a href="${akhwatGroupWA}" target="_blank">
                     <button className="w-full h-10 rounded-md bg-cyan-500 shadow-md text-emerald-500 font-semibold text-xs sm:text-sm xl:text-base">
                       Masuk Grup WhatsApp
                     </button>
                   </a>`
                   : `Akh, ${personalMember.fullName} &#128519; <br /> 
-                  <a href="https://chat.whatsapp.com/Ep3aTOSQzi0Kye6laINkzU" target="_blank">
+                  <a href="${ikhwanGroupWA}" target="_blank">
                     <button className="w-full h-10 rounded-md bg-cyan-500 shadow-md text-emerald-500 font-semibold text-xs sm:text-sm xl:text-base">
                       Masuk Grup WhatsApp
                     </button>
