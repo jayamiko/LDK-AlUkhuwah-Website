@@ -16,7 +16,6 @@ import swal from "sweetalert2";
 const scriptURL =
   "https://script.google.com/macros/s/AKfycbxBND5Bi5PYyIYkqwU-bnjaOhIe2EfG79qs1aVsryR8_MGOy-8h1_IyFYyJ1spb0EXD/exec";
 const url = `https://docs.google.com/spreadsheets/d/e/2PACX-1vT2Kdpc-_D5FgG8qPrPGj1SZaMdxfJTkcVGiQp5VQmz1FTcSAeTtb_Lq6Ubi4V2HrBtZVGFCIqhLdgf/pub?gid=0&single=true&output=csv`;
-// For Email Js
 
 const ikhwanGroupWA = "https://chat.whatsapp.com/Es7eN3cRVNCL9h1FbYRsfX";
 const akhwatGroupWA = "https://chat.whatsapp.com/H9Zo4dYnBtT7UpEhaYLBU5";
